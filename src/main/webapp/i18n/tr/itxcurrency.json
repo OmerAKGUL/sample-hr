@@ -1,0 +1,24 @@
+{
+  "sampleHrApp": {
+    "itxcurrency": {
+      "home": {
+        "title": "Itxcurrencies",
+        "createLabel": "Create a new Itxcurrency",
+        "createOrEditLabel": "Create or edit a Itxcurrency",
+        "notFound": "No Itxcurrencies found"
+      },
+      "created": "A new Itxcurrency is created with identifier {{ param }}",
+      "updated": "A Itxcurrency is updated with identifier {{ param }}",
+      "deleted": "A Itxcurrency is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxcurrency {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxcurrency"
+      },
+      "isocode": "Isocode",
+      "name": "Name",
+      "localname": "Localname"
+    }
+  }
+}

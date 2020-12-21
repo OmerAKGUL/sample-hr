@@ -1,0 +1,38 @@
+{
+  "sampleHrApp": {
+    "meconfig": {
+      "home": {
+        "title": "Meconfigs",
+        "createLabel": "Create a new Meconfig",
+        "createOrEditLabel": "Create or edit a Meconfig",
+        "notFound": "No Meconfigs found"
+      },
+      "created": "A new Meconfig is created with identifier {{ param }}",
+      "updated": "A Meconfig is updated with identifier {{ param }}",
+      "deleted": "A Meconfig is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Meconfig {{ id }}?",
+        "questionstart": "Are you sure you want to start Meconfig {{ id }}?",
+        "questionstop": "Are you sure you want to stop Meconfig {{ id }}?",
+        "nosuch": "No such action can be done because of WFState value."
+      },
+      "detail": {
+        "title": "Meconfig"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "wlfieldlist": "Wlfieldlist",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "scheduleid": "Scheduleid",
+      "stopped": "Stopped",
+      "started": "Started",
+      "preparing": "Preparing"
+    }
+  }
+}

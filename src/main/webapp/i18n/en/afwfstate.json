@@ -1,0 +1,33 @@
+{
+  "sampleHrApp": {
+    "afwfstate": {
+      "home": {
+        "title": "Afwfstates",
+        "createLabel": "Create a new Afwfstate",
+        "createOrEditLabel": "Create or edit a Afwfstate",
+        "notFound": "No Afwfstates found"
+      },
+      "created": "A new Afwfstate is created with identifier {{ param }}",
+      "updated": "A Afwfstate is updated with identifier {{ param }}",
+      "deleted": "A Afwfstate is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afwfstate {{ id }}?"
+      },
+      "detail": {
+        "title": "Afwfstate"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "apprefhandlerfrm": "Apprefhandlerfrm",
+      "apprefhandlerdom": "Apprefhandlerdom",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "wfcode": "Wfcode"
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { AvFeedback, AvForm, AvGroup, AvInput, AvField } from 'availity-reactstr
 import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
+import VirtualizedSelect from 'react-virtualized-select'
 
 import { getEntities as getEmployees } from 'app/entities/employee/employee.reducer';
 import { IDepartment } from 'app/shared/model/department.model';
@@ -15,6 +16,10 @@ import { IEmployee } from 'app/shared/model/employee.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
 
+import 'C:/java_wlengine_repo/sample-HRSystem-2020_11_06/node_modules/react-select/dist/react-select.css'
+import 'C:/java_wlengine_repo/sample-HRSystem-2020_11_06/node_modules/react-virtualized/styles.css'
+import 'C:/java_wlengine_repo/sample-HRSystem-2020_11_06/node_modules/react-virtualized-select/styles.css'
+
 export interface IEmployeeUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const EmployeeUpdate = (props: IEmployeeUpdateProps) => {
@@ -23,6 +28,20 @@ export const EmployeeUpdate = (props: IEmployeeUpdateProps) => {
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
   const { employeeEntity, employees, departments, loading, updating } = props;
+
+  const [selectedDepartment, setSelectedDepartment] = useState( '' );
+
+    const optionsEski = [
+      { label: "One", value: 1 },
+      { label: "Two", value: 2 },
+      { label: "Three", value: 3, disabled: true }
+      // And so on...
+    ]
+
+  const optionss = Array.from(new Array(departments.length), (_, index) => ({
+	  label: departments[index].departmentName,
+	  value: index }));
+
 
   const handleClose = () => {
     props.history.push('/employee');
@@ -144,12 +163,17 @@ export const EmployeeUpdate = (props: IEmployeeUpdateProps) => {
                   {employees
                     ? employees.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.firstName}
                         </option>
                       ))
                     : null}
                 </AvInput>
               </AvGroup>
+		      <VirtualizedSelect
+		        options={optionss}
+		        onChange={(e) => setSelectedDepartment(e)}
+				value = {selectedDepartment}
+		      />
               <AvGroup>
                 <Label for="employee-department">
                   <Translate contentKey="sampleHrApp.employee.department">Department</Translate>

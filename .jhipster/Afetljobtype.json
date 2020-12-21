@@ -1,0 +1,102 @@
+{
+  "name": "Afetljobtype",
+  "fields": [
+    {
+      "fieldName": "jobname",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "apprefid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcdataprofile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tgtdataprofile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "afsid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "srclocurl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tgtlocurl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcconntype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tgtconntype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsystem",
+      "otherEntityRelationshipName": "afetljobtype",
+      "relationshipName": "srcsyscode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsystem",
+      "otherEntityRelationshipName": "afetljobtype",
+      "relationshipName": "tgtsyscode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afschedule",
+      "otherEntityRelationshipName": "afetljobtype",
+      "relationshipName": "scheduleid",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106115753",
+  "entityTableName": "afetljobtype",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,32 @@
+{
+  "sampleHrApp": {
+    "iwlimportqueue": {
+      "home": {
+        "title": "Iwlimportqueues",
+        "createLabel": "Create a new Iwlimportqueue",
+        "createOrEditLabel": "Create or edit a Iwlimportqueue",
+        "notFound": "No Iwlimportqueues found"
+      },
+      "created": "A new Iwlimportqueue is created with identifier {{ param }}",
+      "updated": "A Iwlimportqueue is updated with identifier {{ param }}",
+      "deleted": "A Iwlimportqueue is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Iwlimportqueue {{ id }}?"
+      },
+      "detail": {
+        "title": "Iwlimportqueue"
+      },
+      "etljobstart": "Etljobstart",
+      "etljobsessiond": "Etljobsessiond",
+      "srcfileurl": "Srcfileurl",
+      "tgtfileurl": "Tgtfileurl",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "etljobtype": "Etljobtype"
+    }
+  }
+}

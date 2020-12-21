@@ -1,19 +1,18 @@
 {
   "home": {
-    "title": "Merhaba, Java Hipster!",
-    "subtitle": "Burası Ana Sayfanız",
+    "title": "VELOXAPP-TEST Uygulamasına Hoş Geldiniz!",
+    "subtitle": "Anasayfa",
+    "module": "Modüller",
     "logged": {
-      "message": "\"{{username}}\" olarak giriş yaptınız."
+      "message": "\"{{username}}\" kullanıcısı ile giriş yapıldı."
     },
-    "question": "JHipster hakkında sorularınız için:",
+    "question": "VELOXAPP-TEST uygulaması hakkında bazı bağlantılar:",
     "link": {
-      "homepage": "JHipster ana sayfa",
-      "stackoverflow": "Stack Overflow'da JHipster",
-      "bugtracker": "JHipster hata yönetimi",
-      "chat": "JHipster genel sohbet odası",
-      "follow": "Twitter'da @jhipster adresinden ulaşabilirsiniz"
-    },
-    "like": "JHipster'ı beğendiysenizi yıldız vermeyi unutmayın",
-    "github": "GitHub"
+      "homepage": "VELOXAPP-WEBTEST anasayfa",
+      "stackoverflow": "VELOXAPP-TEST Stack Overflow",
+      "bugtracker": "VELOXAPP-TEST bug tracker",
+      "chat": "VELOXAPP-TEST public chat room",
+      "follow": "follow @VELOXAPP-TEST Twitter"
+    }
   }
 }

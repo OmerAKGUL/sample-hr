@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Afsauthorization.
+    -->
+    <changeSet id="20201106120553-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="rolecode_id"
+                                 baseTableName="afsauthorization"
+                                 constraintName="fk_afsauthorization_rolecode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsrole"/>
+
+        <addForeignKeyConstraint baseColumnNames="acccode_id"
+                                 baseTableName="afsauthorization"
+                                 constraintName="fk_afsauthorization_acccode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afwfaction"/>
+
+        <addForeignKeyConstraint baseColumnNames="modulecode_id"
+                                 baseTableName="afsauthorization"
+                                 constraintName="fk_afsauthorization_modulecode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsysmodule"/>
+
+        <addForeignKeyConstraint baseColumnNames="menuitemcode_id"
+                                 baseTableName="afsauthorization"
+                                 constraintName="fk_afsauthorization_menuitemcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afmenuitem"/>
+
+    </changeSet>
+</databaseChangeLog>

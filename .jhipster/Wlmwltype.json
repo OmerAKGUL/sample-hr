@@ -1,0 +1,79 @@
+{
+  "name": "Wlmwltype",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "descr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publishercat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publisherorgid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "publishername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "publishformat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "filteringtype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201019122516",
+  "entityTableName": "wlmwltype",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

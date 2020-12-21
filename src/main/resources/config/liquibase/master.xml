@@ -22,6 +22,54 @@
     <include file="config/liquibase/changelog/20200823140112_added_entity_Employee.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200823140212_added_entity_Job.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200823140312_added_entity_JobHistory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201019122516_added_entity_Wlmwltype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201019122616_added_entity_Wlmwldata.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106115653_added_entity_Afdatafilter.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106115753_added_entity_Afetljobtype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106115853_added_entity_Afform.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106115953_added_entity_Afformdatafilter.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120053_added_entity_Afmenuchild.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120153_added_entity_Afmenuitem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120253_added_entity_Afmsg.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120353_added_entity_Afparamval.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120453_added_entity_Afsauthentication.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120553_added_entity_Afsauthorization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120653_added_entity_Afsrole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120753_added_entity_Afsroleuser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120853_added_entity_Afschedule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120953_added_entity_Afsysmodule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121053_added_entity_Afsystem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121153_added_entity_Afwfaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121253_added_entity_Afwfstate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121353_added_entity_Afwprocaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121453_added_entity_Afwprocess.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121553_added_entity_Afworkflow.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121653_added_entity_Itxaccounttype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121753_added_entity_Itxaccounttinfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121853_added_entity_Itxcity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121953_added_entity_Itxcountry.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122053_added_entity_Itxcurrency.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122153_added_entity_Itxcustaddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122253_added_entity_Itxcustadressinfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122353_added_entity_Itxcustinfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122453_added_entity_Itxcusttype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122553_added_entity_Itxdictionary.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122653_added_entity_Itxorgbranch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122753_added_entity_Itxorganization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122853_added_entity_Itxtxnqueue.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122953_added_entity_Itxtxntype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123053_added_entity_Iwlimportqueue.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123153_added_entity_Meconfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123253_added_entity_Meinvestproc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123353_added_entity_Meinvestprofile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123453_added_entity_Mematchmethod.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123553_added_entity_Mematchresult.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123653_added_entity_Mematchresultctx.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123753_added_entity_Memethodparam.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123853_added_entity_Memtdconfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123953_added_entity_Memtdwlcriteria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106124253_added_entity_Wlmwldatalog.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106124353_added_entity_Jhiuser.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20200823135712_added_entity_constraints_Country.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200823135812_added_entity_constraints_Location.xml" relativeToChangelogFile="false"/>
@@ -29,6 +77,40 @@
     <include file="config/liquibase/changelog/20200823140112_added_entity_constraints_Employee.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200823140212_added_entity_constraints_Job.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200823140312_added_entity_constraints_JobHistory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201019122616_added_entity_constraints_Wlmwldata.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106115753_added_entity_constraints_Afetljobtype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106115853_added_entity_constraints_Afform.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106115953_added_entity_constraints_Afformdatafilter.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120053_added_entity_constraints_Afmenuchild.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120153_added_entity_constraints_Afmenuitem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120253_added_entity_constraints_Afmsg.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120453_added_entity_constraints_Afsauthentication.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120553_added_entity_constraints_Afsauthorization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120753_added_entity_constraints_Afsroleuser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106120953_added_entity_constraints_Afsysmodule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121153_added_entity_constraints_Afwfaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121253_added_entity_constraints_Afwfstate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121353_added_entity_constraints_Afwprocaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121453_added_entity_constraints_Afwprocess.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121753_added_entity_constraints_Itxaccounttinfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106121853_added_entity_constraints_Itxcity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122153_added_entity_constraints_Itxcustaddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122253_added_entity_constraints_Itxcustadressinfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122353_added_entity_constraints_Itxcustinfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122553_added_entity_constraints_Itxdictionary.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122653_added_entity_constraints_Itxorgbranch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122753_added_entity_constraints_Itxorganization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106122853_added_entity_constraints_Itxtxnqueue.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123053_added_entity_constraints_Iwlimportqueue.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123153_added_entity_constraints_Meconfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123253_added_entity_constraints_Meinvestproc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123353_added_entity_constraints_Meinvestprofile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123553_added_entity_constraints_Mematchresult.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123653_added_entity_constraints_Mematchresultctx.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123753_added_entity_constraints_Memethodparam.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123853_added_entity_constraints_Memtdconfig.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106123953_added_entity_constraints_Memtdwlcriteria.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201106124253_added_entity_constraints_Wlmwldatalog.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

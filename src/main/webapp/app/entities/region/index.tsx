@@ -7,9 +7,9 @@ import Region from './region';
 import RegionDetail from './region-detail';
 import RegionUpdate from './region-update';
 import RegionDeleteDialog from './region-delete-dialog';
-
 const Routes = ({ match }) => (
   <>
+
     <Switch>
       <ErrorBoundaryRoute exact path={`${match.url}/new`} component={RegionUpdate} />
       <ErrorBoundaryRoute exact path={`${match.url}/:id/edit`} component={RegionUpdate} />

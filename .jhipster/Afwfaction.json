@@ -1,0 +1,100 @@
+{
+  "name": "Afwfaction",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "descr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apprefhandler",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "afsid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "afmid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afmenuitem",
+      "otherEntityRelationshipName": "afwfaction",
+      "relationshipName": "appmenucode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afform",
+      "otherEntityRelationshipName": "afwfaction",
+      "relationshipName": "appformcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsysmodule",
+      "otherEntityRelationshipName": "afwfaction",
+      "relationshipName": "appmodulecode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afworkflow",
+      "otherEntityRelationshipName": "afwfaction",
+      "relationshipName": "wfcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106121153",
+  "entityTableName": "afwfaction",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

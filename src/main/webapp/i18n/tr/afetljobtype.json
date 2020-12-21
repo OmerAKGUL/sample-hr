@@ -1,0 +1,39 @@
+{
+  "sampleHrApp": {
+    "afetljobtype": {
+      "home": {
+        "title": "ETL İş Listesi",
+        "createLabel": "Yeni ETL Oluştur",
+        "createOrEditLabel": "ETL Düzenle ya da Oluştur",
+        "notFound": "ETL İş Listesi Bulunmamaktadır"
+      },
+      "created": "{{ param }} id li ETL İşi oluşturuldu.",
+      "updated": "{{ param }} id li ETL İşi güncellendi.",
+      "deleted": "{{ param }} id li ETL İşi silinid.",
+      "delete": {
+        "question": "{{ id }}'li ETLi silmek istediğinize emin misiniz?"
+      },
+      "detail": {
+        "title": "ETL İş Listesi"
+      },
+      "jobname": "ETL İsmi",
+      "apprefid": "Uygulama Referans ID",
+      "srcdataprofile": "Kaynak Veri Profili",
+      "tgtdataprofile": "Hedef Veri Profili",
+      "afsid": "AFS ID",
+      "srclocurl": "Kaynak Local URL",
+      "tgtlocurl": "Hedeh Local URL",
+      "srcconntype": "Kaynak Bağlantı",
+      "tgtconntype": "Hedef Bağlantı",
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullanıcı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "İş Akış Durumu",
+      "wfprocid": "İş ID",
+      "srcsyscode": "Kaynak Sistem Kodu",
+      "tgtsyscode": "Hedef Sistem Kodu",
+      "scheduleid": "Zamanlayıcı ID"
+    }
+  }
+}

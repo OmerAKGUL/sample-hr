@@ -13,6 +13,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+//import com.mdsap.wlf.config.DatabaseConfiguration;
+
 import java.sql.SQLException;
 
 @Configuration
@@ -20,14 +22,16 @@ import java.sql.SQLException;
 @EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
 @EnableTransactionManagement
 public class DatabaseConfiguration {
-
+	
+	 private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);
+/*
     private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);
 
     private final Environment env;
 
     public DatabaseConfiguration(Environment env) {
         this.env = env;
-    }
+    }*/
 
     /**
      * Open the TCP port for the H2 database, so it is available remotely.
@@ -35,7 +39,7 @@ public class DatabaseConfiguration {
      * @return the H2 database TCP server.
      * @throws SQLException if the server failed to start.
      */
-    @Bean(initMethod = "start", destroyMethod = "stop")
+ /*   @Bean(initMethod = "start", destroyMethod = "stop")
     @Profile(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT)
     public Object h2TCPServer() throws SQLException {
         String port = getValidPortForH2();
@@ -55,5 +59,5 @@ public class DatabaseConfiguration {
             }
         }
         return String.valueOf(port);
-    }
+    }*/
 }

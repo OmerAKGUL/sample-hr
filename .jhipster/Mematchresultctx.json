@@ -1,0 +1,54 @@
+{
+  "name": "Mematchresultctx",
+  "fields": [
+    {
+      "fieldName": "memid",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "matchtime",
+      "fieldType": "Instant",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "matchmtdmsg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "matchctxdata",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "mematchresult",
+      "otherEntityRelationshipName": "mematchresultctx",
+      "relationshipName": "matchid",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "mematchmethod",
+      "otherEntityRelationshipName": "mematchresultctx",
+      "relationshipName": "matchmtdcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106123653",
+  "entityTableName": "mematchresultctx",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

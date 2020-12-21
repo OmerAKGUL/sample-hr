@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Itxaccounttinfo.
+    -->
+    <changeSet id="20201106121753-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="typeid_id"
+                                 baseTableName="itxaccounttinfo"
+                                 constraintName="fk_itxaccounttinfo_typeid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxaccounttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="srcsyscode_id"
+                                 baseTableName="itxaccounttinfo"
+                                 constraintName="fk_itxaccounttinfo_srcsyscode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsystem"/>
+
+        <addForeignKeyConstraint baseColumnNames="ownercustid_id"
+                                 baseTableName="itxaccounttinfo"
+                                 constraintName="fk_itxaccounttinfo_ownercustid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxcustinfo"/>
+
+    </changeSet>
+</databaseChangeLog>

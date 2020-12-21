@@ -1,0 +1,26 @@
+{
+  "sampleHrApp": {
+    "afformdatafilter": {
+      "home": {
+        "title": "Afformdatafilters",
+        "createLabel": "Create a new Afformdatafilter",
+        "createOrEditLabel": "Create or edit a Afformdatafilter",
+        "notFound": "No Afformdatafilters found"
+      },
+      "created": "A new Afformdatafilter is created with identifier {{ param }}",
+      "updated": "A Afformdatafilter is updated with identifier {{ param }}",
+      "deleted": "A Afformdatafilter is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afformdatafilter {{ id }}?"
+      },
+      "detail": {
+        "title": "Afformdatafilter"
+      },
+      "afsid": "Afsid",
+      "affid": "Affid",
+      "approlecode": "Approlecode",
+      "appformcode": "Appformcode",
+      "appdatafiltercode": "Appdatafiltercode"
+    }
+  }
+}

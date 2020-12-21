@@ -23,6 +23,6 @@
         "remoteAddress": "Uzak Adres:"
       }
     },
-    "notFound": "No audit found"
+    "notFound": "Denetim bulunamadı"
   }
 }

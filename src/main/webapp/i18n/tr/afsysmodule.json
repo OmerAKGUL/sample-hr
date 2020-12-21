@@ -1,0 +1,25 @@
+{
+  "sampleHrApp": {
+    "afsysmodule": {
+      "home": {
+        "title": "Afsysmodules",
+        "createLabel": "Create a new Afsysmodule",
+        "createOrEditLabel": "Create or edit a Afsysmodule",
+        "notFound": "No Afsysmodules found"
+      },
+      "created": "A new Afsysmodule is created with identifier {{ param }}",
+      "updated": "A Afsysmodule is updated with identifier {{ param }}",
+      "deleted": "A Afsysmodule is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afsysmodule {{ id }}?"
+      },
+      "detail": {
+        "title": "Afsysmodule"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "appsyscode": "Appsyscode"
+    }
+  }
+}

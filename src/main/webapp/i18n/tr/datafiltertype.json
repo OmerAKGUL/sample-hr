@@ -1,0 +1,9 @@
+{
+  "sampleHrApp": {
+    "Datafiltertype": {
+      "null": "",
+      "VIEW": "VIEW",
+      "SQLSELECT": "SQLSELECT"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "sampleHrApp": {
+    "afform": {
+      "home": {
+        "title": "Afforms",
+        "createLabel": "Create a new Afform",
+        "createOrEditLabel": "Create or edit a Afform",
+        "notFound": "No Afforms found"
+      },
+      "created": "A new Afform is created with identifier {{ param }}",
+      "updated": "A Afform is updated with identifier {{ param }}",
+      "deleted": "A Afform is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afform {{ id }}?"
+      },
+      "detail": {
+        "title": "Afform"
+      },
+      "title": "Title",
+      "descr": "Descr",
+      "apprefclsid": "Apprefclsid",
+      "apprefformid": "Apprefformid",
+      "appreflinkurl": "Appreflinkurl",
+      "code": "Code"
+    }
+  }
+}

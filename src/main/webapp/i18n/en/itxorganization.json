@@ -1,0 +1,32 @@
+{
+  "sampleHrApp": {
+    "itxorganization": {
+      "home": {
+        "title": "Itxorganizations",
+        "createLabel": "Create a new Itxorganization",
+        "createOrEditLabel": "Create or edit a Itxorganization",
+        "notFound": "No Itxorganizations found"
+      },
+      "created": "A new Itxorganization is created with identifier {{ param }}",
+      "updated": "A Itxorganization is updated with identifier {{ param }}",
+      "deleted": "A Itxorganization is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxorganization {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxorganization"
+      },
+      "commtitle": "Commtitle",
+      "localcommtitle": "Localcommtitle",
+      "sector": "Sector",
+      "segment": "Segment",
+      "traderegno": "Traderegno",
+      "hqaddress": "Hqaddress",
+      "enterprisetype": "Enterprisetype",
+      "registerdate": "Registerdate",
+      "swiftcode": "Swiftcode",
+      "wwwaddr": "Wwwaddr",
+      "regcountry": "Regcountry"
+    }
+  }
+}

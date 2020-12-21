@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Itxtxnqueue.
+    -->
+    <changeSet id="20201106122853-1" author="jhipster">
+        <createTable tableName="itxtxnqueue">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="etljobstart" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="etljobsessiond" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="createdt" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="updatedt" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="createusr" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="updateusr" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="wfstate" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="wfprocid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="scsyscustid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scmidname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scsurname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scbirthdate" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="sccommtitle" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scaddresstype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scaddress" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sccity" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scnationality" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scnationalid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scidtype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scidno" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scgender" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="saorgid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="saorgname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sasyscode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sabranchcode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="saname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcsyscustid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcmidname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcsurname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcbirthdate" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="rccommtitle" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcaddresstype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcaddress" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rccity" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcnationality" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcnationalid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcidtype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcidno" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rcgender" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="raorgid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="raorgname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rasyscode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rabranchcode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="raname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnchanneltype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnsysid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnprodtype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnprodname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnamount" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="txndescr" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnentitiesupd" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnagentorgid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnagentbrachid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnagenttype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnagentaccid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnorderdate" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="txnvaluedate" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="rctype_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="ratype_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="satype_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="sctype_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="txntypeid_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="txncurrency_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="etljobtype_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="itxtxnqueue" columnName="etljobstart" columnDataType="datetime"/>
+        <dropDefaultValue tableName="itxtxnqueue" columnName="createdt" columnDataType="datetime"/>
+        <dropDefaultValue tableName="itxtxnqueue" columnName="updatedt" columnDataType="datetime"/>
+        <dropDefaultValue tableName="itxtxnqueue" columnName="txnorderdate" columnDataType="datetime"/>
+        <dropDefaultValue tableName="itxtxnqueue" columnName="txnvaluedate" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20201106122853-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20201106122853-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/itxtxnqueue.csv"
+                  separator=";"
+                  tableName="itxtxnqueue">
+            <column name="id" type="numeric"/>
+            <column name="etljobstart" type="datetime"/>
+            <column name="etljobsessiond" type="string"/>
+            <column name="createdt" type="datetime"/>
+            <column name="updatedt" type="datetime"/>
+            <column name="createusr" type="numeric"/>
+            <column name="updateusr" type="numeric"/>
+            <column name="wfstate" type="string"/>
+            <column name="wfprocid" type="numeric"/>
+            <column name="scsyscustid" type="string"/>
+            <column name="scname" type="string"/>
+            <column name="scmidname" type="string"/>
+            <column name="scsurname" type="string"/>
+            <column name="scbirthdate" type="date"/>
+            <column name="sccommtitle" type="string"/>
+            <column name="scaddresstype" type="string"/>
+            <column name="scaddress" type="string"/>
+            <column name="sccity" type="string"/>
+            <column name="scnationality" type="string"/>
+            <column name="scnationalid" type="string"/>
+            <column name="scidtype" type="string"/>
+            <column name="scidno" type="string"/>
+            <column name="scgender" type="string"/>
+            <column name="saorgid" type="numeric"/>
+            <column name="saorgname" type="string"/>
+            <column name="sasyscode" type="string"/>
+            <column name="sabranchcode" type="string"/>
+            <column name="saname" type="string"/>
+            <column name="rcsyscustid" type="string"/>
+            <column name="rcname" type="string"/>
+            <column name="rcmidname" type="string"/>
+            <column name="rcsurname" type="string"/>
+            <column name="rcbirthdate" type="date"/>
+            <column name="rccommtitle" type="string"/>
+            <column name="rcaddresstype" type="string"/>
+            <column name="rcaddress" type="string"/>
+            <column name="rccity" type="string"/>
+            <column name="rcnationality" type="string"/>
+            <column name="rcnationalid" type="string"/>
+            <column name="rcidtype" type="string"/>
+            <column name="rcidno" type="string"/>
+            <column name="rcgender" type="string"/>
+            <column name="raorgid" type="numeric"/>
+            <column name="raorgname" type="string"/>
+            <column name="rasyscode" type="string"/>
+            <column name="rabranchcode" type="string"/>
+            <column name="raname" type="string"/>
+            <column name="txnchanneltype" type="string"/>
+            <column name="txnsysid" type="string"/>
+            <column name="txnprodtype" type="string"/>
+            <column name="txnprodname" type="string"/>
+            <column name="txnamount" type="numeric"/>
+            <column name="txndescr" type="string"/>
+            <column name="txnentitiesupd" type="string"/>
+            <column name="txnagentorgid" type="numeric"/>
+            <column name="txnagentbrachid" type="string"/>
+            <column name="txnagenttype" type="string"/>
+            <column name="txnagentaccid" type="string"/>
+            <column name="txnorderdate" type="datetime"/>
+            <column name="txnvaluedate" type="datetime"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

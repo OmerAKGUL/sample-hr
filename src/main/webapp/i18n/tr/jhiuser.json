@@ -1,0 +1,34 @@
+{
+  "sampleHrApp": {
+    "jhiuser": {
+      "home": {
+        "title": "Jhiusers",
+        "createLabel": "Create a new Jhiuser",
+        "createOrEditLabel": "Create or edit a Jhiuser",
+        "notFound": "No Jhiusers found"
+      },
+      "created": "A new Jhiuser is created with identifier {{ param }}",
+      "updated": "A Jhiuser is updated with identifier {{ param }}",
+      "deleted": "A Jhiuser is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Jhiuser {{ id }}?"
+      },
+      "detail": {
+        "title": "Jhiuser"
+      },
+      "loginname": "Loginname",
+      "passwordhash": "Passwordhash",
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "imageurl": "Imageurl",
+      "langkey": "Langkey",
+      "activationkey": "Activationkey",
+      "resetkey": "Resetkey",
+      "createdby": "Createdby",
+      "createddate": "Createddate",
+      "resetdate": "Resetdate",
+      "lastmodifiedby": "Lastmodifiedby",
+      "lastmodifieddate": "Lastmodifieddate"
+    }
+  }
+}

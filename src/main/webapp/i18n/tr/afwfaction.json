@@ -1,0 +1,37 @@
+{
+  "sampleHrApp": {
+    "afwfaction": {
+      "home": {
+        "title": "Afwfactions",
+        "createLabel": "Create a new Afwfaction",
+        "createOrEditLabel": "Create or edit a Afwfaction",
+        "notFound": "No Afwfactions found"
+      },
+      "created": "A new Afwfaction is created with identifier {{ param }}",
+      "updated": "A Afwfaction is updated with identifier {{ param }}",
+      "deleted": "A Afwfaction is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afwfaction {{ id }}?"
+      },
+      "detail": {
+        "title": "Afwfaction"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "apprefhandler": "Apprefhandler",
+      "afsid": "Afsid",
+      "afmid": "Afmid",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "appmenucode": "Appmenucode",
+      "appformcode": "Appformcode",
+      "appmodulecode": "Appmodulecode",
+      "wfcode": "Wfcode"
+    }
+  }
+}

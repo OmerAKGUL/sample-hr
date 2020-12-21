@@ -1,0 +1,65 @@
+{
+  "name": "Afsauthorization",
+  "fields": [
+    {
+      "fieldName": "authtype",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "afsid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "afsid2",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "afwid",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsrole",
+      "otherEntityRelationshipName": "afsauthorization",
+      "relationshipName": "rolecode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afwfaction",
+      "otherEntityRelationshipName": "afsauthorization",
+      "relationshipName": "acccode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsysmodule",
+      "otherEntityRelationshipName": "afsauthorization",
+      "relationshipName": "modulecode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afmenuitem",
+      "otherEntityRelationshipName": "afsauthorization",
+      "relationshipName": "menuitemcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106120553",
+  "entityTableName": "afsauthorization",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

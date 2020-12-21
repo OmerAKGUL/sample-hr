@@ -1,0 +1,23 @@
+{
+  "sampleHrApp": {
+    "itxaccounttype": {
+      "home": {
+        "title": "Itxaccounttypes",
+        "createLabel": "Create a new Itxaccounttype",
+        "createOrEditLabel": "Create or edit a Itxaccounttype",
+        "notFound": "No Itxaccounttypes found"
+      },
+      "created": "A new Itxaccounttype is created with identifier {{ param }}",
+      "updated": "A Itxaccounttype is updated with identifier {{ param }}",
+      "deleted": "A Itxaccounttype is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxaccounttype {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxaccounttype"
+      },
+      "name": "Name",
+      "descr": "Descr"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+import { createStore, applyMiddleware, compose } from 'redux';
+import promiseMiddleware from 'redux-promise-middleware';
+import thunkMiddleware from 'redux-thunk';
+import reducer, { IRootState } from 'app/shared/reducers';
+import DevTools from './devtools';
+import errorMiddleware from './error-middleware';
+import notificationMiddleware from './notification-middleware';
+import loggerMiddleware from './logger-middleware';
+import { loadingBarMiddleware } from 'react-redux-loading-bar';
+
+// define middlewares hooked into redux state management
+const defaultMiddlewares = [
+  thunkMiddleware,
+  errorMiddleware,
+  notificationMiddleware,
+  promiseMiddleware,
+  loadingBarMiddleware(),
+  loggerMiddleware,
+];
+
+// define composition of middlewares: for development environment adding some devtools provided.
+const ENV = "development"// process.env.NODE_ENV;
+
+const composedMiddlewares = middlewares =>
+   ENV === 'development'
+    ? compose(applyMiddleware(...defaultMiddlewares, ...middlewares), DevTools.instrument())
+    : compose(applyMiddleware(...defaultMiddlewares, ...middlewares));
+
+// define & export redux store initializer, using arguments:
+// 1) initialState: initial store state defined
+// 2) reducer: initial reducer acting on the total store scale
+// 3) composed middlewares used as one big hook
+const initialize = (initialState?: IRootState, middlewares = []) => createStore(reducer, initialState, composedMiddlewares(middlewares));
+export default initialize;

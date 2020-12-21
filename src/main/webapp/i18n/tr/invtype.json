@@ -1,0 +1,10 @@
+{
+  "sampleHrApp": {
+    "Invtype": {
+      "null": "",
+      "GENEL": "GENEL",
+      "IDARI": "IDARI",
+      "ADLI": "ADLI"
+    }
+  }
+}

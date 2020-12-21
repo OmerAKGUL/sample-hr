@@ -1,0 +1,26 @@
+{
+  "sampleHrApp": {
+    "itxorgbranch": {
+      "home": {
+        "title": "Itxorgbranches",
+        "createLabel": "Create a new Itxorgbranch",
+        "createOrEditLabel": "Create or edit a Itxorgbranch",
+        "notFound": "No Itxorgbranches found"
+      },
+      "created": "A new Itxorgbranch is created with identifier {{ param }}",
+      "updated": "A Itxorgbranch is updated with identifier {{ param }}",
+      "deleted": "A Itxorgbranch is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxorgbranch {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxorgbranch"
+      },
+      "code": "Code",
+      "name": "Name",
+      "localname": "Localname",
+      "brachtype": "Brachtype",
+      "orgid": "Orgid"
+    }
+  }
+}

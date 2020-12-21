@@ -102,7 +102,12 @@ public class RegionResource {
         Optional<Region> region = regionRepository.findById(id);
         return ResponseUtil.wrapOrNotFound(region);
     }
-
+    @GetMapping("/regions/filter/{regionname}")
+    public List<Region> getRegionFilter(@PathVariable String regionname) {
+        log.debug("REST request to get Region : {}", regionname);
+        
+        return  regionRepository.findByRegionNameContaining(regionname) ;
+    }
     /**
      * {@code DELETE  /regions/:id} : delete the "id" region.
      *

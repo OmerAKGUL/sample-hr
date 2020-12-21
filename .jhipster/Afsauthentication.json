@@ -1,0 +1,58 @@
+{
+  "name": "Afsauthentication",
+  "fields": [
+    {
+      "fieldName": "afsid",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "authtype",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "pwdhash",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "secprotocol",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appauthlink",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsrole",
+      "otherEntityRelationshipName": "afsauthentication",
+      "relationshipName": "rolecode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsysmodule",
+      "otherEntityRelationshipName": "afsauthentication",
+      "relationshipName": "modulecode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106120453",
+  "entityTableName": "afsauthentication",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

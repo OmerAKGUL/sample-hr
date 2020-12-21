@@ -1,0 +1,24 @@
+{
+  "sampleHrApp": {
+    "afmenuchild": {
+      "home": {
+        "title": "Afmenuchildren",
+        "createLabel": "Create a new Afmenuchild",
+        "createOrEditLabel": "Create or edit a Afmenuchild",
+        "notFound": "No Afmenuchildren found"
+      },
+      "created": "A new Afmenuchild is created with identifier {{ param }}",
+      "updated": "A Afmenuchild is updated with identifier {{ param }}",
+      "deleted": "A Afmenuchild is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afmenuchild {{ id }}?"
+      },
+      "detail": {
+        "title": "Afmenuchild"
+      },
+      "afmid": "Afmid",
+      "menuitemcode": "Menuitemcode",
+      "childcode": "Childcode"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Afetljobtype.
+    -->
+    <changeSet id="20201106115753-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="srcsyscode_id"
+                                 baseTableName="afetljobtype"
+                                 constraintName="fk_afetljobtype_srcsyscode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsystem"/>
+
+        <addForeignKeyConstraint baseColumnNames="tgtsyscode_id"
+                                 baseTableName="afetljobtype"
+                                 constraintName="fk_afetljobtype_tgtsyscode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsystem"/>
+
+        <addForeignKeyConstraint baseColumnNames="scheduleid_id"
+                                 baseTableName="afetljobtype"
+                                 constraintName="fk_afetljobtype_scheduleid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afschedule"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -95,8 +95,55 @@ Navbar styles
   }
 }
 
+.brandVeloxapp-logo {
+  &:hover {
+    text-decoration: none;
+  }
+  .brandVeloxapp-icon {
+    height: 35px;
+    width: auto;
+    display: inline-block;
+    img {
+      height: 45px;
+    }
+  }
+}
+
+.brandClient-logo {
+  &:hover {
+    text-decoration: none;
+  }
+  .brandClient-icon {
+    height: 35px;
+    width: auto;
+    display: inline-block;
+    img {
+      height: 45px;
+    }
+  }
+}
+
 .brand-title {
   font-size: 24px;
+  color: $header-color;
+  &:hover {
+    color: $header-color-hover;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+.brandVeloxapp-title {
+  font-size: 14px;
+  color: $header-color;
+  &:hover {
+    color: $header-color-hover;
+    text-decoration: none;
+  }
+}
+
+.brandClient-title {
+  font-size: 14px;
   color: $header-color;
   &:hover {
     color: $header-color-hover;

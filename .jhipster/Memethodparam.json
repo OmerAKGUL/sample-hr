@@ -1,0 +1,57 @@
+{
+  "name": "Memethodparam",
+  "fields": [
+    {
+      "fieldName": "memid",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "wlmid",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afparamval",
+      "otherEntityRelationshipName": "memethodparam",
+      "relationshipName": "paramvalcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afparamval",
+      "otherEntityRelationshipName": "memethodparam",
+      "relationshipName": "paramidxno",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "mematchmethod",
+      "otherEntityRelationshipName": "memethodparam",
+      "relationshipName": "matchmethodcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "wlmwltype",
+      "otherEntityRelationshipName": "memethodparam",
+      "relationshipName": "wltype",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106123753",
+  "entityTableName": "memethodparam",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

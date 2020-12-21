@@ -1,0 +1,55 @@
+{
+  "name": "Memtdconfig",
+  "fields": [
+    {
+      "fieldName": "memid",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "mematchmethod",
+      "otherEntityRelationshipName": "memtdconfig",
+      "relationshipName": "methodcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "meconfig",
+      "otherEntityRelationshipName": "memtdconfig",
+      "relationshipName": "configcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106123853",
+  "entityTableName": "memtdconfig",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

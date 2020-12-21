@@ -1,24 +1,41 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,createRef } from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 import { Translate, ICrudGetAllAction } from 'react-jhipster';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
+import PropTypes from "prop-types";
 import { IRootState } from 'app/shared/reducers';
-import { getEntities } from './region.reducer';
+import { getEntities ,getEntitiesFilter} from './region.reducer';
 import { IRegion } from 'app/shared/model/region.model';
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 
 export interface IRegionProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
 export const Region = (props: IRegionProps) => {
-  useEffect(() => {
-    props.getEntities();
+	
+	
+	
+	
+	
+  useEffect(() => { 
+ 
+    props.getEntities();// getEntitiesFilter('');
   }, []);
-
+ 
   const { regionList, match, loading } = props;
+   const  textInput = React.createRef();
+
+function  handlePick(){
+	
+   props.getEntities();
+ 
+  }
+ 
+
   return (
+	 
     <div>
       <h2 id="region-heading">
         <Translate contentKey="sampleHrApp.region.home.title">Regions</Translate>
@@ -27,7 +44,20 @@ export const Region = (props: IRegionProps) => {
           &nbsp;
           <Translate contentKey="sampleHrApp.region.home.createLabel">Create new Region</Translate>
         </Link>
+
+   <Link to='/department' className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
+   To Department          
+  </Link>
       </h2>
+
+ <div className="input-group flex-nowrap">
+  <div className="input-group-prepend">
+    <span className="input-group-text" id="addon-wrapping">@</span>
+  </div>
+  <input id="inpt"  onChange={handlePick} type="text" className="form-control" placeholder="Arama Alanı" aria-label="Arama Alanı" aria-describedby="addon-wrapping"/>
+
+</div>
+
       <div className="table-responsive">
         {regionList && regionList.length > 0 ? (
           <Table responsive>
@@ -44,6 +74,7 @@ export const Region = (props: IRegionProps) => {
             </thead>
             <tbody>
               {regionList.map((region, i) => (
+	
                 <tr key={`entity-${i}`}>
                   <td>
                     <Button tag={Link} to={`${match.url}/${region.id}`} color="link" size="sm">
@@ -92,10 +123,13 @@ export const Region = (props: IRegionProps) => {
 const mapStateToProps = ({ region }: IRootState) => ({
   regionList: region.entities,
   loading: region.loading,
+ 
 });
 
 const mapDispatchToProps = {
+  getEntitiesFilter,
   getEntities,
+ 
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

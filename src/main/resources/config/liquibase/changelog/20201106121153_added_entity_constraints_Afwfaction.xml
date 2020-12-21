@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Afwfaction.
+    -->
+    <changeSet id="20201106121153-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="appmenucode_id"
+                                 baseTableName="afwfaction"
+                                 constraintName="fk_afwfaction_appmenucode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afmenuitem"/>
+
+        <addForeignKeyConstraint baseColumnNames="appformcode_id"
+                                 baseTableName="afwfaction"
+                                 constraintName="fk_afwfaction_appformcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afform"/>
+
+        <addForeignKeyConstraint baseColumnNames="appmodulecode_id"
+                                 baseTableName="afwfaction"
+                                 constraintName="fk_afwfaction_appmodulecode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsysmodule"/>
+
+        <addForeignKeyConstraint baseColumnNames="wfcode_id"
+                                 baseTableName="afwfaction"
+                                 constraintName="fk_afwfaction_wfcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afworkflow"/>
+
+    </changeSet>
+</databaseChangeLog>

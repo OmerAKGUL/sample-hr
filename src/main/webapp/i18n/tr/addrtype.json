@@ -1,0 +1,11 @@
+{
+  "sampleHrApp": {
+    "Addrtype": {
+      "null": "",
+      "IKAMET": "IKAMET",
+      "IS": "IS",
+      "SIRKET": "SIRKET",
+      "DIGER": "DIGER"
+    }
+  }
+}

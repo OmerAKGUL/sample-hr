@@ -7,13 +7,13 @@
       "details": "Detaylar",
       "properties": "Ozellikler",
       "name": "Ad",
-      "value": "Deger",
+      "value": "Değer",
       "error": "Hata"
     },
     "indicator": {
       "diskSpace": "Disk alanı",
       "mail": "E-posta",
-      "ping": "Application",
+      "ping": "Uygulama",
       "db": "Veritabanı"
     },
     "table": {
@@ -21,7 +21,7 @@
       "status": "Durum"
     },
     "status": {
-      "UNKNOWN": "UNKNOWN",
+      "UNKNOWN": "BİLİNMEYEN",
       "UP": "AKTİF",
       "DOWN": "DEAKTİF"
     }

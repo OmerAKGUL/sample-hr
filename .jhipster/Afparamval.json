@@ -1,0 +1,95 @@
+{
+  "name": "Afparamval",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "idxno",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "paramtype",
+      "fieldType": "Paramtype",
+      "fieldValues": "APPFRM,DOMAINAPP,BUSINESS",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "paramgrpname",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "valuetype",
+      "fieldType": "Valtype",
+      "fieldValues": "INTEGER,STRING,DATE,DATETIME,TIME,BOOLEAN"
+    },
+    {
+      "fieldName": "valueformat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valueunit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ownersys",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201106120353",
+  "entityTableName": "afparamval",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

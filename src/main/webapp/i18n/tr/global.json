@@ -4,7 +4,9 @@
     "browsehappy": "<strong>Çok eski</strong> bir tarayıcı kullanıyorsunuz. Lütfen kullanım kalitenizi arttırmak için <a href=\"http://browsehappy.com/?locale=tr\">tarayıcınızı yükseltin</a>.",
     "menu": {
       "home": "Ana Sayfa",
-      "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+      "module": "Modüller",
+      "modules": "Modüller",
+      "jhipster-needle-menu-add-element": "Additional menu entries will be added here (do not translate!)",
       "entities": {
         "main": "Varlıklar",
         "region": "Region",
@@ -15,6 +17,54 @@
         "employee": "Employee",
         "job": "Job",
         "jobHistory": "Job History",
+        "wlmwltype": "Wlmwltype",
+        "wlmwldata": "Wlmwldata",
+        "afdatafilter": "Afdatafilter",
+        "afetljobtype": "Afetljobtype",
+        "afform": "Afform",
+        "afformdatafilter": "Afformdatafilter",
+        "afmenuchild": "Afmenuchild",
+        "afmenuitem": "Afmenuitem",
+        "afmsg": "Afmsg",
+        "afparamval": "Afparamval",
+        "afsauthentication": "Afsauthentication",
+        "afsauthorization": "Afsauthorization",
+        "afsrole": "Afsrole",
+        "afsroleuser": "Afsroleuser",
+        "afschedule": "Afschedule",
+        "afsysmodule": "Afsysmodule",
+        "afsystem": "Afsystem",
+        "afwfaction": "Afwfaction",
+        "afwfstate": "Afwfstate",
+        "afwprocaction": "Afwprocaction",
+        "afwprocess": "Afwprocess",
+        "afworkflow": "Afworkflow",
+        "itxaccounttype": "Itxaccounttype",
+        "itxaccounttinfo": "Itxaccounttinfo",
+        "itxcity": "Itxcity",
+        "itxcountry": "Itxcountry",
+        "itxcurrency": "Itxcurrency",
+        "itxcustaddress": "Itxcustaddress",
+        "itxcustadressinfo": "Itxcustadressinfo",
+        "itxcustinfo": "Itxcustinfo",
+        "itxcusttype": "Itxcusttype",
+        "itxdictionary": "Itxdictionary",
+        "itxorgbranch": "Itxorgbranch",
+        "itxorganization": "Itxorganization",
+        "itxtxnqueue": "Itxtxnqueue",
+        "itxtxntype": "Itxtxntype",
+        "iwlimportqueue": "Iwlimportqueue",
+        "meconfig": "Meconfig",
+        "meinvestproc": "Meinvestproc",
+        "meinvestprofile": "Meinvestprofile",
+        "mematchmethod": "Mematchmethod",
+        "mematchresult": "Mematchresult",
+        "mematchresultctx": "Mematchresultctx",
+        "memethodparam": "Memethodparam",
+        "memtdconfig": "Memtdconfig",
+        "memtdwlcriteria": "Memtdwlcriteria",
+        "wlmwldatalog": "Wlmwldatalog",
+        "jhiuser": "Jhiuser",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -30,14 +80,14 @@
         "main": "Yönetim",
         "userManagement": "Kullanıcı yönetimi",
         "tracker": "Kullanıcı Takip",
-        "metrics": "Ölçümler",
+        "metrics": "Öçümler",
         "health": "Sağlık",
         "configuration": "Yapılandırma",
         "logs": "Kayıtlar",
         "audits": "Denetim",
         "apidocs": "API",
         "database": "Veritabanı",
-        "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+        "jhipster-needle-menu-add-admin-element": "Additional menu entries will be added here (do not translate!)"
       },
       "language": "Dil"
     },
@@ -98,7 +148,7 @@
   },
   "entity": {
     "action": {
-      "addblob": "Add blob",
+      "addblob": "BLOB ekle",
       "addimage": "Resim Ekle",
       "back": "Geri",
       "cancel": "İptal",
@@ -106,7 +156,10 @@
       "edit": "Düzenle",
       "open": "Aç",
       "save": "Kaydet",
-      "view": "Görüntüle"
+      "view": "Görüntüle",
+      "start": "Başlat",
+      "stop": "Durdur",
+      "yes": "Evet"
     },
     "detail": {
       "field": "Alan",
@@ -114,6 +167,12 @@
     },
     "delete": {
       "title": "Silme işlemini onayla"
+    },
+    "stop": {
+      "title": "Durdurma işlemini onayla"
+    },
+    "start": {
+      "title": "Başlatma işlemini onayla"
     },
     "validation": {
       "required": "Bu alan gerekli.",
@@ -138,10 +197,10 @@
     "userexists": "Kullanıcı adı daha önce alınmış!",
     "emailexists": "E-posta adresi zaten kullanılıyor!",
     "idexists": "A new {{entityName}} cannot already have an ID",
-    "idnull": "Invalid ID",
+    "idnull": "Geçersiz ID",
     "file": {
-      "could.not.extract": "Could not extract file",
-      "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
+      "could.not.extract": "Dosya ayıklanamadı",
+      "not.image": "Resim dosyası bekleniyordu fakat bulunan dosya tipi \"{{ fileType }}\""
     }
   },
   "footer": "Burası sayfa alt bilgisi"

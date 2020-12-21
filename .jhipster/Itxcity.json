@@ -1,0 +1,40 @@
+{
+  "name": "Itxcity",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "localname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phonecode",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcountry",
+      "otherEntityRelationshipName": "itxcity",
+      "relationshipName": "countryisocode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106121853",
+  "entityTableName": "itxcity",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

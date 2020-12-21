@@ -1,0 +1,31 @@
+{
+  "sampleHrApp": {
+    "afwprocess": {
+      "home": {
+        "title": "Afwprocesses",
+        "createLabel": "Create a new Afwprocess",
+        "createOrEditLabel": "Create or edit a Afwprocess",
+        "notFound": "No Afwprocesses found"
+      },
+      "created": "A new Afwprocess is created with identifier {{ param }}",
+      "updated": "A Afwprocess is updated with identifier {{ param }}",
+      "deleted": "A Afwprocess is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afwprocess {{ id }}?"
+      },
+      "detail": {
+        "title": "Afwprocess"
+      },
+      "entity": "Entity",
+      "apprefmngfrm": "Apprefmngfrm",
+      "apprefmngdomain": "Apprefmngdomain",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "wfcode": "Wfcode"
+    }
+  }
+}

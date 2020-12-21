@@ -5,10 +5,10 @@
       "400": "Bad request.",
       "403": "Bu sayfaya erişmeye yetkiniz yok.",
       "404": "Sayfa mevcut değil.",
-      "405": "The HTTP verb you used is not supported for this URL.",
+      "405": "Kullanılan HTTP terimi bu URL'de desteklenmiyor.",
       "500": "Internal server error."
     },
-    "concurrencyFailure": "Another user modified this data at the same time as you. Your changes were rejected.",
-    "validation": "Validation error on the server."
+    "concurrencyFailure": "Bu veri aynı anda baika bir kullanıcı tarafından değiştirilmiş. Sizin değişiklikleriniz reddedildi.",
+    "validation": "Sunucuda validasyon hatası."
   }
 }

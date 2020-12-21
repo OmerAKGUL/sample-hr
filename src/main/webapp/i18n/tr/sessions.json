@@ -9,7 +9,7 @@
     },
     "messages": {
       "success": "<strong>Oturum etkisizleştirildi!</strong>",
-      "error": "<strong>Bİr hata oluştu!</strong> Oturum etkisizleştirilemedi."
+      "error": "<strong>Bir hata oluştu!</strong> Oturum etkisizleştirilemedi."
     }
   }
 }

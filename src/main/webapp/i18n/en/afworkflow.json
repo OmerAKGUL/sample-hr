@@ -1,0 +1,32 @@
+{
+  "sampleHrApp": {
+    "afworkflow": {
+      "home": {
+        "title": "Afworkflows",
+        "createLabel": "Create a new Afworkflow",
+        "createOrEditLabel": "Create or edit a Afworkflow",
+        "notFound": "No Afworkflows found"
+      },
+      "created": "A new Afworkflow is created with identifier {{ param }}",
+      "updated": "A Afworkflow is updated with identifier {{ param }}",
+      "deleted": "A Afworkflow is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afworkflow {{ id }}?"
+      },
+      "detail": {
+        "title": "Afworkflow"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "apprefmngfrm": "Apprefmngfrm",
+      "apprefmngdomain": "Apprefmngdomain",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "sampleHrApp": {
+    "afsystem": {
+      "home": {
+        "title": "Afsystems",
+        "createLabel": "Create a new Afsystem",
+        "createOrEditLabel": "Create or edit a Afsystem",
+        "notFound": "No Afsystems found"
+      },
+      "created": "A new Afsystem is created with identifier {{ param }}",
+      "updated": "A Afsystem is updated with identifier {{ param }}",
+      "deleted": "A Afsystem is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afsystem {{ id }}?"
+      },
+      "detail": {
+        "title": "Afsystem"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "apprefcode": "Apprefcode",
+      "systype": "Systype",
+      "appdomaincode": "Appdomaincode",
+      "connecttype": "Connecttype",
+      "connectstr": "Connectstr"
+    }
+  }
+}

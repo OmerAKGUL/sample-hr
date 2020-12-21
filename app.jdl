@@ -1,0 +1,950 @@
+enum Addrtype {
+IKAMET,
+IS,
+SIRKET,
+DIGER
+}
+
+enum Datafiltertype {
+VIEW,
+SQLSELECT
+}
+
+enum Idtype {
+NUFUSCUZDAN,
+EHLIYET,
+PASAPORT,
+DOGUMSERT,
+GOCMENSERT,
+DIGER
+}
+
+enum Invtype {
+GENEL,
+IDARI,
+ADLI
+}
+
+enum Linktype {
+INTACTION,
+EXTACTION,
+INTREPORT,
+EXTREPORT,
+INTWEBLINK,
+EXTWEBLINK
+}
+
+enum Paramcateg {
+BUSINESS,
+APPLICATION,
+ALGORITHM,
+SQL
+}
+
+enum Paramtype {
+APPFRM,
+DOMAINAPP,
+BUSINESS
+}
+
+enum Periodunit {
+MILLISEC,
+SECOND,
+MINUTE,
+HOUR,
+DAY,
+MONTH,
+YEAR
+}
+
+enum Prodtype {
+YATIRIM,
+DEGERLIMADEN,
+YATIRIMFONU,
+SGMK,
+HISSESENEDI,
+BIREYSELKREDI,
+TICARIKREDI,
+KREDIKARTI,
+POSTACEKI,
+HGS,
+FATURA,
+VADELIMEVDUAT,
+VADESIZMEVDUAT,
+WESTERNUNION
+}
+
+enum Systype {
+INTERNAL,
+EXTERNAL
+}
+
+enum Valtype {
+INTEGER,
+STRING,
+DATE,
+DATETIME,
+TIME,
+BOOLEAN
+}
+
+
+
+entity Afdatafilter 
+{
+
+ code String required,
+ name String required,
+ descr String,
+ appscript String required,
+ type Datafiltertype 
+}
+
+entity Afetljobtype 
+{
+ 
+ jobname String required,
+ apprefid String,
+ srcdataprofile String,
+ tgtdataprofile String,
+ afsid Long,
+ srclocurl String,
+ tgtlocurl String,
+ srcconntype String,
+ tgtconntype String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Afform 
+{
+ 
+ title String required,
+ descr String,
+ apprefclsid String,
+ apprefformid String required,
+ appreflinkurl String 
+}
+
+entity Afformdatafilter 
+{
+ 
+ afsid Long,
+ affid Long
+}
+
+entity Afmenuchild 
+{
+ 
+ afmid Long 
+}
+
+entity Afmenuitem 
+{
+ 
+ code String required,
+ afsid Long,
+ name String required,
+ title String,
+ descr String,
+ linktype Linktype,
+ appreflinkurl String
+}
+
+entity Afmsg 
+{
+ 
+ appmsgtype String,
+ apprefctxinfo String,
+ appmsgcode String,
+ langisocode String required,
+ appmsgtxt String,
+ msgseverity Integer 
+}
+
+entity Afparamval 
+{
+
+ code String required,
+ idxno Integer required,
+ paramtype Paramtype required,
+ paramgrpname String required,
+ valuetype Valtype,
+ valueformat String,
+ valueunit String,
+ value String,
+ descr String,
+ ownersys String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Afsauthentication 
+{
+ 
+ afsid Long required,
+ authtype String required,
+ pwdhash String,
+ secprotocol String,
+ appauthlink String 
+}
+
+entity Afsauthorization 
+{
+ 
+ authtype String required,
+ afsid Long,
+ afsid2 Long,
+ afwid Long
+}
+
+entity Afsrole 
+{
+
+ code String required,
+ name String required,
+ descr String 
+}
+
+entity Afsroleuser 
+{
+ 
+}
+
+entity Afschedule 
+{
+
+ name String required,
+ descr String,
+ dtvalidfrom Instant,
+ dtvaliduntil Instant,
+ periodunit Periodunit,
+ period Integer,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+entity Afsysmodule 
+{
+ 
+ code String required,
+ name String required,
+ descr String
+}
+
+entity Afsystem 
+{
+
+ code String required,
+ name String required,
+ descr String,
+ apprefcode String,
+ systype Systype,
+ appdomaincode String,
+ connecttype String,
+ connectstr String 
+}
+
+entity Afwfaction 
+{
+ 
+ code String required,
+ name String required,
+ descr String,
+ apprefhandler String,
+ afsid Long
+ afmid Long,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Afwfstate 
+{
+
+ code String required,
+ name String required,
+ descr String,
+ apprefhandlerfrm String,
+ apprefhandlerdom String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Afwprocaction 
+{
+ 
+ actionnote String,
+ scheduleddt Instant,
+ starteddt Instant,
+ finisheddt Instant,
+ refdoc1url String,
+ refdoc2url String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Afwprocess 
+{
+
+ entity String required,
+ apprefmngfrm String,
+ apprefmngdomain String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Afworkflow 
+{
+
+ code String required,
+ name String required,
+ descr String,
+ apprefmngfrm String,
+ apprefmngdomain String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Itxaccounttype 
+{
+
+ name String,
+ descr String 
+}
+
+entity Itxaccounttinfo 
+{
+ 
+ srcsysacccode String 
+}
+
+entity Itxcity 
+{
+
+ name String required,
+ localname String,
+ phonecode String 
+}
+
+entity Itxcountry 
+{
+
+ isocode String required,
+ name String,
+ localname String,
+ isocode2 String,
+ numcode Integer 
+}
+
+entity Itxcurrency 
+{
+
+ isocode String required,
+ name String,
+ localname String 
+}
+
+entity Itxcustaddress 
+{
+
+}
+
+entity Itxcustadressinfo 
+{
+
+ addrtype Addrtype,
+ addresstxt String,
+ addrline1 String,
+ addrline2 String,
+ postcode String,
+ street1 String,
+ street2 String,
+ street3 String,
+ town String,
+ county String,
+ city String 
+}
+entity Itxcustinfo 
+{
+ 
+ srcsyscustid String,
+ itxid Long,
+ name String,
+ midname String,
+ surname String,
+ birthdate LocalDate,
+ commtitle String,
+ addresstype String,
+ address String,
+ city String,
+ nationality String,
+ nationalid String,
+ gender String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer,
+ idtype1 Idtype,
+ idno1 String,
+ idtype2 Idtype,
+ idno2 String,
+ idtype3 Idtype,
+ idno3 String 
+}
+
+entity Itxcusttype 
+{
+
+ name String,
+ descr String 
+}
+entity Itxdictionary 
+{
+
+ termname String required,
+ type String required
+}
+
+entity Itxorgbranch 
+{
+ 
+ code String required,
+ name String,
+ localname String,
+ brachtype String 
+}
+entity Itxorganization 
+{
+ 
+ commtitle String required,
+ localcommtitle String required,
+ sector String,
+ segment String,
+ traderegno String,
+ hqaddress String,
+ enterprisetype String,
+ registerdate Instant,
+ swiftcode String,
+ wwwaddr String 
+}
+
+entity Itxtxnqueue 
+{
+
+ etljobstart Instant,
+ etljobsessiond String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer,
+ scsyscustid String,
+ scname String,
+ scmidname String,
+ scsurname String,
+ scbirthdate LocalDate,
+ sccommtitle String,
+ scaddresstype Addrtype,
+ scaddress String,
+ sccity String,
+ scnationality String,
+ scnationalid String,
+ scidtype Idtype,
+ scidno String,
+ scgender String,
+ saorgid Integer,
+ saorgname String,
+ sasyscode String,
+ sabranchcode String,
+ saname String,
+ rcsyscustid String,
+ rcname String,
+ rcmidname String,
+ rcsurname String,
+ rcbirthdate LocalDate,
+ rccommtitle String,
+ rcaddresstype Addrtype,
+ rcaddress String,
+ rccity String,
+ rcnationality String,
+ rcnationalid String,
+ rcidtype Idtype,
+ rcidno String,
+ rcgender String,
+ raorgid Integer,
+ raorgname String,
+ rasyscode String,
+ rabranchcode String,
+ raname String,
+ txnchanneltype String,
+ txnsysid String,
+ txnprodtype Prodtype,
+ txnprodname String,
+ txnamount Double,
+ txndescr String,
+ txnentitiesupd String,
+ txnagentorgid Integer,
+ txnagentbrachid String,
+ txnagenttype String,
+ txnagentaccid String,
+ txnorderdate Instant,
+ txnvaluedate Instant 
+}
+
+
+entity Itxtxntype 
+{
+
+ name String,
+ descr String 
+}
+
+entity Iwlimportqueue 
+{
+
+ etljobstart Instant,
+ etljobsessiond String,
+ srcfileurl String,
+ tgtfileurl String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Meconfig 
+{
+
+ code String required,
+ name String required,
+ descr String required,
+ wlfieldlist String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Meinvestproc 
+{
+
+ descr String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String
+}
+
+entity Meinvestprofile 
+{
+ 
+ name String,
+ wlmid Long,
+ afsid Long,
+ invtype Invtype,
+ processdescr String,
+ notifgrp1emailaddr String,
+ notifgrp2emailaddr String,
+ notifmsgtempl String 
+}
+
+entity Mematchmethod 
+{
+
+ code String required,
+ name String,
+ descr String,
+ applyonwlfields String 
+}
+
+
+entity Mematchresult 
+{
+ 
+ matchid Integer required,
+ matchctxid Integer,
+ matchwltype String,
+ matchtxnid Double,
+ matchscore Double,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer 
+}
+
+entity Mematchresultctx 
+{
+ 
+ memid Long required,
+ matchtime Instant required,
+ matchmtdmsg String,
+ matchctxdata String 
+}
+
+entity Memethodparam 
+{
+ 
+ memid Long required,
+ wlmid Long
+}
+
+entity Memtdconfig 
+{
+ 
+ memid Long required,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer 
+}
+
+entity Memtdwlcriteria 
+{
+ 
+ wlmid Long required,
+ name String required,
+ applyonwlfields String 
+}
+
+entity Wlmwldata 
+{
+ 
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer,
+ namedata String,
+ addressdata String,
+ citydata String,
+ countrydata String,
+ birthdatedata LocalDate,
+ tinnumberdata String 
+}
+
+entity Wlmwltype 
+{
+
+ code String required,
+ name String required,
+ descr String,
+ publishercat String,
+ publisherorgid Integer,
+ publishername String,
+ publishformat String,
+ filteringtype String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid String 
+}
+
+entity Wlmwldatalog 
+{
+ 
+ dtchanged Instant required,
+ changeusr Integer,
+ wltype String,
+ createdt Instant,
+ updatedt Instant,
+ createusr Integer,
+ updateusr Integer,
+ wfstate String,
+ wfprocid Integer,
+ namedata String,
+ addressdata String,
+ citydata String,
+ countrydata String,
+ birthdatedata LocalDate,
+ tinnumberdata String 
+}
+
+entity Jhiuser 
+{
+
+ loginname String,
+ passwordhash String,
+ firstname String,
+ lastname String,
+ imageurl String,
+ langkey String,
+ activationkey String,
+ resetkey String,
+ createdby String,
+ createddate Instant,
+ resetdate Instant,
+ lastmodifiedby String,
+ lastmodifieddate Instant 
+}
+
+
+relationship ManyToOne
+ { Afetljobtype { srcsyscode } to Afsystem}
+
+relationship ManyToOne
+ { Afetljobtype { tgtsyscode } to Afsystem}
+
+relationship ManyToOne
+ { Afetljobtype { scheduleid } to Afschedule}
+
+relationship ManyToOne
+ { Afform { code } to Afsysmodule}
+
+relationship ManyToOne
+ { Afformdatafilter { approlecode } to Afsrole}
+
+relationship ManyToOne
+ { Afformdatafilter { appformcode } to Afform}
+
+relationship ManyToOne
+ { Afformdatafilter { appdatafiltercode } to Afdatafilter}
+
+relationship ManyToOne
+ { Afmenuchild { menuitemcode } to Afmenuitem}
+
+relationship ManyToOne
+ { Afmenuchild { childcode } to Afmenuitem}
+
+relationship ManyToOne
+ { Afmenuitem { modulecode } to Afsysmodule}
+
+relationship ManyToOne
+ { Afmenuitem { apprefformcode } to Afform}
+
+relationship ManyToOne
+ { Afmsg { appsyscode } to Afsystem}
+
+relationship ManyToOne
+ { Afsauthentication { rolecode } to Afsrole}
+
+relationship ManyToOne
+ { Afsauthentication { modulecode } to Afsysmodule}
+
+relationship ManyToOne
+ { Afsauthorization { rolecode } to Afsrole}
+
+relationship ManyToOne
+ { Afsauthorization { acccode } to Afwfaction}
+
+relationship ManyToOne
+ { Afsauthorization { modulecode } to Afsysmodule}
+
+relationship ManyToOne
+ { Afsauthorization { menuitemcode } to Afmenuitem}
+
+relationship ManyToOne
+ { Afsroleuser { usrid } to Jhiuser}
+
+relationship ManyToOne
+ { Afsroleuser { rolecode } to Afsrole}
+
+relationship ManyToOne
+ { Afsysmodule { appsyscode } to Afsystem}
+
+relationship ManyToOne
+ { Afwfaction { appmenucode } to Afmenuitem}
+
+relationship ManyToOne
+ { Afwfaction { appformcode } to Afform}
+
+relationship ManyToOne
+ { Afwfaction { appmodulecode } to Afsysmodule}
+
+relationship ManyToOne
+ { Afwfaction { wfcode } to Afworkflow}
+
+relationship ManyToOne
+ { Afwfstate { wfcode } to Afworkflow}
+
+relationship ManyToOne
+ { Afwprocaction { procid } to Afwprocess}
+
+relationship ManyToOne
+ { Afwprocaction { actioncode } to Afwfaction}
+
+relationship ManyToOne
+ { Afwprocess { wfcode } to Afworkflow}
+
+relationship ManyToOne
+ { Itxaccounttinfo { typeid } to Itxaccounttype}
+
+relationship ManyToOne
+ { Itxaccounttinfo { srcsyscode } to Afsystem}
+
+relationship ManyToOne
+ { Itxaccounttinfo { ownercustid } to Itxcustinfo}
+
+relationship ManyToOne
+ { Itxcity { countryisocode } to Itxcountry}
+
+relationship ManyToOne
+ { Itxcustaddress { custid } to Itxcustinfo}
+
+relationship ManyToOne
+ { Itxcustaddress { addrid } to Itxcustadressinfo}
+
+relationship ManyToOne
+ { Itxcustadressinfo { country } to Itxcountry}
+
+relationship ManyToOne
+ { Itxcustinfo { custorgid } to Itxorganization}
+
+relationship ManyToOne
+ { Itxcustinfo { custtype } to Itxcusttype}
+
+relationship ManyToOne
+ { Itxcustinfo { srcsyscode } to Afsystem}
+
+relationship ManyToOne
+ { Itxcustinfo { custorgbrachid } to Itxorgbranch}
+
+relationship ManyToOne
+ { Itxdictionary { countryisocode } to Itxcountry}
+
+relationship ManyToOne
+ { Itxorgbranch { orgid } to Itxorganization}
+
+relationship ManyToOne
+ { Itxorganization { regcountry } to Itxcountry}
+
+relationship ManyToOne
+ { Itxtxnqueue { rctype } to Itxcusttype}
+
+relationship ManyToOne
+ { Itxtxnqueue { ratype } to Itxaccounttype}
+
+relationship ManyToOne
+ { Itxtxnqueue { satype } to Itxaccounttype}
+
+relationship ManyToOne
+ { Itxtxnqueue { sctype } to Itxcusttype}
+
+relationship ManyToOne
+ { Itxtxnqueue { txntypeid } to Itxtxntype}
+
+relationship ManyToOne
+ { Itxtxnqueue { txncurrency } to Itxcurrency}
+
+relationship ManyToOne
+ { Itxtxnqueue { etljobtype } to Afetljobtype}
+
+relationship ManyToOne
+ { Iwlimportqueue { etljobtype } to Afetljobtype}
+
+relationship ManyToOne
+ { Meconfig { scheduleid } to Afschedule}
+
+relationship ManyToOne
+ { Meinvestproc { wfprocid } to Afwprocess}
+
+relationship ManyToOne
+ { Meinvestproc { invprofile } to Meinvestprofile}
+
+relationship ManyToOne
+ { Meinvestprofile { matchwltype } to Wlmwltype}
+
+relationship ManyToOne
+ { Meinvestprofile { matchtxntype } to Itxtxntype}
+
+relationship ManyToOne
+ { Meinvestprofile { matchtxncusttype } to Itxcusttype}
+
+relationship ManyToOne
+ { Meinvestprofile { matchtxnacctype } to Itxaccounttype}
+
+relationship ManyToOne
+ { Meinvestprofile { matchsystemcode } to Afsystem}
+
+relationship ManyToOne
+ { Meinvestprofile { invrespuserid } to Jhiuser}
+
+relationship ManyToOne
+ { Meinvestprofile { invresprole } to Afsrole}
+
+relationship ManyToOne
+ { Mematchresult { matchconfigcode } to Meconfig}
+
+relationship ManyToOne
+ { Mematchresult { invprocid } to Meinvestproc}
+
+relationship ManyToOne
+ { Mematchresultctx { matchid } to Mematchresult}
+
+relationship ManyToOne
+ { Mematchresultctx { matchmtdcode } to Mematchmethod}
+
+relationship ManyToOne
+ { Memethodparam { paramvalcode } to Afparamval}
+   
+relationship ManyToOne
+ { Memethodparam { paramidxno } to Afparamval}
+
+relationship ManyToOne
+ { Memethodparam { matchmethodcode } to Mematchmethod}
+
+relationship ManyToOne
+ { Memethodparam { wltype } to Wlmwltype}
+
+relationship ManyToOne
+ { Memtdconfig { methodcode } to Mematchmethod}
+
+relationship ManyToOne
+ { Memtdconfig { configcode } to Meconfig}
+
+relationship ManyToOne
+ { Memtdwlcriteria { wltypecode } to Wlmwltype}
+
+relationship ManyToOne
+ { Memtdwlcriteria { matchmethodcode } to Mematchmethod}
+
+relationship ManyToOne
+ { Wlmwldata { wltype } to Wlmwltype}
+
+relationship ManyToOne
+ { Wlmwldatalog { wlwldataid } to Wlmwldata}
+
+

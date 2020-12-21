@@ -1,0 +1,28 @@
+{
+  "sampleHrApp": {
+    "afsauthentication": {
+      "home": {
+        "title": "Afsauthentications",
+        "createLabel": "Create a new Afsauthentication",
+        "createOrEditLabel": "Create or edit a Afsauthentication",
+        "notFound": "No Afsauthentications found"
+      },
+      "created": "A new Afsauthentication is created with identifier {{ param }}",
+      "updated": "A Afsauthentication is updated with identifier {{ param }}",
+      "deleted": "A Afsauthentication is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afsauthentication {{ id }}?"
+      },
+      "detail": {
+        "title": "Afsauthentication"
+      },
+      "afsid": "Afsid",
+      "authtype": "Authtype",
+      "pwdhash": "Pwdhash",
+      "secprotocol": "Secprotocol",
+      "appauthlink": "Appauthlink",
+      "rolecode": "Rolecode",
+      "modulecode": "Modulecode"
+    }
+  }
+}

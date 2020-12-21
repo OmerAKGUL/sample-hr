@@ -1,0 +1,67 @@
+{
+  "name": "Afmenuitem",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "afsid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "linktype",
+      "fieldType": "Linktype",
+      "fieldValues": "INTACTION,EXTACTION,INTREPORT,EXTREPORT,INTWEBLINK,EXTWEBLINK"
+    },
+    {
+      "fieldName": "appreflinkurl",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsysmodule",
+      "otherEntityRelationshipName": "afmenuitem",
+      "relationshipName": "modulecode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afform",
+      "otherEntityRelationshipName": "afmenuitem",
+      "relationshipName": "apprefformcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106120153",
+  "entityTableName": "afmenuitem",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,50 @@
+{
+  "sampleHrApp": {
+    "itxcustinfo": {
+      "home": {
+        "title": "Itxcustinfos",
+        "createLabel": "Create a new Itxcustinfo",
+        "createOrEditLabel": "Create or edit a Itxcustinfo",
+        "notFound": "No Itxcustinfos found"
+      },
+      "created": "A new Itxcustinfo is created with identifier {{ param }}",
+      "updated": "A Itxcustinfo is updated with identifier {{ param }}",
+      "deleted": "A Itxcustinfo is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxcustinfo {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxcustinfo"
+      },
+      "srcsyscustid": "Srcsyscustid",
+      "itxid": "Itxid",
+      "name": "Name",
+      "midname": "Midname",
+      "surname": "Surname",
+      "birthdate": "Birthdate",
+      "commtitle": "Commtitle",
+      "addresstype": "Addresstype",
+      "address": "Address",
+      "city": "City",
+      "nationality": "Nationality",
+      "nationalid": "Nationalid",
+      "gender": "Gender",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "idtype1": "Idtype 1",
+      "idno1": "Idno 1",
+      "idtype2": "Idtype 2",
+      "idno2": "Idno 2",
+      "idtype3": "Idtype 3",
+      "idno3": "Idno 3",
+      "custorgid": "Custorgid",
+      "custtype": "Custtype",
+      "srcsyscode": "Srcsyscode",
+      "custorgbrachid": "Custorgbrachid"
+    }
+  }
+}

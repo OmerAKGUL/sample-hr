@@ -1,0 +1,13 @@
+{
+  "sampleHrApp": {
+    "Idtype": {
+      "null": "",
+      "NUFUSCUZDAN": "NUFUSCUZDAN",
+      "EHLIYET": "EHLIYET",
+      "PASAPORT": "PASAPORT",
+      "DOGUMSERT": "DOGUMSERT",
+      "GOCMENSERT": "GOCMENSERT",
+      "DIGER": "DIGER"
+    }
+  }
+}

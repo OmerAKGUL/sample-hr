@@ -1,0 +1,23 @@
+{
+  "sampleHrApp": {
+    "afsroleuser": {
+      "home": {
+        "title": "Afsroleusers",
+        "createLabel": "Create a new Afsroleuser",
+        "createOrEditLabel": "Create or edit a Afsroleuser",
+        "notFound": "No Afsroleusers found"
+      },
+      "created": "A new Afsroleuser is created with identifier {{ param }}",
+      "updated": "A Afsroleuser is updated with identifier {{ param }}",
+      "deleted": "A Afsroleuser is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afsroleuser {{ id }}?"
+      },
+      "detail": {
+        "title": "Afsroleuser"
+      },
+      "usrid": "Usrid",
+      "rolecode": "Rolecode"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "sampleHrApp": {
+    "memethodparam": {
+      "home": {
+        "title": "Memethodparams",
+        "createLabel": "Create a new Memethodparam",
+        "createOrEditLabel": "Create or edit a Memethodparam",
+        "notFound": "No Memethodparams found"
+      },
+      "created": "A new Memethodparam is created with identifier {{ param }}",
+      "updated": "A Memethodparam is updated with identifier {{ param }}",
+      "deleted": "A Memethodparam is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Memethodparam {{ id }}?"
+      },
+      "detail": {
+        "title": "Memethodparam"
+      },
+      "memid": "Memid",
+      "wlmid": "Wlmid",
+      "paramvalcode": "Paramvalcode",
+      "paramidxno": "Paramidxno",
+      "matchmethodcode": "Matchmethodcode",
+      "wltype": "Wltype"
+    }
+  }
+}

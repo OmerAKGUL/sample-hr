@@ -1,0 +1,56 @@
+{
+  "name": "Afsystem",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "descr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apprefcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "systype",
+      "fieldType": "Systype",
+      "fieldValues": "INTERNAL,EXTERNAL"
+    },
+    {
+      "fieldName": "appdomaincode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "connecttype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "connectstr",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201106121053",
+  "entityTableName": "afsystem",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Itxorganization",
+  "fields": [
+    {
+      "fieldName": "commtitle",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "localcommtitle",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "sector",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "segment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "traderegno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hqaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "enterprisetype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registerdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "swiftcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wwwaddr",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcountry",
+      "otherEntityRelationshipName": "itxorganization",
+      "relationshipName": "regcountry",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106122753",
+  "entityTableName": "itxorganization",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

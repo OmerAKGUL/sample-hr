@@ -1,0 +1,39 @@
+{
+  "sampleHrApp": {
+    "afetljobtype": {
+      "home": {
+        "title": "Afetljobtypes",
+        "createLabel": "Create a new Afetljobtype",
+        "createOrEditLabel": "Create or edit a Afetljobtype",
+        "notFound": "No Afetljobtypes found"
+      },
+      "created": "A new Afetljobtype is created with identifier {{ param }}",
+      "updated": "A Afetljobtype is updated with identifier {{ param }}",
+      "deleted": "A Afetljobtype is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afetljobtype {{ id }}?"
+      },
+      "detail": {
+        "title": "Afetljobtype"
+      },
+      "jobname": "Job Name",
+      "apprefid": "Application Refference ID",
+      "srcdataprofile": "Source Data Profile",
+      "tgtdataprofile": "Target Data Profile",
+      "afsid": "Afsid",
+      "srclocurl": "Srclocurl",
+      "tgtlocurl": "Tgtlocurl",
+      "srcconntype": "Srcconntype",
+      "tgtconntype": "Tgtconntype",
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "srcsyscode": "Srcsyscode",
+      "tgtsyscode": "Tgtsyscode",
+      "scheduleid": "Schedule ID"
+    }
+  }
+}

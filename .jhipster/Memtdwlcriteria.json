@@ -1,0 +1,50 @@
+{
+  "name": "Memtdwlcriteria",
+  "fields": [
+    {
+      "fieldName": "wlmid",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "applyonwlfields",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "wlmwltype",
+      "otherEntityRelationshipName": "memtdwlcriteria",
+      "relationshipName": "wltypecode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "mematchmethod",
+      "otherEntityRelationshipName": "memtdwlcriteria",
+      "relationshipName": "matchmethodcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106123953",
+  "entityTableName": "memtdwlcriteria",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

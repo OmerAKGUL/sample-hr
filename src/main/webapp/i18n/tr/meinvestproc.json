@@ -1,0 +1,29 @@
+{
+  "sampleHrApp": {
+    "meinvestproc": {
+      "home": {
+        "title": "Meinvestprocs",
+        "createLabel": "Create a new Meinvestproc",
+        "createOrEditLabel": "Create or edit a Meinvestproc",
+        "notFound": "No Meinvestprocs found"
+      },
+      "created": "A new Meinvestproc is created with identifier {{ param }}",
+      "updated": "A Meinvestproc is updated with identifier {{ param }}",
+      "deleted": "A Meinvestproc is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Meinvestproc {{ id }}?"
+      },
+      "detail": {
+        "title": "Meinvestproc"
+      },
+      "descr": "Descr",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "invprofile": "Invprofile"
+    }
+  }
+}

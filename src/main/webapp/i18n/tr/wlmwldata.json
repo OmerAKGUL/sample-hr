@@ -1,0 +1,34 @@
+{
+  "sampleHrApp": {
+    "wlmwldata": {
+      "home": {
+        "title": "Wlmwldata",
+        "createLabel": "Create a new Wlmwldata",
+        "createOrEditLabel": "Create or edit a Wlmwldata",
+        "notFound": "No Wlmwldata found"
+      },
+      "created": "A new Wlmwldata is created with identifier {{ param }}",
+      "updated": "A Wlmwldata is updated with identifier {{ param }}",
+      "deleted": "A Wlmwldata is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Wlmwldata {{ id }}?"
+      },
+      "detail": {
+        "title": "Wlmwldata"
+      },
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "namedata": "Namedata",
+      "addressdata": "Addressdata",
+      "citydata": "Citydata",
+      "countrydata": "Countrydata",
+      "birthdatedata": "Birthdatedata",
+      "tinnumberdata": "Tinnumberdata",
+      "wltype": "Wltype"
+    }
+  }
+}

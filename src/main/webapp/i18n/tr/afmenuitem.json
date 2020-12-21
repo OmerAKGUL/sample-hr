@@ -1,0 +1,30 @@
+{
+  "sampleHrApp": {
+    "afmenuitem": {
+      "home": {
+        "title": "Afmenuitems",
+        "createLabel": "Create a new Afmenuitem",
+        "createOrEditLabel": "Create or edit a Afmenuitem",
+        "notFound": "No Afmenuitems found"
+      },
+      "created": "A new Afmenuitem is created with identifier {{ param }}",
+      "updated": "A Afmenuitem is updated with identifier {{ param }}",
+      "deleted": "A Afmenuitem is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afmenuitem {{ id }}?"
+      },
+      "detail": {
+        "title": "Afmenuitem"
+      },
+      "code": "Code",
+      "afsid": "Afsid",
+      "name": "Name",
+      "title": "Title",
+      "descr": "Descr",
+      "linktype": "Linktype",
+      "appreflinkurl": "Appreflinkurl",
+      "modulecode": "Modulecode",
+      "apprefformcode": "Apprefformcode"
+    }
+  }
+}

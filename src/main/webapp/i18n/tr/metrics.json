@@ -12,10 +12,10 @@
         "nonheap": "Yığın-dışı Bellek"
       },
       "threads": {
-        "title": "Threadler",
+        "title": "Thread'ler",
         "all": "Hepsi",
         "runnable": "Runnable",
-        "timedwaiting": "Timed waiting",
+        "timedwaiting": "Zamanlanmış bekleme",
         "waiting": "Bekleyen",
         "blocked": "Bloklanan",
         "dump": {
@@ -23,8 +23,8 @@
           "id": "Id: ",
           "blockedtime": "Bloklanma Zamanı",
           "blockedcount": "Bloklanan Sayısı",
-          "waitedtime": "Waited Time",
-          "waitedcount": "Waited Count",
+          "waitedtime": "Bekleme Süresi",
+          "waitedcount": "Bekleme Sayısı",
           "lockname": "Kilit Adı",
           "stacktrace": "Stacktrace",
           "show": "Göster",
@@ -33,20 +33,20 @@
       },
       "gc": {
         "title": "Çöp toplayıcılar",
-        "marksweepcount": "Mark Sweep count",
-        "marksweeptime": "Mark Sweep time",
-        "scavengecount": "Scavenge count",
-        "scavengetime": "Scavenge time"
+        "marksweepcount": "Mark Sweep sayısı",
+        "marksweeptime": "Mark Sweep süresi",
+        "scavengecount": "Scavenge sayısı",
+        "scavengetime": "Scavenge süresi"
       },
       "http": {
         "title": "HTTP istekleri (saniyedeki istek sayısı)",
         "active": "Aktif talepler:",
         "total": "Toplam talep:",
         "table": {
-          "code": "Code",
-          "count": "Count",
+          "code": "Kod",
+          "count": "Sayı",
           "mean": "Mean",
-          "average": "Average"
+          "average": "Ortalama"
         },
         "code": {
           "ok": "Ok",

@@ -1,0 +1,70 @@
+{
+  "name": "Itxcustadressinfo",
+  "fields": [
+    {
+      "fieldName": "addrtype",
+      "fieldType": "Addrtype",
+      "fieldValues": "IKAMET,IS,SIRKET,DIGER"
+    },
+    {
+      "fieldName": "addresstxt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addrline1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addrline2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "street1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "street2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "street3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "town",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "county",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcountry",
+      "otherEntityRelationshipName": "itxcustadressinfo",
+      "relationshipName": "country",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106122253",
+  "entityTableName": "itxcustadressinfo",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

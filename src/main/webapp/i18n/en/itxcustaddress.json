@@ -1,0 +1,23 @@
+{
+  "sampleHrApp": {
+    "itxcustaddress": {
+      "home": {
+        "title": "Itxcustaddresses",
+        "createLabel": "Create a new Itxcustaddress",
+        "createOrEditLabel": "Create or edit a Itxcustaddress",
+        "notFound": "No Itxcustaddresses found"
+      },
+      "created": "A new Itxcustaddress is created with identifier {{ param }}",
+      "updated": "A Itxcustaddress is updated with identifier {{ param }}",
+      "deleted": "A Itxcustaddress is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxcustaddress {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxcustaddress"
+      },
+      "custid": "Custid",
+      "addrid": "Addrid"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Itxtxnqueue.
+    -->
+    <changeSet id="20201106122853-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="rctype_id"
+                                 baseTableName="itxtxnqueue"
+                                 constraintName="fk_itxtxnqueue_rctype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxcusttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="ratype_id"
+                                 baseTableName="itxtxnqueue"
+                                 constraintName="fk_itxtxnqueue_ratype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxaccounttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="satype_id"
+                                 baseTableName="itxtxnqueue"
+                                 constraintName="fk_itxtxnqueue_satype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxaccounttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="sctype_id"
+                                 baseTableName="itxtxnqueue"
+                                 constraintName="fk_itxtxnqueue_sctype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxcusttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="txntypeid_id"
+                                 baseTableName="itxtxnqueue"
+                                 constraintName="fk_itxtxnqueue_txntypeid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxtxntype"/>
+
+        <addForeignKeyConstraint baseColumnNames="txncurrency_id"
+                                 baseTableName="itxtxnqueue"
+                                 constraintName="fk_itxtxnqueue_txncurrency_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxcurrency"/>
+
+        <addForeignKeyConstraint baseColumnNames="etljobtype_id"
+                                 baseTableName="itxtxnqueue"
+                                 constraintName="fk_itxtxnqueue_etljobtype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afetljobtype"/>
+
+    </changeSet>
+</databaseChangeLog>

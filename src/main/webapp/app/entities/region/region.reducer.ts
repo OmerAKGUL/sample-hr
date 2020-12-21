@@ -8,6 +8,7 @@ import { IRegion, defaultValue } from 'app/shared/model/region.model';
 
 export const ACTION_TYPES = {
   FETCH_REGION_LIST: 'region/FETCH_REGION_LIST',
+  FETCH_REGION_LIST_FILTER: 'region/FETCH_REGION_LIST_FILTER',
   FETCH_REGION: 'region/FETCH_REGION',
   CREATE_REGION: 'region/CREATE_REGION',
   UPDATE_REGION: 'region/UPDATE_REGION',
@@ -31,6 +32,7 @@ export type RegionState = Readonly<typeof initialState>;
 export default (state: RegionState = initialState, action): RegionState => {
   switch (action.type) {
     case REQUEST(ACTION_TYPES.FETCH_REGION_LIST):
+    case REQUEST(ACTION_TYPES.FETCH_REGION_LIST_FILTER):
     case REQUEST(ACTION_TYPES.FETCH_REGION):
       return {
         ...state,
@@ -48,6 +50,7 @@ export default (state: RegionState = initialState, action): RegionState => {
         updating: true,
       };
     case FAILURE(ACTION_TYPES.FETCH_REGION_LIST):
+    case FAILURE(ACTION_TYPES.FETCH_REGION_LIST_FILTER):
     case FAILURE(ACTION_TYPES.FETCH_REGION):
     case FAILURE(ACTION_TYPES.CREATE_REGION):
     case FAILURE(ACTION_TYPES.UPDATE_REGION):
@@ -60,6 +63,7 @@ export default (state: RegionState = initialState, action): RegionState => {
         errorMessage: action.payload,
       };
     case SUCCESS(ACTION_TYPES.FETCH_REGION_LIST):
+    case SUCCESS(ACTION_TYPES.FETCH_REGION_LIST_FILTER):
       return {
         ...state,
         loading: false,
@@ -98,6 +102,14 @@ export default (state: RegionState = initialState, action): RegionState => {
 const apiUrl = 'api/regions';
 
 // Actions
+
+export const getEntitiesFilter: ICrudGetAction<IRegion> = id => {
+  const requestUrl = 'api/regions/filter/' + id; // `${apiUrl}/${id}`;
+  return {
+    type: ACTION_TYPES.FETCH_REGION_LIST_FILTER,
+    payload: axios.get<IRegion>(requestUrl),
+  };
+};
 
 export const getEntities: ICrudGetAllAction<IRegion> = (page, size, sort) => ({
   type: ACTION_TYPES.FETCH_REGION_LIST,

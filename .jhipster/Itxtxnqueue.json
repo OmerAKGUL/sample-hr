@@ -1,0 +1,308 @@
+{
+  "name": "Itxtxnqueue",
+  "fields": [
+    {
+      "fieldName": "etljobstart",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "etljobsessiond",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "scsyscustid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scmidname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scsurname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scbirthdate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "sccommtitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scaddresstype",
+      "fieldType": "Addrtype",
+      "fieldValues": "IKAMET,IS,SIRKET,DIGER"
+    },
+    {
+      "fieldName": "scaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sccity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scnationality",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scnationalid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scidtype",
+      "fieldType": "Idtype",
+      "fieldValues": "NUFUSCUZDAN,EHLIYET,PASAPORT,DOGUMSERT,GOCMENSERT,DIGER"
+    },
+    {
+      "fieldName": "scidno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "scgender",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "saorgid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "saorgname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sasyscode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sabranchcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "saname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcsyscustid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcmidname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcsurname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcbirthdate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "rccommtitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcaddresstype",
+      "fieldType": "Addrtype",
+      "fieldValues": "IKAMET,IS,SIRKET,DIGER"
+    },
+    {
+      "fieldName": "rcaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rccity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcnationality",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcnationalid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcidtype",
+      "fieldType": "Idtype",
+      "fieldValues": "NUFUSCUZDAN,EHLIYET,PASAPORT,DOGUMSERT,GOCMENSERT,DIGER"
+    },
+    {
+      "fieldName": "rcidno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rcgender",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "raorgid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "raorgname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rasyscode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rabranchcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "raname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnchanneltype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnsysid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnprodtype",
+      "fieldType": "Prodtype",
+      "fieldValues": "YATIRIM,DEGERLIMADEN,YATIRIMFONU,SGMK,HISSESENEDI,BIREYSELKREDI,TICARIKREDI,KREDIKARTI,POSTACEKI,HGS,FATURA,VADELIMEVDUAT,VADESIZMEVDUAT,WESTERNUNION"
+    },
+    {
+      "fieldName": "txnprodname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnamount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "txndescr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnentitiesupd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnagentorgid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "txnagentbrachid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnagenttype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnagentaccid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txnorderdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "txnvaluedate",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcusttype",
+      "otherEntityRelationshipName": "itxtxnqueue",
+      "relationshipName": "rctype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxaccounttype",
+      "otherEntityRelationshipName": "itxtxnqueue",
+      "relationshipName": "ratype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxaccounttype",
+      "otherEntityRelationshipName": "itxtxnqueue",
+      "relationshipName": "satype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcusttype",
+      "otherEntityRelationshipName": "itxtxnqueue",
+      "relationshipName": "sctype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxtxntype",
+      "otherEntityRelationshipName": "itxtxnqueue",
+      "relationshipName": "txntypeid",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcurrency",
+      "otherEntityRelationshipName": "itxtxnqueue",
+      "relationshipName": "txncurrency",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afetljobtype",
+      "otherEntityRelationshipName": "itxtxnqueue",
+      "relationshipName": "etljobtype",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106122853",
+  "entityTableName": "itxtxnqueue",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

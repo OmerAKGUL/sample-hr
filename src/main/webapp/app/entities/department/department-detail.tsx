@@ -13,12 +13,16 @@ import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 export interface IDepartmentDetailProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const DepartmentDetail = (props: IDepartmentDetailProps) => {
+  const { history } = props;
+  const {match} = props;
+
   useEffect(() => {
-    props.getEntity(props.match.params.id);
+      props.getEntity(props.match.params.id);
   }, []);
 
   const { departmentEntity } = props;
   return (
+    <div >
     <Row>
       <Col md="8">
         <h2>
@@ -51,6 +55,7 @@ export const DepartmentDetail = (props: IDepartmentDetailProps) => {
         </Button>
       </Col>
     </Row>
+    </div>
   );
 };
 

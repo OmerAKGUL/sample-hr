@@ -1,0 +1,25 @@
+{
+  "sampleHrApp": {
+    "itxaccounttinfo": {
+      "home": {
+        "title": "Itxaccounttinfos",
+        "createLabel": "Create a new Itxaccounttinfo",
+        "createOrEditLabel": "Create or edit a Itxaccounttinfo",
+        "notFound": "No Itxaccounttinfos found"
+      },
+      "created": "A new Itxaccounttinfo is created with identifier {{ param }}",
+      "updated": "A Itxaccounttinfo is updated with identifier {{ param }}",
+      "deleted": "A Itxaccounttinfo is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxaccounttinfo {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxaccounttinfo"
+      },
+      "srcsysacccode": "Srcsysacccode",
+      "typeid": "Typeid",
+      "srcsyscode": "Srcsyscode",
+      "ownercustid": "Ownercustid"
+    }
+  }
+}

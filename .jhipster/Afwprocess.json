@@ -1,0 +1,64 @@
+{
+  "name": "Afwprocess",
+  "fields": [
+    {
+      "fieldName": "entity",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "apprefmngfrm",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apprefmngdomain",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afworkflow",
+      "otherEntityRelationshipName": "afwprocess",
+      "relationshipName": "wfcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106121453",
+  "entityTableName": "afwprocess",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

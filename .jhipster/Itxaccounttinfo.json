@@ -1,0 +1,43 @@
+{
+  "name": "Itxaccounttinfo",
+  "fields": [
+    {
+      "fieldName": "srcsysacccode",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxaccounttype",
+      "otherEntityRelationshipName": "itxaccounttinfo",
+      "relationshipName": "typeid",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsystem",
+      "otherEntityRelationshipName": "itxaccounttinfo",
+      "relationshipName": "srcsyscode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcustinfo",
+      "otherEntityRelationshipName": "itxaccounttinfo",
+      "relationshipName": "ownercustid",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106121753",
+  "entityTableName": "itxaccounttinfo",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

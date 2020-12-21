@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Meinvestprofile.
+    -->
+    <changeSet id="20201106123353-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="matchwltype_id"
+                                 baseTableName="meinvestprofile"
+                                 constraintName="fk_meinvestprofile_matchwltype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="wlmwltype"/>
+
+        <addForeignKeyConstraint baseColumnNames="matchtxntype_id"
+                                 baseTableName="meinvestprofile"
+                                 constraintName="fk_meinvestprofile_matchtxntype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxtxntype"/>
+
+        <addForeignKeyConstraint baseColumnNames="matchtxncusttype_id"
+                                 baseTableName="meinvestprofile"
+                                 constraintName="fk_meinvestprofile_matchtxncusttype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxcusttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="matchtxnacctype_id"
+                                 baseTableName="meinvestprofile"
+                                 constraintName="fk_meinvestprofile_matchtxnacctype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itxaccounttype"/>
+
+        <addForeignKeyConstraint baseColumnNames="matchsystemcode_id"
+                                 baseTableName="meinvestprofile"
+                                 constraintName="fk_meinvestprofile_matchsystemcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsystem"/>
+
+        <addForeignKeyConstraint baseColumnNames="invrespuserid_id"
+                                 baseTableName="meinvestprofile"
+                                 constraintName="fk_meinvestprofile_invrespuserid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhiuser"/>
+
+        <addForeignKeyConstraint baseColumnNames="invresprole_id"
+                                 baseTableName="meinvestprofile"
+                                 constraintName="fk_meinvestprofile_invresprole_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsrole"/>
+
+    </changeSet>
+</databaseChangeLog>

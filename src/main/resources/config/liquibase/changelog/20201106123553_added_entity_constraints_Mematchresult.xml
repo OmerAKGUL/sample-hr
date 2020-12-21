@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Mematchresult.
+    -->
+    <changeSet id="20201106123553-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="matchconfigcode_id"
+                                 baseTableName="mematchresult"
+                                 constraintName="fk_mematchresult_matchconfigcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meconfig"/>
+
+        <addForeignKeyConstraint baseColumnNames="invprocid_id"
+                                 baseTableName="mematchresult"
+                                 constraintName="fk_mematchresult_invprocid_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meinvestproc"/>
+
+    </changeSet>
+</databaseChangeLog>

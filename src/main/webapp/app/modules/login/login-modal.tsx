@@ -12,6 +12,7 @@ export interface ILoginModalProps {
 }
 
 class LoginModal extends React.Component<ILoginModalProps> {
+	
   handleSubmit = (event, errors, { username, password, rememberMe }) => {
     const { handleLogin } = this.props;
     handleLogin(username, password, rememberMe);

@@ -1,0 +1,20 @@
+import { combineReducers } from 'redux';
+import { loadingBarReducer as loadingBar } from 'react-redux-loading-bar';
+
+// module reducers imports
+import localeReducer, { LocaleState } from '../../../module/framework/localization/localization.reducer';
+import sampleEntityReducer, { sampleEntityState } from '../../../module/domain/samplemodule/sampleentity.reducer';
+
+export interface IRootState {
+  readonly locale: LocaleState;
+  readonly sampleEntity: sampleEntityState;
+  readonly loadingBar: any;
+}
+
+const rootReducer = combineReducers<IRootState>({
+  localeReducer,
+  sampleEntityReducer,
+  loadingBar,
+});
+
+export default rootReducer;

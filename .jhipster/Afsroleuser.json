@@ -1,0 +1,31 @@
+{
+  "name": "Afsroleuser",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "jhiuser",
+      "otherEntityRelationshipName": "afsroleuser",
+      "relationshipName": "usrid",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsrole",
+      "otherEntityRelationshipName": "afsroleuser",
+      "relationshipName": "rolecode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106120753",
+  "entityTableName": "afsroleuser",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

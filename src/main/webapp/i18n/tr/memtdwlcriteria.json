@@ -1,0 +1,26 @@
+{
+  "sampleHrApp": {
+    "memtdwlcriteria": {
+      "home": {
+        "title": "Memtdwlcriteria",
+        "createLabel": "Create a new Memtdwlcriteria",
+        "createOrEditLabel": "Create or edit a Memtdwlcriteria",
+        "notFound": "No Memtdwlcriteria found"
+      },
+      "created": "A new Memtdwlcriteria is created with identifier {{ param }}",
+      "updated": "A Memtdwlcriteria is updated with identifier {{ param }}",
+      "deleted": "A Memtdwlcriteria is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Memtdwlcriteria {{ id }}?"
+      },
+      "detail": {
+        "title": "Memtdwlcriteria"
+      },
+      "wlmid": "Wlmid",
+      "name": "Name",
+      "applyonwlfields": "Applyonwlfields",
+      "wltypecode": "Wltypecode",
+      "matchmethodcode": "Matchmethodcode"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "name": "Mematchresult",
+  "fields": [
+    {
+      "fieldName": "matchid",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "matchctxid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "matchwltype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "matchtxnid",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "matchscore",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "meconfig",
+      "otherEntityRelationshipName": "mematchresult",
+      "relationshipName": "matchconfigcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "meinvestproc",
+      "otherEntityRelationshipName": "mematchresult",
+      "relationshipName": "invprocid",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106123553",
+  "entityTableName": "mematchresult",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,35 @@
+{
+  "sampleHrApp": {
+    "wlmwltype": {
+      "home": {
+        "title": "Wlmwltypes",
+        "createLabel": "Create a new Wlmwltype",
+        "createOrEditLabel": "Create or edit a Wlmwltype",
+        "notFound": "No Wlmwltypes found"
+      },
+      "created": "A new Wlmwltype is created with identifier {{ param }}",
+      "updated": "A Wlmwltype is updated with identifier {{ param }}",
+      "deleted": "A Wlmwltype is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Wlmwltype {{ id }}?"
+      },
+      "detail": {
+        "title": "Wlmwltype"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "publishercat": "Publishercat",
+      "publisherorgid": "Publisherorgid",
+      "publishername": "Publishername",
+      "publishformat": "Publishformat",
+      "filteringtype": "Filteringtype",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid"
+    }
+  }
+}

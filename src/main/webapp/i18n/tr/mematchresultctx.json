@@ -1,0 +1,27 @@
+{
+  "sampleHrApp": {
+    "mematchresultctx": {
+      "home": {
+        "title": "Mematchresultctxes",
+        "createLabel": "Create a new Mematchresultctx",
+        "createOrEditLabel": "Create or edit a Mematchresultctx",
+        "notFound": "No Mematchresultctxes found"
+      },
+      "created": "A new Mematchresultctx is created with identifier {{ param }}",
+      "updated": "A Mematchresultctx is updated with identifier {{ param }}",
+      "deleted": "A Mematchresultctx is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mematchresultctx {{ id }}?"
+      },
+      "detail": {
+        "title": "Mematchresultctx"
+      },
+      "memid": "Memid",
+      "matchtime": "Matchtime",
+      "matchmtdmsg": "Matchmtdmsg",
+      "matchctxdata": "Matchctxdata",
+      "matchid": "Matchid",
+      "matchmtdcode": "Matchmtdcode"
+    }
+  }
+}

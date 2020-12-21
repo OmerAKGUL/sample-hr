@@ -1,0 +1,31 @@
+{
+  "name": "Itxcustaddress",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcustinfo",
+      "otherEntityRelationshipName": "itxcustaddress",
+      "relationshipName": "custid",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcustadressinfo",
+      "otherEntityRelationshipName": "itxcustaddress",
+      "relationshipName": "addrid",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106122153",
+  "entityTableName": "itxcustaddress",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,9 @@
+{
+  "sampleHrApp": {
+    "Filteringtype": {
+      "null": "",
+      "BLACKLISTING": "BLACKLISTING",
+      "WHITELISTING": "WHITELISTING"
+    }
+  }
+}

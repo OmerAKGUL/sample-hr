@@ -1,0 +1,28 @@
+{
+  "sampleHrApp": {
+    "memtdconfig": {
+      "home": {
+        "title": "Memtdconfigs",
+        "createLabel": "Create a new Memtdconfig",
+        "createOrEditLabel": "Create or edit a Memtdconfig",
+        "notFound": "No Memtdconfigs found"
+      },
+      "created": "A new Memtdconfig is created with identifier {{ param }}",
+      "updated": "A Memtdconfig is updated with identifier {{ param }}",
+      "deleted": "A Memtdconfig is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Memtdconfig {{ id }}?"
+      },
+      "detail": {
+        "title": "Memtdconfig"
+      },
+      "memid": "Memid",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "methodcode": "Methodcode",
+      "configcode": "Configcode"
+    }
+  }
+}

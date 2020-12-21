@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Jhiuser.
+    -->
+    <changeSet id="20201106124353-1" author="jhipster">
+        <createTable tableName="jhiuser">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="loginname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="passwordhash" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="firstname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lastname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="imageurl" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="langkey" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="activationkey" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="resetkey" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="createdby" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="createddate" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="resetdate" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="lastmodifiedby" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lastmodifieddate" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="jhiuser" columnName="createddate" columnDataType="datetime"/>
+        <dropDefaultValue tableName="jhiuser" columnName="resetdate" columnDataType="datetime"/>
+        <dropDefaultValue tableName="jhiuser" columnName="lastmodifieddate" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20201106124353-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20201106124353-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/jhiuser.csv"
+                  separator=";"
+                  tableName="jhiuser">
+            <column name="id" type="numeric"/>
+            <column name="loginname" type="string"/>
+            <column name="passwordhash" type="string"/>
+            <column name="firstname" type="string"/>
+            <column name="lastname" type="string"/>
+            <column name="imageurl" type="string"/>
+            <column name="langkey" type="string"/>
+            <column name="activationkey" type="string"/>
+            <column name="resetkey" type="string"/>
+            <column name="createdby" type="string"/>
+            <column name="createddate" type="datetime"/>
+            <column name="resetdate" type="datetime"/>
+            <column name="lastmodifiedby" type="string"/>
+            <column name="lastmodifieddate" type="datetime"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

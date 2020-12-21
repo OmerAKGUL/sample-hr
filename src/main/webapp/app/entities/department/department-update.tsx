@@ -14,13 +14,50 @@ import { IDepartment } from 'app/shared/model/department.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
 
+// VeloxApp imports
+import Location from 'app/entities/location/location';
+
+import {AppMsgType} from '../../veloxap/module/framework/app/AppTypes';
+import {AppLayoutContext} from '../../veloxap/module//framework/app/AppLayout';
+
+
 export interface IDepartmentUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const DepartmentUpdate = (props: IDepartmentUpdateProps) => {
+
   const [locationId, setLocationId] = useState('0');
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
-
   const { departmentEntity, locations, loading, updating } = props;
+
+  // veloxapp: use veloxapp context
+  const {setMsgBarMsg, setSelectorCtx } = React.useContext(AppLayoutContext);
+  // veloxapp: function for selection data binding
+  const setLocationSelectionAtOrigin = (selectedVals:string[])=>{
+    // set first value for location-id
+    if(selectedVals&&selectedVals[0]) {
+      if(document.getElementsByName("location.id")[0])
+        document.getElementsByName("location.id")[0].innerHTML = selectedVals[0];
+    }
+
+    // set next value for location-city name
+    if(selectedVals&&selectedVals[1]) {
+      if(document.getElementsByName("location.id")[0])
+        document.getElementsByName("location.id")[0].innerHTML = selectedVals[0];
+    }
+  }
+  // veloxapp: function for selection data binding
+  const refreshDSelectorListCompLocation = (attrs?:string[],attrVals?:string[])=>{
+  }
+
+  // veloxapp: data selector triggers
+  const DSelectLocation = ()=>{
+    // get edited values
+    let editCityValue = (document.getElementById("department-location-city") as HTMLInputElement).value;
+    if(!editCityValue)
+      editCityValue="";
+
+    setSelectorCtx("Select Location for the Department","Location",["id","city"],["",editCityValue],["id","city"],Location,setLocationSelectionAtOrigin,refreshDSelectorListCompLocation);
+  }
 
   const handleClose = () => {
     props.history.push('/department');
@@ -107,6 +144,15 @@ export const DepartmentUpdate = (props: IDepartmentUpdateProps) => {
                       ))
                     : null}
                 </AvInput>
+
+
+                <Label for="department-location-city">
+                  <Translate contentKey="sampleHrApp.department.location.city">City</Translate>
+                </Label>
+                <AvInput id="department-location-city" className="form-control" name="location.city" onfocusout={()=>{ alert("onfocusout") }}>
+                </AvInput>
+                <Button onClick={()=>{DSelectLocation();}}>...</Button>
+
               </AvGroup>
               <Button tag={Link} id="cancel-save" to="/department" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />

@@ -1,0 +1,52 @@
+{
+  "name": "Afmsg",
+  "fields": [
+    {
+      "fieldName": "appmsgtype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apprefctxinfo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appmsgcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "langisocode",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "appmsgtxt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "msgseverity",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsystem",
+      "otherEntityRelationshipName": "afmsg",
+      "relationshipName": "appsyscode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106120253",
+  "entityTableName": "afmsg",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

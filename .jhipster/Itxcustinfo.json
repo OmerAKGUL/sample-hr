@@ -1,0 +1,149 @@
+{
+  "name": "Itxcustinfo",
+  "fields": [
+    {
+      "fieldName": "srcsyscustid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itxid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "midname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "surname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birthdate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "commtitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addresstype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nationality",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nationalid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idtype1",
+      "fieldType": "Idtype",
+      "fieldValues": "NUFUSCUZDAN,EHLIYET,PASAPORT,DOGUMSERT,GOCMENSERT,DIGER"
+    },
+    {
+      "fieldName": "idno1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idtype2",
+      "fieldType": "Idtype",
+      "fieldValues": "NUFUSCUZDAN,EHLIYET,PASAPORT,DOGUMSERT,GOCMENSERT,DIGER"
+    },
+    {
+      "fieldName": "idno2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idtype3",
+      "fieldType": "Idtype",
+      "fieldValues": "NUFUSCUZDAN,EHLIYET,PASAPORT,DOGUMSERT,GOCMENSERT,DIGER"
+    },
+    {
+      "fieldName": "idno3",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxorganization",
+      "otherEntityRelationshipName": "itxcustinfo",
+      "relationshipName": "custorgid",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcusttype",
+      "otherEntityRelationshipName": "itxcustinfo",
+      "relationshipName": "custtype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsystem",
+      "otherEntityRelationshipName": "itxcustinfo",
+      "relationshipName": "srcsyscode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxorgbranch",
+      "otherEntityRelationshipName": "itxcustinfo",
+      "relationshipName": "custorgbrachid",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106122353",
+  "entityTableName": "itxcustinfo",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Itxorgbranch",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "localname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brachtype",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxorganization",
+      "otherEntityRelationshipName": "itxorgbranch",
+      "relationshipName": "orgid",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106122653",
+  "entityTableName": "itxorgbranch",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

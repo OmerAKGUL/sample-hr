@@ -1,0 +1,23 @@
+{
+  "sampleHrApp": {
+    "itxtxntype": {
+      "home": {
+        "title": "Itxtxntypes",
+        "createLabel": "Create a new Itxtxntype",
+        "createOrEditLabel": "Create or edit a Itxtxntype",
+        "notFound": "No Itxtxntypes found"
+      },
+      "created": "A new Itxtxntype is created with identifier {{ param }}",
+      "updated": "A Itxtxntype is updated with identifier {{ param }}",
+      "deleted": "A Itxtxntype is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxtxntype {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxtxntype"
+      },
+      "name": "Name",
+      "descr": "Descr"
+    }
+  }
+}

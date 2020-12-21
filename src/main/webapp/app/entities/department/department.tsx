@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
@@ -9,15 +9,17 @@ import { IRootState } from 'app/shared/reducers';
 import { getEntities } from './department.reducer';
 import { IDepartment } from 'app/shared/model/department.model';
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
+import {IALPersistWFProps} from '../../veloxap/module/framework/app/AppTypes';
+import {IAppLayoutPropsNoRoute} from '../../veloxap/module//framework/app/AppTypes';
 
 export interface IDepartmentProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
 export const Department = (props: IDepartmentProps) => {
-  useEffect(() => {
-    props.getEntities();
-  }, []);
-
   const { departmentList, match, loading } = props;
+  useEffect(() => {
+      props.getEntities();
+  },[]);
+
   return (
     <div>
       <h2 id="department-heading">
@@ -27,6 +29,9 @@ export const Department = (props: IDepartmentProps) => {
           &nbsp;
           <Translate contentKey="sampleHrApp.department.home.createLabel">Create new Department</Translate>
         </Link>
+ <Link to='/region' className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
+   To Region          
+  </Link>
       </h2>
       <div className="table-responsive">
         {departmentList && departmentList.length > 0 ? (
@@ -105,4 +110,5 @@ const mapDispatchToProps = {
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
 
+// const DepartmentVeloxWrap = (props:IDepartmentProps)=>{return (<Department {...props} listEntities={()=>{props.getEntities()}}/>);}
 export default connect(mapStateToProps, mapDispatchToProps)(Department);

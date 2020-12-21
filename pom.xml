@@ -31,8 +31,8 @@
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
-        <m2e.apt.activation>jdt_apt</m2e.apt.activation>
+        <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m -Dfile.encoding=UTF-8</argLine>
+		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
         <run.addResources>false</run.addResources>
         <!-- These remain empty unless the corresponding profile is active -->
         <profile.no-liquibase />
@@ -103,6 +103,17 @@
     </dependencyManagement>
 
     <dependencies>
+    <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-ldap</artifactId>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-ldap</artifactId>
+            <version>5.2.1.RELEASE</version>
+        </dependency>
+        
         <dependency>
             <groupId>io.github.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
@@ -111,6 +122,13 @@
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
         </dependency>
+        
+        
+    		<dependency>
+			<groupId>com.sap.db.jdbc</groupId>
+			<artifactId>jconn4</artifactId>
+			<version>4.0</version>
+		</dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

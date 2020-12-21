@@ -1,0 +1,69 @@
+{
+  "name": "Jhiuser",
+  "fields": [
+    {
+      "fieldName": "loginname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "passwordhash",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imageurl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "langkey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "activationkey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resetkey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdby",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createddate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "resetdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastmodifiedby",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastmodifieddate",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201106124353",
+  "entityTableName": "jhiuser",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

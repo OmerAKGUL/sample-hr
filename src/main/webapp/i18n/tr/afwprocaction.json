@@ -1,0 +1,35 @@
+{
+  "sampleHrApp": {
+    "afwprocaction": {
+      "home": {
+        "title": "Afwprocactions",
+        "createLabel": "Create a new Afwprocaction",
+        "createOrEditLabel": "Create or edit a Afwprocaction",
+        "notFound": "No Afwprocactions found"
+      },
+      "created": "A new Afwprocaction is created with identifier {{ param }}",
+      "updated": "A Afwprocaction is updated with identifier {{ param }}",
+      "deleted": "A Afwprocaction is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afwprocaction {{ id }}?"
+      },
+      "detail": {
+        "title": "Afwprocaction"
+      },
+      "actionnote": "Actionnote",
+      "scheduleddt": "Scheduleddt",
+      "starteddt": "Starteddt",
+      "finisheddt": "Finisheddt",
+      "refdoc1url": "Refdoc 1 Url",
+      "refdoc2url": "Refdoc 2 Url",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "procid": "Procid",
+      "actioncode": "Actioncode"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "sampleHrApp": {
+    "afsrole": {
+      "home": {
+        "title": "Afsroles",
+        "createLabel": "Create a new Afsrole",
+        "createOrEditLabel": "Create or edit a Afsrole",
+        "notFound": "No Afsroles found"
+      },
+      "created": "A new Afsrole is created with identifier {{ param }}",
+      "updated": "A Afsrole is updated with identifier {{ param }}",
+      "deleted": "A Afsrole is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Afsrole {{ id }}?"
+      },
+      "detail": {
+        "title": "Afsrole"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr"
+    }
+  }
+}

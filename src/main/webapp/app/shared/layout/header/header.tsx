@@ -8,8 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink as Link } from 'react-router-dom';
 import LoadingBar from 'react-redux-loading-bar';
 
-import { Home, Brand } from './header-components';
+import { Home, Modules, Brand, BrandVeloxapp, BrandClient } from './header-components';
 import { AdminMenu, EntitiesMenu, AccountMenu, LocaleMenu } from '../menus';
+
+import { AppTitleBar } from 'app/veloxap/module/framework/app/AppTitleBar';
 
 export interface IHeaderProps {
   isAuthenticated: boolean;
@@ -42,18 +44,19 @@ const Header = (props: IHeaderProps) => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   /* jhipster-needle-add-element-to-menu - JHipster will add new menu items here */
-
+/*{props.isAuthenticated && <EntitiesMenu />}*/
   return (
     <div id="app-header">
-      {renderDevRibbon()}
+      {/* renderDevRibbon() */}
       <LoadingBar className="loading-bar" />
       <Navbar dark expand="sm" fixed="top" className="jh-navbar">
         <NavbarToggler aria-label="Menu" onClick={toggleMenu} />
-        <Brand />
+        <BrandVeloxapp />
+        <AppTitleBar />
         <Collapse isOpen={menuOpen} navbar>
           <Nav id="header-tabs" className="ml-auto" navbar>
             <Home />
-            {props.isAuthenticated && <EntitiesMenu />}
+            {props.isAuthenticated && <Modules />}
             {props.isAuthenticated && props.isAdmin && (
               <AdminMenu showSwagger={props.isSwaggerEnabled} showDatabase={!props.isInProduction} />
             )}
@@ -61,6 +64,7 @@ const Header = (props: IHeaderProps) => {
             <AccountMenu isAuthenticated={props.isAuthenticated} />
           </Nav>
         </Collapse>
+        <BrandClient />
       </Navbar>
     </div>
   );

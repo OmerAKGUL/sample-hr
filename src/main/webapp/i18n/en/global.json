@@ -4,9 +4,12 @@
     "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
     "menu": {
       "home": "Home",
+      "module": "Modules",
+      "modules": "Modules",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "modules": "Modules",
         "region": "Region",
         "country": "Country",
         "location": "Location",
@@ -15,6 +18,54 @@
         "employee": "Employee",
         "job": "Job",
         "jobHistory": "Job History",
+        "wlmwltype": "Wlmwltype",
+        "wlmwldata": "Wlmwldata",
+        "afdatafilter": "Afdatafilter",
+        "afetljobtype": "Afetljobtype",
+        "afform": "Afform",
+        "afformdatafilter": "Afformdatafilter",
+        "afmenuchild": "Afmenuchild",
+        "afmenuitem": "Afmenuitem",
+        "afmsg": "Afmsg",
+        "afparamval": "Afparamval",
+        "afsauthentication": "Afsauthentication",
+        "afsauthorization": "Afsauthorization",
+        "afsrole": "Afsrole",
+        "afsroleuser": "Afsroleuser",
+        "afschedule": "Afschedule",
+        "afsysmodule": "Afsysmodule",
+        "afsystem": "Afsystem",
+        "afwfaction": "Afwfaction",
+        "afwfstate": "Afwfstate",
+        "afwprocaction": "Afwprocaction",
+        "afwprocess": "Afwprocess",
+        "afworkflow": "Afworkflow",
+        "itxaccounttype": "Itxaccounttype",
+        "itxaccounttinfo": "Itxaccounttinfo",
+        "itxcity": "Itxcity",
+        "itxcountry": "Itxcountry",
+        "itxcurrency": "Itxcurrency",
+        "itxcustaddress": "Itxcustaddress",
+        "itxcustadressinfo": "Itxcustadressinfo",
+        "itxcustinfo": "Itxcustinfo",
+        "itxcusttype": "Itxcusttype",
+        "itxdictionary": "Itxdictionary",
+        "itxorgbranch": "Itxorgbranch",
+        "itxorganization": "Itxorganization",
+        "itxtxnqueue": "Itxtxnqueue",
+        "itxtxntype": "Itxtxntype",
+        "iwlimportqueue": "Iwlimportqueue",
+        "meconfig": "Meconfig",
+        "meinvestproc": "Meinvestproc",
+        "meinvestprofile": "Meinvestprofile",
+        "mematchmethod": "Mematchmethod",
+        "mematchresult": "Mematchresult",
+        "mematchresultctx": "Mematchresultctx",
+        "memethodparam": "Memethodparam",
+        "memtdconfig": "Memtdconfig",
+        "memtdwlcriteria": "Memtdwlcriteria",
+        "wlmwldatalog": "Wlmwldatalog",
+        "jhiuser": "Jhiuser",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -106,7 +157,10 @@
       "edit": "Edit",
       "open": "Open",
       "save": "Save",
-      "view": "View"
+      "view": "View",
+      "start": "Start",
+      "stop": "Stop",
+      "yes": "Yes"
     },
     "detail": {
       "field": "Field",
@@ -114,6 +168,12 @@
     },
     "delete": {
       "title": "Confirm delete operation"
+    },
+    "stop": {
+      "title": "Confirm stop operation"
+    },
+    "start": {
+      "title": "Confirm start operation"
     },
     "validation": {
       "required": "This field is required.",

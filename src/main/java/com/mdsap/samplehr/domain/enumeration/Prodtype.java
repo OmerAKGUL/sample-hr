@@ -1,0 +1,8 @@
+package com.mdsap.samplehr.domain.enumeration;
+
+/**
+ * The Prodtype enumeration.
+ */
+public enum Prodtype {
+    YATIRIM, DEGERLIMADEN, YATIRIMFONU, SGMK, HISSESENEDI, BIREYSELKREDI, TICARIKREDI, KREDIKARTI, POSTACEKI, HGS, FATURA, VADELIMEVDUAT, VADESIZMEVDUAT, WESTERNUNION
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Itxcountry",
+  "fields": [
+    {
+      "fieldName": "isocode",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "localname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isocode2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numcode",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201106121953",
+  "entityTableName": "itxcountry",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,15 @@
+/* eslint no-console: off */
+export default () => next => action => {
+  const env = "development";
+  // "process.env.NODE_ENV;
+  if (env !== 'production') {
+    const { type, payload, meta } = action;
+
+    console.groupCollapsed(type);
+    console.log('Payload:', payload);
+    console.log('Meta:', meta);
+    console.groupEnd();
+  }
+
+  return next(action);
+};

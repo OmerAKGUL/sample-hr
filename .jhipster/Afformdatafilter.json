@@ -1,0 +1,47 @@
+{
+  "name": "Afformdatafilter",
+  "fields": [
+    {
+      "fieldName": "afsid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "affid",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsrole",
+      "otherEntityRelationshipName": "afformdatafilter",
+      "relationshipName": "approlecode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afform",
+      "otherEntityRelationshipName": "afformdatafilter",
+      "relationshipName": "appformcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afdatafilter",
+      "otherEntityRelationshipName": "afformdatafilter",
+      "relationshipName": "appdatafiltercode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106115953",
+  "entityTableName": "afformdatafilter",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

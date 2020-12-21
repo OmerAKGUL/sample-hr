@@ -1,0 +1,36 @@
+{
+  "sampleHrApp": {
+    "meinvestprofile": {
+      "home": {
+        "title": "Meinvestprofiles",
+        "createLabel": "Create a new Meinvestprofile",
+        "createOrEditLabel": "Create or edit a Meinvestprofile",
+        "notFound": "No Meinvestprofiles found"
+      },
+      "created": "A new Meinvestprofile is created with identifier {{ param }}",
+      "updated": "A Meinvestprofile is updated with identifier {{ param }}",
+      "deleted": "A Meinvestprofile is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Meinvestprofile {{ id }}?"
+      },
+      "detail": {
+        "title": "Meinvestprofile"
+      },
+      "name": "Name",
+      "wlmid": "Wlmid",
+      "afsid": "Afsid",
+      "invtype": "Invtype",
+      "processdescr": "Processdescr",
+      "notifgrp1emailaddr": "Notifgrp 1 Emailaddr",
+      "notifgrp2emailaddr": "Notifgrp 2 Emailaddr",
+      "notifmsgtempl": "Notifmsgtempl",
+      "matchwltype": "Matchwltype",
+      "matchtxntype": "Matchtxntype",
+      "matchtxncusttype": "Matchtxncusttype",
+      "matchtxnacctype": "Matchtxnacctype",
+      "matchsystemcode": "Matchsystemcode",
+      "invrespuserid": "Invrespuserid",
+      "invresprole": "Invresprole"
+    }
+  }
+}

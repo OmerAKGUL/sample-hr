@@ -13,6 +13,18 @@ export const BrandIcon = props => (
   </div>
 );
 
+export const BrandVeloxappIcon = props => (
+  <div {...props} className="brandVeloxapp-icon">
+    <img src="content/images/logo-veloxapp.png" alt="Logo" />
+  </div>
+);
+
+export const BrandClientIcon = props => (
+  <div {...props} className="brandClient-icon">
+    <img src="content/images/logo-client.png" alt="Logo" />
+  </div>
+);
+
 export const Brand = props => (
   <NavbarBrand tag={Link} to="/" className="brand-logo">
     <BrandIcon />
@@ -23,12 +35,35 @@ export const Brand = props => (
   </NavbarBrand>
 );
 
+export const BrandVeloxapp = props => (
+  <NavbarBrand tag={Link} to="/" className="brandVeloxapp-logo">
+    <BrandVeloxappIcon />
+    <span className="navbar-version">{appConfig.VERSION}</span>
+  </NavbarBrand>
+);
+
+export const BrandClient = props => (
+  <NavbarBrand tag={Link} to="/" className="brandClient-logo">
+    <BrandClientIcon />
+  </NavbarBrand>
+);
+
 export const Home = props => (
   <NavItem>
     <NavLink tag={Link} to="/" className="d-flex align-items-center">
       <FontAwesomeIcon icon="home" />
       <span>
         <Translate contentKey="global.menu.home">Home</Translate>
+      </span>
+    </NavLink>
+  </NavItem>
+);
+export const Modules = props => (
+  <NavItem>
+    <NavLink tag={Link} to="/modules" className="d-flex align-items-center">
+      <FontAwesomeIcon icon="th-list" />
+      <span>
+        <Translate contentKey="global.menu.module">Modules</Translate>
       </span>
     </NavLink>
   </NavItem>

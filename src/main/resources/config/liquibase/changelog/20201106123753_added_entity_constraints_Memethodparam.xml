@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Memethodparam.
+    -->
+    <changeSet id="20201106123753-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="paramvalcode_id"
+                                 baseTableName="memethodparam"
+                                 constraintName="fk_memethodparam_paramvalcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afparamval"/>
+
+        <addForeignKeyConstraint baseColumnNames="paramidxno_id"
+                                 baseTableName="memethodparam"
+                                 constraintName="fk_memethodparam_paramidxno_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afparamval"/>
+
+        <addForeignKeyConstraint baseColumnNames="matchmethodcode_id"
+                                 baseTableName="memethodparam"
+                                 constraintName="fk_memethodparam_matchmethodcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mematchmethod"/>
+
+        <addForeignKeyConstraint baseColumnNames="wltype_id"
+                                 baseTableName="memethodparam"
+                                 constraintName="fk_memethodparam_wltype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="wlmwltype"/>
+
+    </changeSet>
+</databaseChangeLog>

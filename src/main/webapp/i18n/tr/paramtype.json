@@ -1,0 +1,10 @@
+{
+  "sampleHrApp": {
+    "Paramtype": {
+      "null": "",
+      "APPFRM": "APPFRM",
+      "DOMAINAPP": "DOMAINAPP",
+      "BUSINESS": "BUSINESS"
+    }
+  }
+}

@@ -12,7 +12,7 @@
     "messages": {
       "error": {
         "fail": "<strong>Bir hata oluştu!</strong> Ayarlar kaydedilemedi.",
-        "emailexists": "<strong>Email adresi zaten kullanılıyor!</strong> Lütfen başka bir mail seçiniz."
+        "emailexists": "<strong>Email adresi zaten kullanılıyor!</strong> Lütfen başka bir mail seÃ§iniz."
       },
       "success": "<strong>Ayarlar kaydedildi!</strong>",
       "validate": {

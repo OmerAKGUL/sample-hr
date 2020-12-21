@@ -1,0 +1,25 @@
+{
+  "sampleHrApp": {
+    "mematchmethod": {
+      "home": {
+        "title": "Mematchmethods",
+        "createLabel": "Create a new Mematchmethod",
+        "createOrEditLabel": "Create or edit a Mematchmethod",
+        "notFound": "No Mematchmethods found"
+      },
+      "created": "A new Mematchmethod is created with identifier {{ param }}",
+      "updated": "A Mematchmethod is updated with identifier {{ param }}",
+      "deleted": "A Mematchmethod is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mematchmethod {{ id }}?"
+      },
+      "detail": {
+        "title": "Mematchmethod"
+      },
+      "code": "Code",
+      "name": "Name",
+      "descr": "Descr",
+      "applyonwlfields": "Applyonwlfields"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Afformdatafilter.
+    -->
+    <changeSet id="20201106115953-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="approlecode_id"
+                                 baseTableName="afformdatafilter"
+                                 constraintName="fk_afformdatafilter_approlecode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afsrole"/>
+
+        <addForeignKeyConstraint baseColumnNames="appformcode_id"
+                                 baseTableName="afformdatafilter"
+                                 constraintName="fk_afformdatafilter_appformcode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afform"/>
+
+        <addForeignKeyConstraint baseColumnNames="appdatafiltercode_id"
+                                 baseTableName="afformdatafilter"
+                                 constraintName="fk_afformdatafilter_appdatafiltercode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="afdatafilter"/>
+
+    </changeSet>
+</databaseChangeLog>

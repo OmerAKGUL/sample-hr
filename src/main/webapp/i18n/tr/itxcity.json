@@ -1,0 +1,25 @@
+{
+  "sampleHrApp": {
+    "itxcity": {
+      "home": {
+        "title": "Itxcities",
+        "createLabel": "Create a new Itxcity",
+        "createOrEditLabel": "Create or edit a Itxcity",
+        "notFound": "No Itxcities found"
+      },
+      "created": "A new Itxcity is created with identifier {{ param }}",
+      "updated": "A Itxcity is updated with identifier {{ param }}",
+      "deleted": "A Itxcity is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxcity {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxcity"
+      },
+      "name": "Name",
+      "localname": "Localname",
+      "phonecode": "Phonecode",
+      "countryisocode": "Countryisocode"
+    }
+  }
+}

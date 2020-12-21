@@ -1,0 +1,38 @@
+{
+  "sampleHrApp": {
+    "meconfig": {
+      "home": {
+        "title": "Karşılaştırma Motoru",
+        "createLabel": "Yeni Karşılaştırma Oluştur",
+        "createOrEditLabel": "Karşılaştırma olurtur ve düzenle",
+        "notFound": "Herhangi bir karşılaştırma bulunmamaktadır."
+      },
+      "created": "{{ param }} Karşılaştırma konfirigayonu eklendi.",
+      "updated": "A Meconfig is updated with identifier {{ param }}",
+      "deleted": "A Meconfig is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Meconfig {{ id }}?",
+        "questionstart": "Başlatmak istediğinize emin misiniz? Meconfig {{ id }}?",
+        "questionstop": "Durdurmak istediğinize emin misiniz? Meconfig {{ id }}?",
+        "nosuch": "No such action can be done because of WFState value."
+      },
+      "detail": {
+        "title": "Meconfig"
+      },
+      "code": "Karşılaştırma Kodu",
+      "name": "Karşılaştırma İsmi",
+      "descr": "Tanım",
+      "wlfieldlist": "İş Durum Alan Listesi",
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullancı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "Çalışma Durumu",
+      "wfprocid": "İş Durum ID",
+      "scheduleid": "Zamanlama İsmi",
+      "stopped": "Durduruldu",
+      "started": "Başlatıldı",
+      "preparing": "Hazırlanıyor"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "sampleHrApp": {
+    "mematchresult": {
+      "home": {
+        "title": "Mematchresults",
+        "createLabel": "Create a new Mematchresult",
+        "createOrEditLabel": "Create or edit a Mematchresult",
+        "notFound": "No Mematchresults found"
+      },
+      "created": "A new Mematchresult is created with identifier {{ param }}",
+      "updated": "A Mematchresult is updated with identifier {{ param }}",
+      "deleted": "A Mematchresult is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mematchresult {{ id }}?"
+      },
+      "detail": {
+        "title": "Mematchresult"
+      },
+      "matchid": "Matchid",
+      "matchctxid": "Matchctxid",
+      "matchwltype": "Matchwltype",
+      "matchtxnid": "Matchtxnid",
+      "matchscore": "Matchscore",
+      "createdt": "Createdt",
+      "updatedt": "Updatedt",
+      "createusr": "Createusr",
+      "updateusr": "Updateusr",
+      "wfstate": "Wfstate",
+      "wfprocid": "Wfprocid",
+      "matchconfigcode": "Matchconfigcode",
+      "invprocid": "Invprocid"
+    }
+  }
+}

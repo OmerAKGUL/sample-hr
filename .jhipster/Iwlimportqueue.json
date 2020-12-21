@@ -1,0 +1,65 @@
+{
+  "name": "Iwlimportqueue",
+  "fields": [
+    {
+      "fieldName": "etljobstart",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "etljobsessiond",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcfileurl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tgtfileurl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updateusr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "wfstate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wfprocid",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afetljobtype",
+      "otherEntityRelationshipName": "iwlimportqueue",
+      "relationshipName": "etljobtype",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106123053",
+  "entityTableName": "iwlimportqueue",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

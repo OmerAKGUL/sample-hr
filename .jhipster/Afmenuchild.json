@@ -1,0 +1,36 @@
+{
+  "name": "Afmenuchild",
+  "fields": [
+    {
+      "fieldName": "afmid",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afmenuitem",
+      "otherEntityRelationshipName": "afmenuchild",
+      "relationshipName": "menuitemcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afmenuitem",
+      "otherEntityRelationshipName": "afmenuchild",
+      "relationshipName": "childcode",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106120053",
+  "entityTableName": "afmenuchild",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

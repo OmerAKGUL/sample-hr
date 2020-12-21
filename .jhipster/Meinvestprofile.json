@@ -1,0 +1,100 @@
+{
+  "name": "Meinvestprofile",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wlmid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "afsid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "invtype",
+      "fieldType": "Invtype",
+      "fieldValues": "GENEL,IDARI,ADLI"
+    },
+    {
+      "fieldName": "processdescr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notifgrp1emailaddr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notifgrp2emailaddr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notifmsgtempl",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "wlmwltype",
+      "otherEntityRelationshipName": "meinvestprofile",
+      "relationshipName": "matchwltype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxtxntype",
+      "otherEntityRelationshipName": "meinvestprofile",
+      "relationshipName": "matchtxntype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxcusttype",
+      "otherEntityRelationshipName": "meinvestprofile",
+      "relationshipName": "matchtxncusttype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "itxaccounttype",
+      "otherEntityRelationshipName": "meinvestprofile",
+      "relationshipName": "matchtxnacctype",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsystem",
+      "otherEntityRelationshipName": "meinvestprofile",
+      "relationshipName": "matchsystemcode",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "jhiuser",
+      "otherEntityRelationshipName": "meinvestprofile",
+      "relationshipName": "invrespuserid",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "afsrole",
+      "otherEntityRelationshipName": "meinvestprofile",
+      "relationshipName": "invresprole",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201106123353",
+  "entityTableName": "meinvestprofile",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

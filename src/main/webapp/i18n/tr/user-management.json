@@ -5,9 +5,9 @@
       "createLabel": "Yeni kullanıcı oluştur",
       "createOrEditLabel": "Kullanıcı oluştur veya düzenle"
     },
-    "created": "A new user is created with identifier {{ param }}",
-    "updated": "A user is updated with identifier {{ param }}",
-    "deleted": "A user is deleted with identifier {{ param }}",
+    "created": "Şu tanımlayıcıyla bir kullanıcı oluşturuldu {{ param }}",
+    "updated": "Şu tanımlayıcıyla bir kullanıcı güncellendi {{ param }}",
+    "deleted": "Şu tanımlayıcıyla bir kullanıcı silindi {{ param }}",
     "delete": {
       "question": "{{ login }} kullanıcısını silmek istediğinize emin misiniz?"
     },

@@ -1,0 +1,13 @@
+{
+  "sampleHrApp": {
+    "Linktype": {
+      "null": "",
+      "INTACTION": "INTACTION",
+      "EXTACTION": "EXTACTION",
+      "INTREPORT": "INTREPORT",
+      "EXTREPORT": "EXTREPORT",
+      "INTWEBLINK": "INTWEBLINK",
+      "EXTWEBLINK": "EXTWEBLINK"
+    }
+  }
+}

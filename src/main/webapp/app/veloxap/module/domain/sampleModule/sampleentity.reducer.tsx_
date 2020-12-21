@@ -1,0 +1,143 @@
+import axios from 'axios';
+import { ICrudGetAction, ICrudGetAllAction, ICrudPutAction, ICrudDeleteAction } from 'react-jhipster';
+
+import { cleanEntity } from '../../../shared/redux/entity-utils';
+import { REQUEST, SUCCESS, FAILURE } from '../../../shared/redux/reducers/action-type';
+
+import { sampleEntity, defaultValue } from 'sampleEntity';
+
+export const ACTION_TYPES = {
+  FETCH_SAMPLEENTITY_LIST: 'sampleentity/FETCH_SAMPLEENTITY_LIST',
+  FETCH_SAMPLEENTITY: 'sampleentity/FETCH_SAMPLEENTITY',
+  CREATE_SAMPLEENTITY: 'sampleentity/CREATE_SAMPLEENTITY',
+  UPDATE_SAMPLEENTITY: 'sampleentity/UPDATE_SAMPLEENTITY',
+  DELETE_SAMPLEENTITY: 'sampleentity/DELETE_SAMPLEENTITY',
+  RESET: 'sampleentity/RESET',
+};
+
+const initialState = {
+  loading: false,
+  errorMessage: null,
+  entities: [] as ReadonlyArray<sampleEntity>,
+  entity: defaultValue,
+  updating: false,
+  updateSuccess: false,
+};
+
+export type SampleEntityState = Readonly<typeof initialState>;
+
+// Reducer
+export default (state: SampleEntityState = initialState, action): SampleEntityState => {
+  switch (action.type) {
+    case REQUEST(ACTION_TYPES.FETCH_COUNTRY_LIST):
+    case REQUEST(ACTION_TYPES.FETCH_COUNTRY):
+      return {
+        ...state,
+        errorMessage: null,
+        updateSuccess: false,
+        loading: true,
+      };
+    case REQUEST(ACTION_TYPES.CREATE_COUNTRY):
+    case REQUEST(ACTION_TYPES.UPDATE_COUNTRY):
+    case REQUEST(ACTION_TYPES.DELETE_COUNTRY):
+      return {
+        ...state,
+        errorMessage: null,
+        updateSuccess: false,
+        updating: true,
+      };
+    case FAILURE(ACTION_TYPES.FETCH_COUNTRY_LIST):
+    case FAILURE(ACTION_TYPES.FETCH_COUNTRY):
+    case FAILURE(ACTION_TYPES.CREATE_COUNTRY):
+    case FAILURE(ACTION_TYPES.UPDATE_COUNTRY):
+    case FAILURE(ACTION_TYPES.DELETE_COUNTRY):
+      return {
+        ...state,
+        loading: false,
+        updating: false,
+        updateSuccess: false,
+        errorMessage: action.payload,
+      };
+    case SUCCESS(ACTION_TYPES.FETCH_COUNTRY_LIST):
+      return {
+        ...state,
+        loading: false,
+        entities: action.payload.data,
+      };
+    case SUCCESS(ACTION_TYPES.FETCH_COUNTRY):
+      return {
+        ...state,
+        loading: false,
+        entity: action.payload.data,
+      };
+    case SUCCESS(ACTION_TYPES.CREATE_COUNTRY):
+    case SUCCESS(ACTION_TYPES.UPDATE_COUNTRY):
+      return {
+        ...state,
+        updating: false,
+        updateSuccess: true,
+        entity: action.payload.data,
+      };
+    case SUCCESS(ACTION_TYPES.DELETE_COUNTRY):
+      return {
+        ...state,
+        updating: false,
+        updateSuccess: true,
+        entity: {},
+      };
+    case ACTION_TYPES.RESET:
+      return {
+        ...initialState,
+      };
+    default:
+      return state;
+  }
+};
+
+const apiUrl = 'api/countries';
+
+// Actions
+
+export const getEntities: ICrudGetAllAction<ICountry> = (page, size, sort) => ({
+  type: ACTION_TYPES.FETCH_COUNTRY_LIST,
+  payload: axios.get<ICountry>(`${apiUrl}?cacheBuster=${new Date().getTime()}`),
+});
+
+export const getEntity: ICrudGetAction<ICountry> = id => {
+  const requestUrl = `${apiUrl}/${id}`;
+  return {
+    type: ACTION_TYPES.FETCH_COUNTRY,
+    payload: axios.get<ICountry>(requestUrl),
+  };
+};
+
+export const createEntity: ICrudPutAction<ICountry> = entity => async dispatch => {
+  const result = await dispatch({
+    type: ACTION_TYPES.CREATE_COUNTRY,
+    payload: axios.post(apiUrl, cleanEntity(entity)),
+  });
+  dispatch(getEntities());
+  return result;
+};
+
+export const updateEntity: ICrudPutAction<ICountry> = entity => async dispatch => {
+  const result = await dispatch({
+    type: ACTION_TYPES.UPDATE_COUNTRY,
+    payload: axios.put(apiUrl, cleanEntity(entity)),
+  });
+  return result;
+};
+
+export const deleteEntity: ICrudDeleteAction<ICountry> = id => async dispatch => {
+  const requestUrl = `${apiUrl}/${id}`;
+  const result = await dispatch({
+    type: ACTION_TYPES.DELETE_COUNTRY,
+    payload: axios.delete(requestUrl),
+  });
+  dispatch(getEntities());
+  return result;
+};
+
+export const reset = () => ({
+  type: ACTION_TYPES.RESET,
+});

@@ -1,0 +1,24 @@
+{
+  "sampleHrApp": {
+    "itxdictionary": {
+      "home": {
+        "title": "Itxdictionaries",
+        "createLabel": "Create a new Itxdictionary",
+        "createOrEditLabel": "Create or edit a Itxdictionary",
+        "notFound": "No Itxdictionaries found"
+      },
+      "created": "A new Itxdictionary is created with identifier {{ param }}",
+      "updated": "A Itxdictionary is updated with identifier {{ param }}",
+      "deleted": "A Itxdictionary is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Itxdictionary {{ id }}?"
+      },
+      "detail": {
+        "title": "Itxdictionary"
+      },
+      "termname": "Termname",
+      "type": "Type",
+      "countryisocode": "Countryisocode"
+    }
+  }
+}
