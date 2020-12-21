@@ -1,11 +1,14 @@
 package com.mdsap.samplehr.config;
 
 import com.mdsap.samplehr.security.*;
+import com.mdsap.samplehr.security.customSecurity.CustomAuthenticationProvider;
 import com.mdsap.samplehr.security.jwt.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -28,6 +31,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final CorsFilter corsFilter;
     private final SecurityProblemSupport problemSupport;
+
+    @Autowired
+    private CustomAuthenticationProvider authProvider;
 
     public SecurityConfiguration(TokenProvider tokenProvider, CorsFilter corsFilter, SecurityProblemSupport problemSupport) {
         this.tokenProvider = tokenProvider;
@@ -97,4 +103,24 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private JWTConfigurer securityConfigurerAdapter() {
         return new JWTConfigurer(tokenProvider);
     }
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+
+
+       auth.authenticationProvider(authProvider);
+
+ /*
+        auth
+            .ldapAuthentication()
+            .userSearchFilter("(uid={0})")
+            .userSearchBase("")
+            .contextSource()
+            .url("ldap://ldap.forumsys.com:389/dc=example,dc=com")
+            .managerDn("cn=read-only-admin,dc=example,dc=com")
+            .managerPassword("password");
+*/
+
+    }
+
 }
