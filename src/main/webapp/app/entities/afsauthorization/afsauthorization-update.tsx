@@ -6,6 +6,7 @@ import { AvFeedback, AvForm, AvGroup, AvInput, AvField } from 'availity-reactstr
 import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
+import VirtualizedSelect from 'react-virtualized-select';
 
 import { IAfsrole } from 'app/shared/model/afsrole.model';
 import { getEntities as getAfsroles } from 'app/entities/afsrole/afsrole.reducer';
@@ -23,16 +24,16 @@ import { mapIdList } from 'app/shared/util/entity-utils';
 export interface IAfsauthorizationUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const AfsauthorizationUpdate = (props: IAfsauthorizationUpdateProps) => {
-  const [rolecodeId, setRolecodeId] = useState('0');
-  const [acccodeId, setAcccodeId] = useState('0');
-  const [modulecodeId, setModulecodeId] = useState('0');
-  const [menuitemcodeId, setMenuitemcodeId] = useState('0');
+  const [rolecodeId, setRolecodeId] = useState({label : '', value : 0});
+  const [acccodeId, setAcccodeId] = useState({label : '', value : 0});
+  const [modulecodeId, setModulecodeId] = useState({label : '', value : 0});
+  const [menuitemcodeId, setMenuitemcodeId] = useState({label : '', value : 0});
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
   const { afsauthorizationEntity, afsroles, afwfactions, afsysmodules, afmenuitems, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afsauthorization');
+    props.history.push('/modules/afs/afsauthorization');
   };
 
   useEffect(() => {
@@ -47,6 +48,12 @@ export const AfsauthorizationUpdate = (props: IAfsauthorizationUpdateProps) => {
     props.getAfsysmodules();
     props.getAfmenuitems();
   }, []);
+  useEffect(() => {
+    props.afsauthorizationEntity.rolecode ? setRolecodeId({label : props.afsauthorizationEntity.rolecode.name,value :props.afsauthorizationEntity.rolecode.id }): null;
+    props.afsauthorizationEntity.acccode ? setAcccodeId({label : props.afsauthorizationEntity.acccode.name,value :props.afsauthorizationEntity.acccode.id }): null;
+    props.afsauthorizationEntity.modulecode ? setModulecodeId({label : props.afsauthorizationEntity.modulecode.name,value :props.afsauthorizationEntity.modulecode.id }): null;
+    props.afsauthorizationEntity.menuitemcode ? setMenuitemcodeId({label : props.afsauthorizationEntity.menuitemcode.name,value :props.afsauthorizationEntity.menuitemcode.id }): null;
+  }, [props.afsauthorizationEntity]);
 
   useEffect(() => {
     if (props.updateSuccess) {
@@ -55,6 +62,10 @@ export const AfsauthorizationUpdate = (props: IAfsauthorizationUpdateProps) => {
   }, [props.updateSuccess]);
 
   const saveEntity = (event, errors, values) => {
+    values.rolecode.id = rolecodeId.value;
+    values.acccode.id = acccodeId.value;
+    values.modulecode.id = modulecodeId.value;
+    values.menuitemcode.id = menuitemcodeId.value;
     if (errors.length === 0) {
       const entity = {
         ...afsauthorizationEntity,
@@ -127,7 +138,14 @@ export const AfsauthorizationUpdate = (props: IAfsauthorizationUpdateProps) => {
                 <Label for="afsauthorization-rolecode">
                   <Translate contentKey="sampleHrApp.afsauthorization.rolecode">Rolecode</Translate>
                 </Label>
-                <AvInput id="afsauthorization-rolecode" type="select" className="form-control" name="rolecode.id">
+                
+                <VirtualizedSelect
+                      id="afsauthorization-rolecode"
+                      options={ afsroles.map(otherEntity => ({label:otherEntity.name,value:otherEntity.id})) }
+                      onChange={(e) => setRolecodeId(e)}
+                      value={rolecodeId}
+                    />
+                <AvInput id="afsauthorization-rolecode" type="select" className="form-control" name="rolecode.id" hidden>
                   <option value="" key="0" />
                   {afsroles
                     ? afsroles.map(otherEntity => (
@@ -142,7 +160,13 @@ export const AfsauthorizationUpdate = (props: IAfsauthorizationUpdateProps) => {
                 <Label for="afsauthorization-acccode">
                   <Translate contentKey="sampleHrApp.afsauthorization.acccode">Acccode</Translate>
                 </Label>
-                <AvInput id="afsauthorization-acccode" type="select" className="form-control" name="acccode.id">
+                <VirtualizedSelect
+                      id="afsauthorization-acccode"
+                      options={ afwfactions.map(otherEntity => ({label:otherEntity.name,value:otherEntity.id})) }
+                      onChange={(e) => setAcccodeId(e)}
+                      value={acccodeId}
+                    />
+                <AvInput id="afsauthorization-acccode" type="select" className="form-control" name="acccode.id" hidden>
                   <option value="" key="0" />
                   {afwfactions
                     ? afwfactions.map(otherEntity => (
@@ -157,7 +181,13 @@ export const AfsauthorizationUpdate = (props: IAfsauthorizationUpdateProps) => {
                 <Label for="afsauthorization-modulecode">
                   <Translate contentKey="sampleHrApp.afsauthorization.modulecode">Modulecode</Translate>
                 </Label>
-                <AvInput id="afsauthorization-modulecode" type="select" className="form-control" name="modulecode.id">
+                <VirtualizedSelect
+                      id="afsauthorization-modulecode"
+                      options={ afsysmodules.map(otherEntity => ({label:otherEntity.name,value:otherEntity.id})) }
+                      onChange={(e) => setModulecodeId(e)}
+                      value={modulecodeId}
+                    />
+                <AvInput id="afsauthorization-modulecode" type="select" className="form-control" name="modulecode.id" hidden>
                   <option value="" key="0" />
                   {afsysmodules
                     ? afsysmodules.map(otherEntity => (
@@ -172,18 +202,24 @@ export const AfsauthorizationUpdate = (props: IAfsauthorizationUpdateProps) => {
                 <Label for="afsauthorization-menuitemcode">
                   <Translate contentKey="sampleHrApp.afsauthorization.menuitemcode">Menuitemcode</Translate>
                 </Label>
-                <AvInput id="afsauthorization-menuitemcode" type="select" className="form-control" name="menuitemcode.id">
+                <VirtualizedSelect
+                      id="afsauthorization-menuitemcode"
+                      options={ afmenuitems.map(otherEntity => ({label:otherEntity.name,value:otherEntity.id})) }
+                      onChange={(e) => setMenuitemcodeId(e)}
+                      value={menuitemcodeId}
+                    />
+                <AvInput id="afsauthorization-menuitemcode" type="select" className="form-control" name="menuitemcode.id" hidden>
                   <option value="" key="0" />
                   {afmenuitems
                     ? afmenuitems.map(otherEntity => (
-                        <option value={otherEntity.id} key={otherEntity.id}>
+                        <option value={otherEntity.id} key={otherEntity.name}>
                           {otherEntity.name}
                         </option>
                       ))
                     : null}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afsauthorization" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/afs/afsauthorization" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

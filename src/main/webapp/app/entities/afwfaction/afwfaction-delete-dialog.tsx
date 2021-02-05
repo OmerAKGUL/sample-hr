@@ -17,7 +17,7 @@ export const AfwfactionDeleteDialog = (props: IAfwfactionDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afwfaction');
+    props.history.push('/modules/af/afwfaction');
   };
 
   useEffect(() => {

@@ -17,7 +17,7 @@ export const AfsysmoduleDeleteDialog = (props: IAfsysmoduleDeleteDialogProps) =>
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afsysmodule');
+    props.history.push('/modules/af/afsysmodule');
   };
 
   useEffect(() => {

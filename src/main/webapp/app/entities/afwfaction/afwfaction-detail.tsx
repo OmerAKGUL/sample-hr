@@ -104,28 +104,28 @@ export const AfwfactionDetail = (props: IAfwfactionDetailProps) => {
           <dt>
             <Translate contentKey="sampleHrApp.afwfaction.appmenucode">Appmenucode</Translate>
           </dt>
-          <dd>{afwfactionEntity.appmenucode ? afwfactionEntity.appmenucode.id : ''}</dd>
+          <dd>{afwfactionEntity.appmenucode ? afwfactionEntity.appmenucode.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.afwfaction.appformcode">Appformcode</Translate>
           </dt>
-          <dd>{afwfactionEntity.appformcode ? afwfactionEntity.appformcode.id : ''}</dd>
+          <dd>{afwfactionEntity.appformcode ? afwfactionEntity.appformcode.title : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.afwfaction.appmodulecode">Appmodulecode</Translate>
           </dt>
-          <dd>{afwfactionEntity.appmodulecode ? afwfactionEntity.appmodulecode.id : ''}</dd>
+          <dd>{afwfactionEntity.appmodulecode ? afwfactionEntity.appmodulecode.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.afwfaction.wfcode">Wfcode</Translate>
           </dt>
-          <dd>{afwfactionEntity.wfcode ? afwfactionEntity.wfcode.id : ''}</dd>
+          <dd>{afwfactionEntity.wfcode ? afwfactionEntity.wfcode.name : ''}</dd>
         </dl>
-        <Button tag={Link} to="/afwfaction" replace color="info">
+        <Button tag={Link} to="/modules/af/afwfaction" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/afwfaction/${afwfactionEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/af/afwfaction/${afwfactionEntity.id}`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

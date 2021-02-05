@@ -94,16 +94,16 @@ export const AfwfstateDetail = (props: IAfwfstateDetailProps) => {
           <dt>
             <Translate contentKey="sampleHrApp.afwfstate.wfcode">Wfcode</Translate>
           </dt>
-          <dd>{afwfstateEntity.wfcode ? afwfstateEntity.wfcode.id : ''}</dd>
+          <dd>{afwfstateEntity.wfcode ? afwfstateEntity.wfcode.name : ''}</dd>
         </dl>
-        <Button tag={Link} to="/afwfstate" replace color="info">
+        <Button tag={Link} to="/modules/af/afwfstate" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/afwfstate/${afwfstateEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/af/afwfstate/${afwfstateEntity.id}`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

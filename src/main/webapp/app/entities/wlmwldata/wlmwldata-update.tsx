@@ -6,6 +6,7 @@ import { AvFeedback, AvForm, AvGroup, AvInput, AvField } from 'availity-reactstr
 import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
+import VirtualizedSelect from 'react-virtualized-select';
 
 import { IWlmwltype } from 'app/shared/model/wlmwltype.model';
 import { getEntities as getWlmwltypes } from 'app/entities/wlmwltype/wlmwltype.reducer';
@@ -19,11 +20,12 @@ export interface IWlmwldataUpdateProps extends StateProps, DispatchProps, RouteC
 export const WlmwldataUpdate = (props: IWlmwldataUpdateProps) => {
   const [wltypeId, setWltypeId] = useState('0');
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
+  const [selectedwlwlmtype,setSelectedwlwlmtype]= useState({label : '', value : 0});
 
   const { wlmwldataEntity, wlmwltypes, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/wlmwldata' + props.location.search);
+    props.history.push('/modules/wlm/wlmwldata' + props.location.search);
   };
 
   useEffect(() => {
@@ -37,6 +39,11 @@ export const WlmwldataUpdate = (props: IWlmwldataUpdateProps) => {
   }, []);
 
   useEffect(() => {
+    props.wlmwldataEntity.wltype ? setSelectedwlwlmtype({label : props.wlmwldataEntity.wltype.name,value :props.wlmwldataEntity.wltype.id }): null;
+   
+  }, [props.wlmwldataEntity]);
+  
+  useEffect(() => {
     if (props.updateSuccess) {
       handleClose();
     }
@@ -45,6 +52,7 @@ export const WlmwldataUpdate = (props: IWlmwldataUpdateProps) => {
   const saveEntity = (event, errors, values) => {
     values.createdt = convertDateTimeToServer(values.createdt);
     values.updatedt = convertDateTimeToServer(values.updatedt);
+    values.wltype.id = selectedwlwlmtype.value;
 
     if (errors.length === 0) {
       const entity = {
@@ -173,18 +181,27 @@ export const WlmwldataUpdate = (props: IWlmwldataUpdateProps) => {
                 <Label for="wlmwldata-wltype">
                   <Translate contentKey="sampleHrApp.wlmwldata.wltype">Wltype</Translate>
                 </Label>
-                <AvInput id="wlmwldata-wltype" type="select" className="form-control" name="wltype.id">
+                <VirtualizedSelect
+                      id="wlmwldata-wltype"
+                      options={ wlmwltypes.map(otherEntity => ({label:otherEntity.name,value:otherEntity.id})) }
+                      onChange={(e) => setSelectedwlwlmtype(e)}
+                      value={selectedwlwlmtype}
+                      validate={{
+                        required: { value: true, errorMessage: translate('entity.validation.required') },
+                      }}
+                    />
+                <AvInput id="wlmwldata-wltype" type="select" className="form-control" name="wltype.id" hidden>
                   <option value="" key="0" />
                   {wlmwltypes
                     ? wlmwltypes.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.name}
                         </option>
                       ))
                     : null}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/wlmwldata" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/wlm/wlmwldata" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

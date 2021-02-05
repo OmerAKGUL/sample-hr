@@ -23,7 +23,7 @@ export const AfwfstateUpdate = (props: IAfwfstateUpdateProps) => {
   const { afwfstateEntity, afworkflows, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afwfstate');
+    props.history.push('/modules/af/afwfstate');
   };
 
   useEffect(() => {
@@ -192,7 +192,7 @@ export const AfwfstateUpdate = (props: IAfwfstateUpdateProps) => {
                     : null}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afwfstate" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/af/afwfstate" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

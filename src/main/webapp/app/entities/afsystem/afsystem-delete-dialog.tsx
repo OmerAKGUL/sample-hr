@@ -17,7 +17,7 @@ export const AfsystemDeleteDialog = (props: IAfsystemDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afsystem');
+    props.history.push('/modules/af/afsystem');
   };
 
   useEffect(() => {

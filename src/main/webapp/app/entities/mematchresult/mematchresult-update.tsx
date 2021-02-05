@@ -15,18 +15,19 @@ import { getEntity, updateEntity, createEntity, reset } from './mematchresult.re
 import { IMematchresult } from 'app/shared/model/mematchresult.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
+import VirtualizedSelect from 'react-virtualized-select';
 
 export interface IMematchresultUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const MematchresultUpdate = (props: IMematchresultUpdateProps) => {
-  const [matchconfigcodeId, setMatchconfigcodeId] = useState('0');
-  const [invprocidId, setInvprocidId] = useState('0');
+  const [matchconfigcodeId, setMatchconfigcodeId] = useState({label : '', value : 0});
+  const [invprocidId, setInvprocidId] = useState({label : '', value : 0});
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
   const { mematchresultEntity, meconfigs, meinvestprocs, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/mematchresult');
+    props.history.push('/modules/me/mematchresult');
   };
 
   useEffect(() => {
@@ -39,6 +40,11 @@ export const MematchresultUpdate = (props: IMematchresultUpdateProps) => {
     props.getMeconfigs();
     props.getMeinvestprocs();
   }, []);
+  useEffect(() => {
+    props.mematchresultEntity.matchconfigcode ? setMatchconfigcodeId({label : props.mematchresultEntity.matchconfigcode.name,value :props.mematchresultEntity.matchconfigcode.id }): null;
+    props.mematchresultEntity.invprocid ? setInvprocidId({label : props.mematchresultEntity.invprocid.invprofile.name,value :props.mematchresultEntity.invprocid.id }): null;
+   
+  }, [props.mematchresultEntity]);
 
   useEffect(() => {
     if (props.updateSuccess) {
@@ -49,6 +55,8 @@ export const MematchresultUpdate = (props: IMematchresultUpdateProps) => {
   const saveEntity = (event, errors, values) => {
     values.createdt = convertDateTimeToServer(values.createdt);
     values.updatedt = convertDateTimeToServer(values.updatedt);
+    values.matchconfigcode.id = matchconfigcodeId.value;
+    values.invprocid.id = invprocidId.value;
 
     if (errors.length === 0) {
       const entity = {
@@ -180,7 +188,13 @@ export const MematchresultUpdate = (props: IMematchresultUpdateProps) => {
                 <Label for="mematchresult-matchconfigcode">
                   <Translate contentKey="sampleHrApp.mematchresult.matchconfigcode">Matchconfigcode</Translate>
                 </Label>
-                <AvInput id="mematchresult-matchconfigcode" type="select" className="form-control" name="matchconfigcode.id">
+                <VirtualizedSelect
+                      id="mematchresult-matchconfigcode"
+                      options={ meconfigs.map(otherEntity => ({label:otherEntity.name,value:otherEntity.id})) }
+                      onChange={(e) => setMatchconfigcodeId(e)}
+                      value={matchconfigcodeId}
+                    />
+                <AvInput id="mematchresult-matchconfigcode" type="select" className="form-control" name="matchconfigcode.id" hidden>
                   <option value="" key="0" />
                   {meconfigs
                     ? meconfigs.map(otherEntity => (
@@ -195,7 +209,13 @@ export const MematchresultUpdate = (props: IMematchresultUpdateProps) => {
                 <Label for="mematchresult-invprocid">
                   <Translate contentKey="sampleHrApp.mematchresult.invprocid">Invprocid</Translate>
                 </Label>
-                <AvInput id="mematchresult-invprocid" type="select" className="form-control" name="invprocid.id">
+                <VirtualizedSelect
+                      id="mematchresult-invprocid"
+                      options={ meinvestprocs.map(otherEntity => ({label:otherEntity.invprofile.name,value:otherEntity.id})) }
+                      onChange={(e) => setInvprocidId(e)}
+                      value={invprocidId}
+                    />
+                <AvInput id="mematchresult-invprocid" type="select" className="form-control" name="invprocid.id" hidden>
                   <option value="" key="0" />
                   {meinvestprocs
                     ? meinvestprocs.map(otherEntity => (

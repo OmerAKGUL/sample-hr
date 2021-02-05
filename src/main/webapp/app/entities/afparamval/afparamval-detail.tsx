@@ -85,7 +85,7 @@ export const AfparamvalDetail = (props: IAfparamvalDetailProps) => {
             </span>
           </dt>
           <dd>{afparamvalEntity.ownersys}</dd>
-          <dt>
+          { /* <dt>
             <span id="createdt">
               <Translate contentKey="sampleHrApp.afparamval.createdt">Createdt</Translate>
             </span>
@@ -112,7 +112,7 @@ export const AfparamvalDetail = (props: IAfparamvalDetailProps) => {
               <Translate contentKey="sampleHrApp.afparamval.updateusr">Updateusr</Translate>
             </span>
           </dt>
-          <dd>{afparamvalEntity.updateusr}</dd>
+          <dd>{afparamvalEntity.updateusr}</dd> */ }
           <dt>
             <span id="wfstate">
               <Translate contentKey="sampleHrApp.afparamval.wfstate">Wfstate</Translate>
@@ -126,14 +126,14 @@ export const AfparamvalDetail = (props: IAfparamvalDetailProps) => {
           </dt>
           <dd>{afparamvalEntity.wfprocid}</dd>
         </dl>
-        <Button tag={Link} to="/afparamval" replace color="info">
+        <Button tag={Link} to="/modules/af/afparamval" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/afparamval/${afparamvalEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/af/afparamval/${afparamvalEntity.id}`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

@@ -12,21 +12,53 @@ import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 
 export interface IAfparamvalProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
+let sumValues = 0;
+let sumValues2 = 0;
 export const Afparamval = (props: IAfparamvalProps) => {
   useEffect(() => {
     props.getEntities();
+    
+
   }, []);
 
   const { afparamvalList, match, loading } = props;
+
+  useEffect(() => {
+    if (props.afparamvalList && props.afparamvalList.length > 0)
+    {
+      sumValues = 0;
+      sumValues2 = 0;
+      for (const [index, value] of afparamvalList.entries()) 
+      {
+        if(value.paramgrpname === "Match.Fields")
+        {
+          sumValues = sumValues + parseInt(value.value,10);
+          // console.warn("value.paramgrpname === Match.Fields:" + (value.paramgrpname === "Match.Fields"));
+          // console.warn("sumValues:" + sumValues);
+          // console.warn("sumValues === 100:" + (sumValues === 100));
+        }
+        if(value.paramgrpname === "Match.Algorithm" && value.valuetype === "BOOLEAN"	)
+        {
+          if(value.value === "TRUE"){
+            sumValues2 = sumValues2 + 100;
+            // console.warn("sumValues2:" + sumValues2);
+            // console.warn("sumValues2 === 100:" + (sumValues2 === 100));
+          }
+        }
+      }  
+  
+    }
+  }, [props.afparamvalList]);
+
   return (
     <div>
       <h2 id="afparamval-heading">
         <Translate contentKey="sampleHrApp.afparamval.home.title">Afparamvals</Translate>
-        <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
+       {/* <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.afparamval.home.createLabel">Create new Afparamval</Translate>
-        </Link>
+        </Link>*/}
       </h2>
       <div className="table-responsive">
         {afparamvalList && afparamvalList.length > 0 ? (
@@ -106,7 +138,7 @@ export const Afparamval = (props: IAfparamvalProps) => {
                   </td>
                   <td>{afparamval.valueformat}</td>
                   <td>{afparamval.valueunit}</td>
-                  <td>{afparamval.value}</td>
+                  <td style={ afparamval.paramgrpname === "Match.Fields" && sumValues === 100 ? { background: 'green' } : afparamval.paramgrpname === "Match.Algorithm" && afparamval.valuetype === "BOOLEAN" && sumValues2 === 100 ? { background: 'green' } : afparamval.paramgrpname === "Match.Algorithm" && afparamval.valuetype === "INTEGER" && parseInt(afparamval.value,10)>=75 && parseInt(afparamval.value,10) <= 100 ? { background: 'green' } : { background: 'red' } }>{afparamval.value }</td>
                   <td>{afparamval.descr}</td>
                   <td>{afparamval.ownersys}</td>
                   <td>{afparamval.wfstate}</td>

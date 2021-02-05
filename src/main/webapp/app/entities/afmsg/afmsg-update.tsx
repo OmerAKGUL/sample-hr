@@ -23,7 +23,7 @@ export const AfmsgUpdate = (props: IAfmsgUpdateProps) => {
   const { afmsgEntity, afsystems, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afmsg');
+    props.history.push('/modules/af/afmsg');
   };
 
   useEffect(() => {
@@ -138,7 +138,7 @@ export const AfmsgUpdate = (props: IAfmsgUpdateProps) => {
                     : null}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afmsg" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/af/afmsg" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

@@ -44,14 +44,14 @@ export const AfsroleDetail = (props: IAfsroleDetailProps) => {
           </dt>
           <dd>{afsroleEntity.descr}</dd>
         </dl>
-        <Button tag={Link} to="/afsrole" replace color="info">
+        <Button tag={Link} to="/modules/afs/afsrole" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/afsrole/${afsroleEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/afs/afsrole/${afsroleEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

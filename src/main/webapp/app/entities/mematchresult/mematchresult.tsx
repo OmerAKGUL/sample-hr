@@ -95,14 +95,14 @@ export const Mematchresult = (props: IMematchresultProps) => {
                   <td>{mematchresult.wfprocid}</td>
                   <td>
                     {mematchresult.matchconfigcode ? (
-                      <Link to={`meconfig/${mematchresult.matchconfigcode.id}`}>{mematchresult.matchconfigcode.id}</Link>
+                      <Link to={`meconfig/${mematchresult.matchconfigcode.id}`}>{mematchresult.matchconfigcode.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {mematchresult.invprocid ? (
-                      <Link to={`meinvestproc/${mematchresult.invprocid.id}`}>{mematchresult.invprocid.id}</Link>
+                      <Link to={`meinvestproc/${mematchresult.invprocid.id}`}>{mematchresult.invprocid.invprofile.name}</Link>
                     ) : (
                       ''
                     )}

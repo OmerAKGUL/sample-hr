@@ -8,6 +8,7 @@ import Metrics from './metrics/metrics';
 import Configuration from './configuration/configuration';
 import Audits from './audits/audits';
 import Docs from './docs/docs';
+import Ldap from './ldap/ldap';
 
 
 const Routes = ({ match }) => (
@@ -19,6 +20,7 @@ const Routes = ({ match }) => (
     <ErrorBoundaryRoute exact path={`${match.url}/configuration`} component={Configuration} />
     <ErrorBoundaryRoute exact path={`${match.url}/audits`} component={Audits} />
     <ErrorBoundaryRoute exact path={`${match.url}/logs`} component={Logs} />
+    <ErrorBoundaryRoute exact path={`${match.url}/ldap`} component={Ldap} />
   </div>
 );
 

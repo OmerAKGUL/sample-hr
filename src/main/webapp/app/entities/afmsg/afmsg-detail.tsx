@@ -64,16 +64,16 @@ export const AfmsgDetail = (props: IAfmsgDetailProps) => {
           <dt>
             <Translate contentKey="sampleHrApp.afmsg.appsyscode">Appsyscode</Translate>
           </dt>
-          <dd>{afmsgEntity.appsyscode ? afmsgEntity.appsyscode.id : ''}</dd>
+          <dd>{afmsgEntity.appsyscode ? afmsgEntity.appsyscode.name : ''}</dd>
         </dl>
-        <Button tag={Link} to="/afmsg" replace color="info">
+        <Button tag={Link} to="/modules/af/afmsg" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/afmsg/${afmsgEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/af/afmsg/${afmsgEntity.id}`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

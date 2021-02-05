@@ -17,7 +17,7 @@ export const AfmsgDeleteDialog = (props: IAfmsgDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afmsg');
+    props.history.push('/modules/af/afmsg');
   };
 
   useEffect(() => {

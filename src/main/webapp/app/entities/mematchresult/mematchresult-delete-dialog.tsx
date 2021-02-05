@@ -17,7 +17,7 @@ export const MematchresultDeleteDialog = (props: IMematchresultDeleteDialogProps
   }, []);
 
   const handleClose = () => {
-    props.history.push('/mematchresult');
+    props.history.push('/modules/me/mematchresult');
   };
 
   useEffect(() => {

@@ -20,7 +20,7 @@ export const AfworkflowUpdate = (props: IAfworkflowUpdateProps) => {
   const { afworkflowEntity, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afworkflow');
+    props.history.push('/modules/af/afworkflow');
   };
 
   useEffect(() => {
@@ -172,7 +172,7 @@ export const AfworkflowUpdate = (props: IAfworkflowUpdateProps) => {
                 </Label>
                 <AvField id="afworkflow-wfprocid" type="string" className="form-control" name="wfprocid" />
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afworkflow" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/af/afworkflow" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

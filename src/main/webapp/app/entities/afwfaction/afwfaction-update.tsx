@@ -32,7 +32,7 @@ export const AfwfactionUpdate = (props: IAfwfactionUpdateProps) => {
   const { afwfactionEntity, afmenuitems, afforms, afsysmodules, afworkflows, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afwfaction');
+    props.history.push('/modules/af/afwfaction');
   };
 
   useEffect(() => {
@@ -255,7 +255,7 @@ export const AfwfactionUpdate = (props: IAfwfactionUpdateProps) => {
                     : null}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afwfaction" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/af/afwfaction" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

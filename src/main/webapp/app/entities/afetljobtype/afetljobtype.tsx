@@ -22,11 +22,12 @@ export const Afetljobtype = (props: IAfetljobtypeProps) => {
     <div>
       <h2 id="afetljobtype-heading">
         <Translate contentKey="sampleHrApp.afetljobtype.home.title">Afetljobtypes</Translate>
+        {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.afetljobtype.home.createLabel">Create new Afetljobtype</Translate>
-        </Link>
+        </Link>}
       </h2>
       <div className="table-responsive">
         {afetljobtypeList && afetljobtypeList.length > 0 ? (
@@ -135,36 +136,44 @@ export const Afetljobtype = (props: IAfetljobtypeProps) => {
                   <td>{afetljobtype.updateusr}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-				      <Button color="info" size="sm">
-                        <FontAwesomeIcon icon="eye" />{' '}
-                        <span className="d-none d-md-inline">
-                          <Translate contentKey="entity.action.start">Start</Translate>
-                        </span>
-                      </Button>
-					  <Button color="danger" size="sm">
-                        <FontAwesomeIcon icon="eye" />{' '}
-                        <span className="d-none d-md-inline">
-                          <Translate contentKey="entity.action.stop">Stop</Translate>
-                        </span>
-                      </Button>
-                   <Button tag={Link} to={`${match.url}/${afetljobtype.id}`} color="info" size="sm">
-                        <FontAwesomeIcon icon="eye" />{' '}
-                        <span className="d-none d-md-inline">
-                          <Translate contentKey="entity.action.view">View</Translate>
-                        </span>
-                      </Button>
+				            {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?
+                      <Button color="info" size="sm">
+                          <FontAwesomeIcon icon="eye" />{' '}
+                          <span className="d-none d-md-inline">
+                            <Translate contentKey="entity.action.start">Start</Translate>
+                          </span>
+                        </Button>:null}
+
+                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?
+                      <Button color="danger" size="sm">
+                          <FontAwesomeIcon icon="eye" />{' '}
+                          <span className="d-none d-md-inline">
+                            <Translate contentKey="entity.action.stop">Stop</Translate>
+                          </span>
+                        </Button>:null}
+                      
+                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
+                      <Button tag={Link} to={`${match.url}/${afetljobtype.id}`} color="info" size="sm">
+                            <FontAwesomeIcon icon="eye" />{' '}
+                            <span className="d-none d-md-inline">
+                              <Translate contentKey="entity.action.view">View</Translate>
+                            </span>
+                          </Button>}
+                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
                       <Button tag={Link} to={`${match.url}/${afetljobtype.id}/edit`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
-                      </Button>
+                      </Button>}
+                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
                       <Button tag={Link} to={`${match.url}/${afetljobtype.id}/delete`} color="danger" size="sm">
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
                         </span>
-                      </Button>
+                      </Button>}
+                      
 
                     </div>
                   </td>

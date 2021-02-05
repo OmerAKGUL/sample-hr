@@ -53,28 +53,28 @@ export const AfsauthorizationDetail = (props: IAfsauthorizationDetailProps) => {
           <dt>
             <Translate contentKey="sampleHrApp.afsauthorization.rolecode">Rolecode</Translate>
           </dt>
-          <dd>{afsauthorizationEntity.rolecode ? afsauthorizationEntity.rolecode.id : ''}</dd>
+          <dd>{afsauthorizationEntity.rolecode ? afsauthorizationEntity.rolecode.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.afsauthorization.acccode">Acccode</Translate>
           </dt>
-          <dd>{afsauthorizationEntity.acccode ? afsauthorizationEntity.acccode.id : ''}</dd>
+          <dd>{afsauthorizationEntity.acccode ? afsauthorizationEntity.acccode.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.afsauthorization.modulecode">Modulecode</Translate>
           </dt>
-          <dd>{afsauthorizationEntity.modulecode ? afsauthorizationEntity.modulecode.id : ''}</dd>
+          <dd>{afsauthorizationEntity.modulecode ? afsauthorizationEntity.modulecode.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.afsauthorization.menuitemcode">Menuitemcode</Translate>
           </dt>
-          <dd>{afsauthorizationEntity.menuitemcode ? afsauthorizationEntity.menuitemcode.id : ''}</dd>
+          <dd>{afsauthorizationEntity.menuitemcode ? afsauthorizationEntity.menuitemcode.name : ''}</dd>
         </dl>
-        <Button tag={Link} to="/afsauthorization" replace color="info">
+        <Button tag={Link} to="/modules/afs/afsauthorization" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/afsauthorization/${afsauthorizationEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/afs/afsauthorization/${afsauthorizationEntity.id}`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

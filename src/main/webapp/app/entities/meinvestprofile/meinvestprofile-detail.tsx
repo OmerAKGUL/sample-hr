@@ -76,31 +76,31 @@ export const MeinvestprofileDetail = (props: IMeinvestprofileDetailProps) => {
           <dt>
             <Translate contentKey="sampleHrApp.meinvestprofile.matchwltype">Matchwltype</Translate>
           </dt>
-          <dd>{meinvestprofileEntity.matchwltype ? meinvestprofileEntity.matchwltype.id : ''}</dd>
+          <dd>{meinvestprofileEntity.matchwltype ? meinvestprofileEntity.matchwltype.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.meinvestprofile.matchtxntype">Matchtxntype</Translate>
           </dt>
-          <dd>{meinvestprofileEntity.matchtxntype ? meinvestprofileEntity.matchtxntype.id : ''}</dd>
+          <dd>{meinvestprofileEntity.matchtxntype ? meinvestprofileEntity.matchtxntype.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.meinvestprofile.matchtxncusttype">Matchtxncusttype</Translate>
           </dt>
-          <dd>{meinvestprofileEntity.matchtxncusttype ? meinvestprofileEntity.matchtxncusttype.id : ''}</dd>
+          <dd>{meinvestprofileEntity.matchtxncusttype ? meinvestprofileEntity.matchtxncusttype.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.meinvestprofile.matchtxnacctype">Matchtxnacctype</Translate>
           </dt>
-          <dd>{meinvestprofileEntity.matchtxnacctype ? meinvestprofileEntity.matchtxnacctype.id : ''}</dd>
+          <dd>{meinvestprofileEntity.matchtxnacctype ? meinvestprofileEntity.matchtxnacctype.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.meinvestprofile.matchsystemcode">Matchsystemcode</Translate>
           </dt>
-          <dd>{meinvestprofileEntity.matchsystemcode ? meinvestprofileEntity.matchsystemcode.id : ''}</dd>
+          <dd>{meinvestprofileEntity.matchsystemcode ? meinvestprofileEntity.matchsystemcode.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.meinvestprofile.invrespuserid">Invrespuserid</Translate>
           </dt>
-          <dd>{meinvestprofileEntity.invrespuserid ? meinvestprofileEntity.invrespuserid.id : ''}</dd>
+          <dd>{meinvestprofileEntity.invrespuserid ? meinvestprofileEntity.invrespuserid.loginname : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.meinvestprofile.invresprole">Invresprole</Translate>
           </dt>
-          <dd>{meinvestprofileEntity.invresprole ? meinvestprofileEntity.invresprole.id : ''}</dd>
+          <dd>{meinvestprofileEntity.invresprole ? meinvestprofileEntity.invresprole.name : ''}</dd>
         </dl>
         <Button tag={Link} to="/meinvestprofile" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
@@ -109,7 +109,7 @@ export const MeinvestprofileDetail = (props: IMeinvestprofileDetailProps) => {
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/meinvestprofile/${meinvestprofileEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/me/meinvestprofile/${meinvestprofileEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

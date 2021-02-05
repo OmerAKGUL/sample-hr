@@ -98,20 +98,20 @@ export const MematchresultDetail = (props: IMematchresultDetailProps) => {
           <dt>
             <Translate contentKey="sampleHrApp.mematchresult.matchconfigcode">Matchconfigcode</Translate>
           </dt>
-          <dd>{mematchresultEntity.matchconfigcode ? mematchresultEntity.matchconfigcode.id : ''}</dd>
+          <dd>{mematchresultEntity.matchconfigcode ? mematchresultEntity.matchconfigcode.name : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.mematchresult.invprocid">Invprocid</Translate>
           </dt>
-          <dd>{mematchresultEntity.invprocid ? mematchresultEntity.invprocid.id : ''}</dd>
+          <dd>{mematchresultEntity.invprocid ? mematchresultEntity.invprocid.invprofile.name : ''}</dd>
         </dl>
-        <Button tag={Link} to="/mematchresult" replace color="info">
+        <Button tag={Link} to="/modules/me/mematchresult" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/mematchresult/${mematchresultEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/me/mematchresult/${mematchresultEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

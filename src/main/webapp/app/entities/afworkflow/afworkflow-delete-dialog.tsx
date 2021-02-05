@@ -17,7 +17,7 @@ export const AfworkflowDeleteDialog = (props: IAfworkflowDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afworkflow');
+    props.history.push('/modules/af/afworkflow');
   };
 
   useEffect(() => {

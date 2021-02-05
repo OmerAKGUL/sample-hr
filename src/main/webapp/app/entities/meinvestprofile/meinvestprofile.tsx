@@ -104,49 +104,49 @@ export const Meinvestprofile = (props: IMeinvestprofileProps) => {
                   <td>{meinvestprofile.notifmsgtempl}</td>
                   <td>
                     {meinvestprofile.matchwltype ? (
-                      <Link to={`wlmwltype/${meinvestprofile.matchwltype.id}`}>{meinvestprofile.matchwltype.id}</Link>
+                      <Link to={`wlmwltype/${meinvestprofile.matchwltype.id}`}>{meinvestprofile.matchwltype.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {meinvestprofile.matchtxntype ? (
-                      <Link to={`itxtxntype/${meinvestprofile.matchtxntype.id}`}>{meinvestprofile.matchtxntype.id}</Link>
+                      <Link to={`itxtxntype/${meinvestprofile.matchtxntype.id}`}>{meinvestprofile.matchtxntype.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {meinvestprofile.matchtxncusttype ? (
-                      <Link to={`itxcusttype/${meinvestprofile.matchtxncusttype.id}`}>{meinvestprofile.matchtxncusttype.id}</Link>
+                      <Link to={`itxcusttype/${meinvestprofile.matchtxncusttype.id}`}>{meinvestprofile.matchtxncusttype.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {meinvestprofile.matchtxnacctype ? (
-                      <Link to={`itxaccounttype/${meinvestprofile.matchtxnacctype.id}`}>{meinvestprofile.matchtxnacctype.id}</Link>
+                      <Link to={`itxaccounttype/${meinvestprofile.matchtxnacctype.id}`}>{meinvestprofile.matchtxnacctype.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {meinvestprofile.matchsystemcode ? (
-                      <Link to={`afsystem/${meinvestprofile.matchsystemcode.id}`}>{meinvestprofile.matchsystemcode.id}</Link>
+                      <Link to={`afsystem/${meinvestprofile.matchsystemcode.id}`}>{meinvestprofile.matchsystemcode.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {meinvestprofile.invrespuserid ? (
-                      <Link to={`jhiuser/${meinvestprofile.invrespuserid.id}`}>{meinvestprofile.invrespuserid.id}</Link>
+                      <Link to={`jhiuser/${meinvestprofile.invrespuserid.id}`}>{meinvestprofile.invrespuserid.loginname}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {meinvestprofile.invresprole ? (
-                      <Link to={`afsrole/${meinvestprofile.invresprole.id}`}>{meinvestprofile.invresprole.id}</Link>
+                      <Link to={`afsrole/${meinvestprofile.invresprole.id}`}>{meinvestprofile.invresprole.name}</Link>
                     ) : (
                       ''
                     )}

@@ -74,7 +74,7 @@ export const Afmsg = (props: IAfmsgProps) => {
                   <td>{afmsg.langisocode}</td>
                   <td>{afmsg.appmsgtxt}</td>
                   <td>{afmsg.msgseverity}</td>
-                  <td>{afmsg.appsyscode ? <Link to={`afsystem/${afmsg.appsyscode.id}`}>{afmsg.appsyscode.id}</Link> : ''}</td>
+                  <td>{afmsg.appsyscode ? <Link to={`afsystem/${afmsg.appsyscode.id}`}>{afmsg.appsyscode.name}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${afmsg.id}`} color="info" size="sm">

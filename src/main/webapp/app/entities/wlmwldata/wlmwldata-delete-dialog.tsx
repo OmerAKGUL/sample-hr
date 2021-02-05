@@ -17,7 +17,7 @@ export const WlmwldataDeleteDialog = (props: IWlmwldataDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/wlmwldata' + props.location.search);
+    props.history.push('/modules/wlm/wlmwldata' + props.location.search);
   };
 
   useEffect(() => {

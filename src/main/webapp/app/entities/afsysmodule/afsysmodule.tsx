@@ -63,17 +63,17 @@ export const Afsysmodule = (props: IAfsysmoduleProps) => {
                   <td>{afsysmodule.name}</td>
                   <td>{afsysmodule.descr}</td>
                   <td>
-                    {afsysmodule.appsyscode ? <Link to={`afsystem/${afsysmodule.appsyscode.id}`}>{afsysmodule.appsyscode.id}</Link> : ''}
+                    {afsysmodule.appsyscode ? <Link to={`afsystem/${afsysmodule.appsyscode.id}`}>{afsysmodule.appsyscode.name}</Link> : ''}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${afsysmodule.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${afsysmodule.id}/edit`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${afsysmodule.id}/edit`} color="primary" size="sm">
+                      <Button tag={Link} to={`${match.url}/${afsysmodule.id}`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>

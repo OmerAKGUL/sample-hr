@@ -21,6 +21,7 @@ const initialState = {
   entities: [] as ReadonlyArray<IItxtxnqueue>,
   entity: defaultValue,
   updating: false,
+  totalItems: 0,
   updateSuccess: false,
 };
 
@@ -99,10 +100,13 @@ const apiUrl = 'api/itxtxnqueues';
 
 // Actions
 
-export const getEntities: ICrudGetAllAction<IItxtxnqueue> = (page, size, sort) => ({
-  type: ACTION_TYPES.FETCH_ITXTXNQUEUE_LIST,
-  payload: axios.get<IItxtxnqueue>(`${apiUrl}?cacheBuster=${new Date().getTime()}`),
-});
+export const getEntities: ICrudGetAllAction<IItxtxnqueue> = (page, size, sort) => {
+  const requestUrl = `${apiUrl}${sort ? `?page=${page}&size=${size}&sort=${sort}` : ''}`;
+  return {
+    type: ACTION_TYPES.FETCH_ITXTXNQUEUE_LIST,
+    payload: axios.get<IItxtxnqueue>(`${requestUrl}${sort ? '&' : '?'}cacheBuster=${new Date().getTime()}`),
+  };
+};
 
 export const getEntity: ICrudGetAction<IItxtxnqueue> = id => {
   const requestUrl = `${apiUrl}/${id}`;

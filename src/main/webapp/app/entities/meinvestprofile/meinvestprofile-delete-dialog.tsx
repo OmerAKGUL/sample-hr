@@ -17,7 +17,7 @@ export const MeinvestprofileDeleteDialog = (props: IMeinvestprofileDeleteDialogP
   }, []);
 
   const handleClose = () => {
-    props.history.push('/meinvestprofile');
+    props.history.push('/modules/me/meinvestprofile');
   };
 
   useEffect(() => {

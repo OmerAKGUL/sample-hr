@@ -90,7 +90,7 @@ export const Afwfstate = (props: IAfwfstateProps) => {
                   <td>{afwfstate.apprefhandlerdom}</td>
                   <td>{afwfstate.wfstate}</td>
                   <td>{afwfstate.wfprocid}</td>
-                  <td>{afwfstate.wfcode ? <Link to={`afworkflow/${afwfstate.wfcode.id}`}>{afwfstate.wfcode.id}</Link> : ''}</td>
+                  <td>{afwfstate.wfcode ? <Link to={`afworkflow/${afwfstate.wfcode.id}`}>{afwfstate.wfcode.name}</Link> : ''}</td>
                   <td>{afwfstate.createdt ? <TextFormat type="date" value={afwfstate.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfstate.updatedt ? <TextFormat type="date" value={afwfstate.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfstate.createusr}</td>

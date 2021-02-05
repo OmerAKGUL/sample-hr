@@ -20,7 +20,7 @@ export const AfsroleUpdate = (props: IAfsroleUpdateProps) => {
   const { afsroleEntity, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afsrole');
+    props.history.push('/modules/afs/afsrole');
   };
 
   useEffect(() => {
@@ -107,7 +107,7 @@ export const AfsroleUpdate = (props: IAfsroleUpdateProps) => {
                 </Label>
                 <AvField id="afsrole-descr" type="text" name="descr" />
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afsrole" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/afs/afsrole" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

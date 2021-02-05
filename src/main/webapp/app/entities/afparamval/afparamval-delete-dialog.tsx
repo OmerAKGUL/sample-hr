@@ -17,7 +17,7 @@ export const AfparamvalDeleteDialog = (props: IAfparamvalDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afparamval');
+    props.history.push('/modules/af/afparamval');
   };
 
   useEffect(() => {

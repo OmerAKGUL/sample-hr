@@ -106,14 +106,14 @@ export const WlmwldataDetail = (props: IWlmwldataDetailProps) => {
           </dt>
           <dd>{wlmwldataEntity.wltype ? wlmwldataEntity.wltype.id : ''}</dd>
         </dl>
-        <Button tag={Link} to="/wlmwldata" replace color="info">
+        <Button tag={Link} to="/modules/wlm/wlmwldata" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/wlmwldata/${wlmwldataEntity.id}/edit`} replace color="primary">
+        <Button tag={Link} to={`/modules/wlm/wlmwldata/${wlmwldataEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>

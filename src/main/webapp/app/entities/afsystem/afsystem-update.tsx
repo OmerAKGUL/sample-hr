@@ -20,7 +20,7 @@ export const AfsystemUpdate = (props: IAfsystemUpdateProps) => {
   const { afsystemEntity, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afsystem');
+    props.history.push('/modules/af/afsystem');
   };
 
   useEffect(() => {
@@ -146,7 +146,7 @@ export const AfsystemUpdate = (props: IAfsystemUpdateProps) => {
                 </Label>
                 <AvField id="afsystem-connectstr" type="text" name="connectstr" />
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afsystem" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/af/afsystem" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

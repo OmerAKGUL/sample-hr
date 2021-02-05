@@ -17,7 +17,7 @@ export const AfsauthorizationDeleteDialog = (props: IAfsauthorizationDeleteDialo
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afsauthorization');
+    props.history.push('/modules/afs/afsauthorization');
   };
 
   useEffect(() => {

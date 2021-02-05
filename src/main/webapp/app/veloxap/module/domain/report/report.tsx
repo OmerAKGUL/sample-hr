@@ -2,11 +2,16 @@ import React, { useEffect, useState, useRef } from 'react';
 import { IAppLayoutProps, AppMsgType, AppLayoutState } from '../../framework/app/AppTypes';
 import { IAppRoute } from '../../framework/app/IAppRoute';
 import {AppLayoutContext} from '../../framework/app/AppLayout';
+
+
+
+
 export const SuspiciousTransactionInvestigation = (props) => {
 
     return (
         <div className="SuspiciousTransactionInvestigation">
             <h2>Şüpheli İşlem İnceleme</h2>
+        <div dangerouslySetInnerHTML={{ __html: "<iframe src='https://vergidosyasi.com/2017/03/28/supheli-islem-tipleri/' height = 410 width=1050/>"}} />
         </div>
     );
 }

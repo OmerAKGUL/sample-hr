@@ -2,22 +2,69 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
-import { Translate, ICrudGetAllAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAllAction, TextFormat, getSortState, IPaginationBaseState, JhiPagination, JhiItemCount } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
 import { getEntities } from './itxtxnqueue.reducer';
 import { IItxtxnqueue } from 'app/shared/model/itxtxnqueue.model';
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
+import { ITEMS_PER_PAGE } from 'app/shared/util/pagination.constants';
+import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 
 export interface IItxtxnqueueProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
 export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
-  useEffect(() => {
-    props.getEntities();
-  }, []);
+  const [paginationState, setPaginationState] = useState(
+    overridePaginationStateWithQueryParams(getSortState(props.location, ITEMS_PER_PAGE), props.location.search)
+  );
 
-  const { itxtxnqueueList, match, loading } = props;
+  const getAllEntities = () => {
+    props.getEntities(paginationState.activePage - 1, paginationState.itemsPerPage, `${paginationState.sort},${paginationState.order}`);
+  };
+
+  const sortEntities = () => {
+    getAllEntities();
+    const endURL = `?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`;
+    if (props.location.search !== endURL) {
+      props.history.push(`${props.location.pathname}${endURL}`);
+    }
+  };
+
+  useEffect(() => {
+    sortEntities();
+  }, [paginationState.activePage, paginationState.order, paginationState.sort]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(props.location.search);
+    const page = params.get('page');
+    const sort = params.get('sort');
+    if (page && sort) {
+      const sortSplit = sort.split(',');
+      setPaginationState({
+        ...paginationState,
+        activePage: +page,
+        sort: sortSplit[0],
+        order: sortSplit[1],
+      });
+    }
+  }, [props.location.search]);
+
+  const sort = p => () => {
+    setPaginationState({
+      ...paginationState,
+      order: paginationState.order === 'asc' ? 'desc' : 'asc',
+      sort: p,
+    });
+  };
+
+  const handlePagination = currentPage =>
+    setPaginationState({
+      ...paginationState,
+      activePage: currentPage,
+    });
+
+  const { itxtxnqueueList, match, loading, totalItems } = props;
   return (
     <div>
       <h2 id="itxtxnqueue-heading">
@@ -324,23 +371,23 @@ export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
                   <td>
                     {itxtxnqueue.txnvaluedate ? <TextFormat type="date" value={itxtxnqueue.txnvaluedate} format={APP_DATE_FORMAT} /> : null}
                   </td>
-                  <td>{itxtxnqueue.rctype ? <Link to={`itxcusttype/${itxtxnqueue.rctype.id}`}>{itxtxnqueue.rctype.id}</Link> : ''}</td>
-                  <td>{itxtxnqueue.ratype ? <Link to={`itxaccounttype/${itxtxnqueue.ratype.id}`}>{itxtxnqueue.ratype.id}</Link> : ''}</td>
-                  <td>{itxtxnqueue.satype ? <Link to={`itxaccounttype/${itxtxnqueue.satype.id}`}>{itxtxnqueue.satype.id}</Link> : ''}</td>
-                  <td>{itxtxnqueue.sctype ? <Link to={`itxcusttype/${itxtxnqueue.sctype.id}`}>{itxtxnqueue.sctype.id}</Link> : ''}</td>
+                  <td>{itxtxnqueue.rctype ? <Link to={`itxcusttype/${itxtxnqueue.rctype.id}`}>{itxtxnqueue.rctype.name}</Link> : ''}</td>
+                  <td>{itxtxnqueue.ratype ? <Link to={`itxaccounttype/${itxtxnqueue.ratype.id}`}>{itxtxnqueue.ratype.name}</Link> : ''}</td>
+                  <td>{itxtxnqueue.satype ? <Link to={`itxaccounttype/${itxtxnqueue.satype.id}`}>{itxtxnqueue.satype.name}</Link> : ''}</td>
+                  <td>{itxtxnqueue.sctype ? <Link to={`itxcusttype/${itxtxnqueue.sctype.id}`}>{itxtxnqueue.sctype.name}</Link> : ''}</td>
                   <td>
-                    {itxtxnqueue.txntypeid ? <Link to={`itxtxntype/${itxtxnqueue.txntypeid.id}`}>{itxtxnqueue.txntypeid.id}</Link> : ''}
+                    {itxtxnqueue.txntypeid ? <Link to={`itxtxntype/${itxtxnqueue.txntypeid.id}`}>{itxtxnqueue.txntypeid.name}</Link> : ''}
                   </td>
                   <td>
                     {itxtxnqueue.txncurrency ? (
-                      <Link to={`itxcurrency/${itxtxnqueue.txncurrency.id}`}>{itxtxnqueue.txncurrency.id}</Link>
+                      <Link to={`itxcurrency/${itxtxnqueue.txncurrency.id}`}>{itxtxnqueue.txncurrency.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {itxtxnqueue.etljobtype ? (
-                      <Link to={`afetljobtype/${itxtxnqueue.etljobtype.id}`}>{itxtxnqueue.etljobtype.id}</Link>
+                      <Link to={`afetljobtype/${itxtxnqueue.etljobtype.id}`}>{itxtxnqueue.etljobtype.jobname}</Link>
                     ) : (
                       ''
                     )}
@@ -383,6 +430,24 @@ export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
           )
         )}
       </div>
+      {props.totalItems ? (
+        <div className={itxtxnqueueList && itxtxnqueueList.length > 0 ? '' : 'd-none'}>
+          <Row className="justify-content-center">
+            <JhiItemCount page={paginationState.activePage} total={totalItems} itemsPerPage={paginationState.itemsPerPage} i18nEnabled />
+          </Row>
+          <Row className="justify-content-center">
+            <JhiPagination
+              activePage={paginationState.activePage}
+              onSelect={handlePagination}
+              maxButtons={5}
+              itemsPerPage={paginationState.itemsPerPage}
+              totalItems={props.totalItems}
+            />
+          </Row>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 };
@@ -390,6 +455,7 @@ export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
 const mapStateToProps = ({ itxtxnqueue }: IRootState) => ({
   itxtxnqueueList: itxtxnqueue.entities,
   loading: itxtxnqueue.loading,
+  totalItems: itxtxnqueue.totalItems,
 });
 
 const mapDispatchToProps = {

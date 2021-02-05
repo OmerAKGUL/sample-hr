@@ -17,7 +17,7 @@ export const AfsroleDeleteDialog = (props: IAfsroleDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afsrole');
+    props.history.push('/modules/afs/afsrole');
   };
 
   useEffect(() => {

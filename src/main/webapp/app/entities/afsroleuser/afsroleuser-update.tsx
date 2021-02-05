@@ -6,6 +6,7 @@ import { AvFeedback, AvForm, AvGroup, AvInput } from 'availity-reactstrap-valida
 import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
+import VirtualizedSelect from 'react-virtualized-select';
 
 import { IJhiuser } from 'app/shared/model/jhiuser.model';
 import { getEntities as getJhiusers } from 'app/entities/jhiuser/jhiuser.reducer';
@@ -19,14 +20,14 @@ import { mapIdList } from 'app/shared/util/entity-utils';
 export interface IAfsroleuserUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
-  const [usridId, setUsridId] = useState('0');
-  const [rolecodeId, setRolecodeId] = useState('0');
+  const [usridId, setUsridId] = useState({label : '', value : 0});
+  const [rolecodeId, setRolecodeId] = useState({label : '', value : 0});
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
   const { afsroleuserEntity, jhiusers, afsroles, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afsroleuser');
+    props.history.push('/modules/afs/afsroleuser');
   };
 
   useEffect(() => {
@@ -39,6 +40,11 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
     props.getJhiusers();
     props.getAfsroles();
   }, []);
+  useEffect(() => {
+    props.afsroleuserEntity.usrid ? setUsridId({label : props.afsroleuserEntity.usrid.loginname,value :props.afsroleuserEntity.usrid.id }): null;
+    props.afsroleuserEntity.rolecode ? setRolecodeId({label : props.afsroleuserEntity.rolecode.name,value :props.afsroleuserEntity.rolecode.id }): null;
+   
+  }, [props.afsroleuserEntity]);
 
   useEffect(() => {
     if (props.updateSuccess) {
@@ -47,6 +53,8 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
   }, [props.updateSuccess]);
 
   const saveEntity = (event, errors, values) => {
+    values.usrid.id = usridId.value;
+    values.rolecode.id = rolecodeId.value;
     if (errors.length === 0) {
       const entity = {
         ...afsroleuserEntity,
@@ -88,7 +96,13 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
                 <Label for="afsroleuser-usrid">
                   <Translate contentKey="sampleHrApp.afsroleuser.usrid">Usrid</Translate>
                 </Label>
-                <AvInput id="afsroleuser-usrid" type="select" className="form-control" name="usrid.id">
+                <VirtualizedSelect
+                      id="afsroleuser-usrid"
+                      options={ jhiusers.map(otherEntity => ({label:otherEntity.loginname,value:otherEntity.id})) }
+                      onChange={(e) => setUsridId(e)}
+                      value={usridId}
+                    />
+                <AvInput id="afsroleuser-usrid" type="select" className="form-control" name="usrid.id" hidden>
                   <option value="" key="0" />
                   {jhiusers
                     ? jhiusers.map(otherEntity => (
@@ -103,7 +117,13 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
                 <Label for="afsroleuser-rolecode">
                   <Translate contentKey="sampleHrApp.afsroleuser.rolecode">Rolecode</Translate>
                 </Label>
-                <AvInput id="afsroleuser-rolecode" type="select" className="form-control" name="rolecode.id">
+                <VirtualizedSelect
+                      id="afsroleuser-rolecode"
+                      options={ afsroles.map(otherEntity => ({label:otherEntity.name,value:otherEntity.id})) }
+                      onChange={(e) => setRolecodeId(e)}
+                      value={rolecodeId}
+                    />
+                <AvInput id="afsroleuser-rolecode" type="select" className="form-control" name="rolecode.id" hidden>
                   <option value="" key="0" />
                   {afsroles
                     ? afsroles.map(otherEntity => (
@@ -114,7 +134,7 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
                     : null}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afsroleuser" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/afs/afsroleuser" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

@@ -104,19 +104,19 @@ export const Afwfaction = (props: IAfwfactionProps) => {
                   <td>{afwfaction.wfstate}</td>
                   <td>{afwfaction.wfprocid}</td>
                   <td>
-                    {afwfaction.appmenucode ? <Link to={`afmenuitem/${afwfaction.appmenucode.id}`}>{afwfaction.appmenucode.id}</Link> : ''}
+                    {afwfaction.appmenucode ? <Link to={`afmenuitem/${afwfaction.appmenucode.id}`}>{afwfaction.appmenucode.name}</Link> : ''}
                   </td>
                   <td>
-                    {afwfaction.appformcode ? <Link to={`afform/${afwfaction.appformcode.id}`}>{afwfaction.appformcode.id}</Link> : ''}
+                    {afwfaction.appformcode ? <Link to={`afform/${afwfaction.appformcode.id}`}>{afwfaction.appformcode.title}</Link> : ''}
                   </td>
                   <td>
                     {afwfaction.appmodulecode ? (
-                      <Link to={`afsysmodule/${afwfaction.appmodulecode.id}`}>{afwfaction.appmodulecode.id}</Link>
+                      <Link to={`afsysmodule/${afwfaction.appmodulecode.id}`}>{afwfaction.appmodulecode.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
-                  <td>{afwfaction.wfcode ? <Link to={`afworkflow/${afwfaction.wfcode.id}`}>{afwfaction.wfcode.id}</Link> : ''}</td>
+                  <td>{afwfaction.wfcode ? <Link to={`afworkflow/${afwfaction.wfcode.id}`}>{afwfaction.wfcode.name}</Link> : ''}</td>
                   <td>{afwfaction.createdt ? <TextFormat type="date" value={afwfaction.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfaction.updatedt ? <TextFormat type="date" value={afwfaction.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfaction.createusr}</td>

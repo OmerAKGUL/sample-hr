@@ -85,10 +85,7 @@ export const Meconfig = (props: IMeconfigProps) => {
                   <td>{meconfig.name}</td>
                   <td>{meconfig.descr}</td>
                   <td>{meconfig.wlfieldlist}</td>
-                  
-					<td  
-					//bgcolor= {meconfig.wfstate === "1" ? "red":meconfig.wfstate === "2" ? "yellow":"green" } 
-					 >
+          <td bgcolor = {meconfig.wfstate === "1" ? "red":meconfig.wfstate === "2" ? "yellow":"green" }>
 					
 					{meconfig.wfstate === "1" ? <Translate contentKey="sampleHrApp.meconfig.stopped">Stopped</Translate>:meconfig.wfstate === "2" ? <Translate contentKey="sampleHrApp.meconfig.preparing">Preparing</Translate>:<Translate contentKey="sampleHrApp.meconfig.started">Started</Translate>}
 					

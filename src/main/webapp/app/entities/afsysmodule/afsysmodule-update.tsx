@@ -23,7 +23,7 @@ export const AfsysmoduleUpdate = (props: IAfsysmoduleUpdateProps) => {
   const { afsysmoduleEntity, afsystems, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afsysmodule');
+    props.history.push('/modules/af/afsysmodule');
   };
 
   useEffect(() => {
@@ -127,7 +127,7 @@ export const AfsysmoduleUpdate = (props: IAfsysmoduleUpdateProps) => {
                     : null}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afsysmodule" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/af/afsysmodule" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

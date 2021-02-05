@@ -77,41 +77,41 @@ export const Afsauthorization = (props: IAfsauthorizationProps) => {
                   <td>{afsauthorization.afwid}</td>
                   <td>
                     {afsauthorization.rolecode ? (
-                      <Link to={`afsrole/${afsauthorization.rolecode.id}`}>{afsauthorization.rolecode.id}</Link>
+                      <Link to={`afsrole/${afsauthorization.rolecode.id}`}>{afsauthorization.rolecode.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {afsauthorization.acccode ? (
-                      <Link to={`afwfaction/${afsauthorization.acccode.id}`}>{afsauthorization.acccode.id}</Link>
+                      <Link to={`afwfaction/${afsauthorization.acccode.id}`}>{afsauthorization.acccode.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {afsauthorization.modulecode ? (
-                      <Link to={`afsysmodule/${afsauthorization.modulecode.id}`}>{afsauthorization.modulecode.id}</Link>
+                      <Link to={`afsysmodule/${afsauthorization.modulecode.id}`}>{afsauthorization.modulecode.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td>
                     {afsauthorization.menuitemcode ? (
-                      <Link to={`afmenuitem/${afsauthorization.menuitemcode.id}`}>{afsauthorization.menuitemcode.id}</Link>
+                      <Link to={`afmenuitem/${afsauthorization.menuitemcode.id}`}>{afsauthorization.menuitemcode.name}</Link>
                     ) : (
                       ''
                     )}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${afsauthorization.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${afsauthorization.id}/edit`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${afsauthorization.id}/edit`} color="primary" size="sm">
+                      <Button tag={Link} to={`${match.url}/${afsauthorization.id}`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>

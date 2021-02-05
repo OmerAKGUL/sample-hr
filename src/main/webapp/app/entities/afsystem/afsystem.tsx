@@ -83,13 +83,13 @@ export const Afsystem = (props: IAfsystemProps) => {
                   <td>{afsystem.connectstr}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${afsystem.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${afsystem.id}/edit`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${afsystem.id}/edit`} color="primary" size="sm">
+                      <Button tag={Link} to={`${match.url}/${afsystem.id}`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>

@@ -20,7 +20,7 @@ export const AfscheduleUpdate = (props: IAfscheduleUpdateProps) => {
   const { afscheduleEntity, loading, updating } = props;
 
   const handleClose = () => {
-    props.history.push('/afschedule');
+    props.history.push('/modules/af/afschedule');
   };
 
   useEffect(() => {
@@ -201,7 +201,7 @@ export const AfscheduleUpdate = (props: IAfscheduleUpdateProps) => {
                 </Label>
                 <AvField id="afschedule-wfprocid" type="string" className="form-control" name="wfprocid" />
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/afschedule" replace color="info">
+              <Button tag={Link} id="cancel-save" to="/modules/af/afschedule" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">

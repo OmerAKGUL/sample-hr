@@ -17,7 +17,7 @@ export const AfwfstateDeleteDialog = (props: IAfwfstateDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afwfstate');
+    props.history.push('/modules/af/afwfstate');
   };
 
   useEffect(() => {

@@ -17,7 +17,7 @@ export const AfscheduleDeleteDialog = (props: IAfscheduleDeleteDialogProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/afschedule');
+    props.history.push('/modules/af/afschedule');
   };
 
   useEffect(() => {
