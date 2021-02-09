@@ -17,6 +17,11 @@ import AfsauthorizationDetail, {IAfsauthorizationDetailProps} from '../../../../
 import AfsauthorizationUpdate, {IAfsauthorizationUpdateProps} from '../../../../entities/afsauthorization/afsauthorization-update';
 import AfsauthorizationDeleteDialog from '../../../../entities/afsauthorization/afsauthorization-delete-dialog';
 
+import UserManagement, {IUserManagementProps} from '../../../../modules/administration/user-management/user-management';
+import UserManagementDetail, {IUserManagementDetailProps} from '../../../../modules/administration/user-management/user-management-detail';
+import UserManagementUpdate, {IUserManagementUpdateProps} from '../../../../modules/administration/user-management/user-management-update';
+import UserManagementDeleteDialog from '../../../../modules/administration/user-management/user-management-delete-dialog';
+
 import {AppLayoutContext} from '../../framework/app/AppLayout';
 
 // define application menu items for module
@@ -54,6 +59,23 @@ const getMenuItems = (matchUrl: string) => {
 			routeTargetActionUpdate:AfsroleusersUpdate,
 			routeTargetActionList:Afsroleusers,
 			routeTargetActionDelete:AfsroleusersDeleteDialog,
+			leaf: true
+		},
+		{
+			path: `${matchUrl}/admin/user-management`,
+			linkedpathCreate: `${matchUrl}/admin/user-management/new`,
+			linkedpathEdit: `${matchUrl}/admin/user-management/:id/edit`,
+			linkedpathUpdate: `${matchUrl}/admin/user-management/:id`,
+			linkedpathDelete: `${matchUrl}/admin/user-management/:id/delete`,
+			linkedpathList: `${matchUrl}/admin/user-management`,
+			exact: true,
+			title: "Kullanıcı Tanım",   
+			routeTarget: UserManagement,   
+			routeTargetActionEdit:UserManagementDetail,
+			routeTargetActionCreate:UserManagementUpdate,
+			routeTargetActionUpdate:UserManagementUpdate,
+			routeTargetActionList:UserManagement,
+			routeTargetActionDelete:UserManagementDeleteDialog,
 			leaf: true
         },
         {

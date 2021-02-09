@@ -12,7 +12,7 @@ import java.io.Serializable;
  * A Afsrole.
  */
 @Entity
-@Table(schema = "WLF", name = "afsrole")
+@Table(schema = "dba", name = "jhi_authority")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Afsrole implements Serializable {
 

@@ -8,8 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 import VirtualizedSelect from 'react-virtualized-select';
 
-import { IJhiuser } from 'app/shared/model/jhiuser.model';
-import { getEntities as getJhiusers } from 'app/entities/jhiuser/jhiuser.reducer';
+import { IUser } from 'app/shared/model/user.model';
+import { getUsers as getUsers } from 'app/modules/administration/user-management/user-management.reducer';
 import { IAfsrole } from 'app/shared/model/afsrole.model';
 import { getEntities as getAfsroles } from 'app/entities/afsrole/afsrole.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './afsroleuser.reducer';
@@ -24,7 +24,7 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
   const [rolecodeId, setRolecodeId] = useState({label : '', value : 0});
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
-  const { afsroleuserEntity, jhiusers, afsroles, loading, updating } = props;
+  const { afsroleuserEntity, users, afsroles, loading, updating } = props;
 
   const handleClose = () => {
     props.history.push('/modules/afs/afsroleuser');
@@ -37,11 +37,11 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
       props.getEntity(props.match.params.id);
     }
 
-    props.getJhiusers();
+    props.getUsers();
     props.getAfsroles();
   }, []);
   useEffect(() => {
-    props.afsroleuserEntity.usrid ? setUsridId({label : props.afsroleuserEntity.usrid.loginname,value :props.afsroleuserEntity.usrid.id }): null;
+    props.afsroleuserEntity.usrid ? setUsridId({label : props.afsroleuserEntity.usrid.login,value :props.afsroleuserEntity.usrid.id }): null;
     props.afsroleuserEntity.rolecode ? setRolecodeId({label : props.afsroleuserEntity.rolecode.name,value :props.afsroleuserEntity.rolecode.id }): null;
    
   }, [props.afsroleuserEntity]);
@@ -98,16 +98,16 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
                 </Label>
                 <VirtualizedSelect
                       id="afsroleuser-usrid"
-                      options={ jhiusers.map(otherEntity => ({label:otherEntity.loginname,value:otherEntity.id})) }
+                      options={ users.map(otherEntity => ({label:otherEntity.login,value:otherEntity.id})) }
                       onChange={(e) => setUsridId(e)}
                       value={usridId}
                     />
                 <AvInput id="afsroleuser-usrid" type="select" className="form-control" name="usrid.id" hidden>
                   <option value="" key="0" />
-                  {jhiusers
-                    ? jhiusers.map(otherEntity => (
+                  {users
+                    ? users.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.loginname}
+                          {otherEntity.login}
                         </option>
                       ))
                     : null}
@@ -156,7 +156,7 @@ export const AfsroleuserUpdate = (props: IAfsroleuserUpdateProps) => {
 };
 
 const mapStateToProps = (storeState: IRootState) => ({
-  jhiusers: storeState.jhiuser.entities,
+  users: storeState.userManagement.users,
   afsroles: storeState.afsrole.entities,
   afsroleuserEntity: storeState.afsroleuser.entity,
   loading: storeState.afsroleuser.loading,
@@ -165,7 +165,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  getJhiusers,
+  getUsers,
   getAfsroles,
   getEntity,
   updateEntity,

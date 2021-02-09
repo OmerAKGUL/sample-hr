@@ -53,7 +53,7 @@ export const Afsroleuser = (props: IAfsroleuserProps) => {
                       {afsroleuser.id}
                     </Button>
                   </td>
-                  <td>{afsroleuser.usrid ? <Link to={`jhiuser/${afsroleuser.usrid.id}`}>{afsroleuser.usrid.loginname}</Link> : ''}</td>
+                  <td>{afsroleuser.usrid ? <Link to={`admin/user-management/${afsroleuser.usrid.login}/edit/`}>{afsroleuser.usrid.login}</Link> : ''}</td>
                   <td>{afsroleuser.rolecode ? <Link to={`afsrole/${afsroleuser.rolecode.id}`}>{afsroleuser.rolecode.name}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

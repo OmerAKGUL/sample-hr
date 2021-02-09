@@ -23,7 +23,7 @@ export const Afparamval = (props: IAfparamvalProps) => {
 
   const { afparamvalList, match, loading } = props;
 
-  useEffect(() => {
+  const calculateFunction = () => {
     if (props.afparamvalList && props.afparamvalList.length > 0)
     {
       sumValues = 0;
@@ -34,24 +34,27 @@ export const Afparamval = (props: IAfparamvalProps) => {
         {
           sumValues = sumValues + parseInt(value.value,10);
           // console.warn("value.paramgrpname === Match.Fields:" + (value.paramgrpname === "Match.Fields"));
-          // console.warn("sumValues:" + sumValues);
+          // console.warn("-------------sumValues:" + sumValues);
           // console.warn("sumValues === 100:" + (sumValues === 100));
         }
         if(value.paramgrpname === "Match.Algorithm" && value.valuetype === "BOOLEAN"	)
         {
           if(value.value === "TRUE"){
             sumValues2 = sumValues2 + 100;
-            // console.warn("sumValues2:" + sumValues2);
+            // console.warn("-------sumValues2:" + sumValues2);
             // console.warn("sumValues2 === 100:" + (sumValues2 === 100));
           }
         }
       }  
   
     }
-  }, [props.afparamvalList]);
+  }
+  
 
   return (
     <div>
+      
+      {calculateFunction()}
       <h2 id="afparamval-heading">
         <Translate contentKey="sampleHrApp.afparamval.home.title">Afparamvals</Translate>
        {/* <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
@@ -60,6 +63,12 @@ export const Afparamval = (props: IAfparamvalProps) => {
           <Translate contentKey="sampleHrApp.afparamval.home.createLabel">Create new Afparamval</Translate>
         </Link>*/}
       </h2>
+      <div>
+      { sumValues !== 100 ? <Translate  contentKey="sampleHrApp.afparamval.home.matchFieldsInfo">Create new Afparamval</Translate> : null}
+      </div>
+      <div>
+      { sumValues2 !== 100 ? <Translate contentKey="sampleHrApp.afparamval.home.matchAlgoInfo">Create new Afparamval</Translate> : null}
+      </div>
       <div className="table-responsive">
         {afparamvalList && afparamvalList.length > 0 ? (
           <Table responsive>

@@ -63,6 +63,7 @@ export const UserManagement = (props: IUserManagementProps) => {
   const { users, account, match, totalItems } = props;
   return (
     <div>
+      
       <h2 id="user-management-page-heading">
         <Translate contentKey="userManagement.home.title">Users</Translate>
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity">
@@ -71,6 +72,21 @@ export const UserManagement = (props: IUserManagementProps) => {
       </h2>
       <Table responsive striped>
         <thead>
+        {window.location.href.includes("modules")?
+          <tr>
+            <th className="hand" onClick={sort('id')}>
+              <Translate contentKey="global.field.id">ID</Translate>
+              <FontAwesomeIcon icon="sort" />
+            </th>
+            <th className="hand" onClick={sort('login')}>
+              <Translate contentKey="userManagement.login">Login</Translate>
+              <FontAwesomeIcon icon="sort" />
+            </th>
+            <th>
+              <Translate contentKey="userManagement.profiles">Profiles</Translate>
+            </th>
+          </tr>
+        :
           <tr>
             <th className="hand" onClick={sort('id')}>
               <Translate contentKey="global.field.id">ID</Translate>
@@ -106,9 +122,60 @@ export const UserManagement = (props: IUserManagementProps) => {
             </th>
             <th />
           </tr>
+        }
         </thead>
         <tbody>
           {users.map((user, i) => (
+            window.location.href.includes("modules")?
+            <tr id={user.login} key={`user-${i}`}>
+              <td>
+                <Button tag={Link} to={`${match.url}/${user.login}`} color="link" size="sm">
+                  {user.id}
+                </Button>
+              </td>
+              <td>{user.login}</td>
+              
+              <td>
+                {user.authorities
+                  ? user.authorities.map((authority, j) => (
+                      <div key={`user-auth-${i}-${j}`}>
+                        <Badge color="info">{authority}</Badge>
+                      </div>
+                    ))
+                  : null}
+              </td>
+              
+              <td className="text-right">
+                <div className="btn-group flex-btn-group-container">
+                  <Button tag={Link} to={`${match.url}/${user.login}`} color="info" size="sm">
+                    <FontAwesomeIcon icon="eye" />{' '}
+                    <span className="d-none d-md-inline">
+                      <Translate contentKey="entity.action.view">View</Translate>
+                    </span>
+                  </Button>
+                  <Button tag={Link} to={`${match.url}/${user.login}/edit`} color="primary" size="sm">
+                    <FontAwesomeIcon icon="pencil-alt" />{' '}
+                    <span className="d-none d-md-inline">
+                      <Translate contentKey="entity.action.edit">Edit</Translate>
+                    </span>
+                  </Button>
+                  <Button
+                    tag={Link}
+                    to={`${match.url}/${user.login}/delete`}
+                    color="danger"
+                    size="sm"
+                    disabled={account.login === user.login}
+                  >
+                    <FontAwesomeIcon icon="trash" />{' '}
+                    <span className="d-none d-md-inline">
+                      <Translate contentKey="entity.action.delete">Delete</Translate>
+                    </span>
+                  </Button>
+                </div>
+              </td>
+            </tr>
+
+            :
             <tr id={user.login} key={`user-${i}`}>
               <td>
                 <Button tag={Link} to={`${match.url}/${user.login}`} color="link" size="sm">

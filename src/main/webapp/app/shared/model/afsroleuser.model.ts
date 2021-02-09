@@ -1,9 +1,9 @@
-import { IJhiuser } from 'app/shared/model/jhiuser.model';
+import { IUser } from 'app/shared/model/user.model';
 import { IAfsrole } from 'app/shared/model/afsrole.model';
 
 export interface IAfsroleuser {
   id?: number;
-  usrid?: IJhiuser;
+  usrid?: IUser;
   rolecode?: IAfsrole;
 }
 

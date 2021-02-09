@@ -5,7 +5,9 @@
         "title": "Afparamvals",
         "createLabel": "Create a new Afparamval",
         "createOrEditLabel": "Create or edit a Afparamval",
-        "notFound": "No Afparamvals found"
+        "notFound": "No Afparamvals found",
+        "matchFieldsInfo": "!!!! Eşleştirme alanı toplam değerin 100 olması gerekmektedir.",
+        "matchAlgoInfo": "!!!! Eşleşme Algoritmalarından sadece bir tanesi TRUE değer seçilebilir."
       },
       "created": "A new Afparamval is created with identifier {{ param }}",
       "updated": "A Afparamval is updated with identifier {{ param }}",

@@ -27,7 +27,7 @@ public class Afsroleuser implements Serializable {
     @ManyToOne
 	@JoinColumn(name="usrid")
     @JsonIgnoreProperties(value = "afsroleusers", allowSetters = true)
-    private Jhiuser usrid;
+    private User usrid;
 
     @ManyToOne
 	@JoinColumn(name="rolecode")
@@ -43,16 +43,16 @@ public class Afsroleuser implements Serializable {
         this.id = id;
     }
 
-    public Jhiuser getUsrid() {
+    public User getUsrid() {
         return usrid;
     }
 
-    public Afsroleuser usrid(Jhiuser jhiuser) {
+    public Afsroleuser usrid(User jhiuser) {
         this.usrid = jhiuser;
         return this;
     }
 
-    public void setUsrid(Jhiuser jhiuser) {
+    public void setUsrid(User jhiuser) {
         this.usrid = jhiuser;
     }
 

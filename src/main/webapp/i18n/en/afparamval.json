@@ -5,7 +5,9 @@
         "title": "Afparamvals",
         "createLabel": "Create a new Afparamval",
         "createOrEditLabel": "Create or edit a Afparamval",
-        "notFound": "No Afparamvals found"
+        "notFound": "No Afparamvals found",
+        "matchFieldsInfo": "!!!! The total value of the Match Fields must be 100.",
+        "matchAlgoInfo": "!!!! Match Algortihm only one value must be TRUE."
       },
       "created": "A new Afparamval is created with identifier {{ param }}",
       "updated": "A Afparamval is updated with identifier {{ param }}",

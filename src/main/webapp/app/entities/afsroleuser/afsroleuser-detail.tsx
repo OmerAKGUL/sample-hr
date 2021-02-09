@@ -28,7 +28,7 @@ export const AfsroleuserDetail = (props: IAfsroleuserDetailProps) => {
           <dt>
             <Translate contentKey="sampleHrApp.afsroleuser.usrid">Usrid</Translate>
           </dt>
-          <dd>{afsroleuserEntity.usrid ? afsroleuserEntity.usrid.loginname : ''}</dd>
+          <dd>{afsroleuserEntity.usrid ? afsroleuserEntity.usrid.login : ''}</dd>
           <dt>
             <Translate contentKey="sampleHrApp.afsroleuser.rolecode">Rolecode</Translate>
           </dt>
