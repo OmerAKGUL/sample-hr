@@ -56,8 +56,8 @@ export const Afsrole = (props: IAfsroleProps) => {
                       {afsrole.id}
                     </Button>
                   </td>
-                  <td>{afsrole.code}</td>
                   <td>{afsrole.name}</td>
+                  <td>{afsrole.code}</td>
                   <td>{afsrole.descr}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

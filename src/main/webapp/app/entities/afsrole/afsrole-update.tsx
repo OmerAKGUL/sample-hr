@@ -76,8 +76,8 @@ export const AfsroleUpdate = (props: IAfsroleUpdateProps) => {
                 </AvGroup>
               ) : null}
               <AvGroup>
-                <Label id="codeLabel" for="afsrole-code">
-                  <Translate contentKey="sampleHrApp.afsrole.code">Code</Translate>
+                <Label id="nameLabel" for="afsrole-name">
+                  <Translate contentKey="sampleHrApp.afsrole.name">Name</Translate>
                 </Label>
                 <AvField
                   id="afsrole-code"
@@ -89,8 +89,8 @@ export const AfsroleUpdate = (props: IAfsroleUpdateProps) => {
                 />
               </AvGroup>
               <AvGroup>
-                <Label id="nameLabel" for="afsrole-name">
-                  <Translate contentKey="sampleHrApp.afsrole.name">Name</Translate>
+                <Label id="codeLabel" for="afsrole-code">
+                  <Translate contentKey="sampleHrApp.afsrole.code">Code</Translate>
                 </Label>
                 <AvField
                   id="afsrole-name"

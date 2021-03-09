@@ -2,16 +2,44 @@ import React, { useEffect, useState, useRef } from 'react';
 import { IAppLayoutProps, AppMsgType, AppLayoutState } from '../../framework/app/AppTypes';
 import { IAppRoute } from '../../framework/app/IAppRoute';
 import {AppLayoutContext} from '../../framework/app/AppLayout';
+import axios from 'axios';
+// 'C:/java_wlengine_repo/sample-HRSystem-2020_11_06/node_modules/react-iframe/iframe'
+import Iframe from 'react-iframe';
+const SupTransInvesRportUrl= "http://BO43:8080/BOE/OpenDocument/opendoc/openDocument.jsp?sIDType=CUID&iDocID=AWEJIfZhRoZJqlo9qhWKQ.E&X-SAP-LogonToken=";
+const WatchListInvesUrl= "http://BO43:8080/BOE/OpenDocument/opendoc/openDocument.jsp?sIDType=CUID&iDocID=AeqLh44yZ5VDhuOnhcDxW_s&X-SAP-LogonToken=";
+const TransListInvesUrl= "http://BO43:8080/BOE/OpenDocument/opendoc/openDocument.jsp?sIDType=CUID&iDocID=AQhSs6XTuytNrfp6i1CWCQ4&X-SAP-LogonToken=";
+let tokenKey;
+function Counter() {
+
+    const bodyFormData = new FormData();
 
 
+    axios({
+        method: 'get',
+        url: 'http://BO43:9000/api/vuserroleswebapis',
+        data:  {"username": "Administrator", "password": "Mds123", "auth": "secEnterprise"},
+        headers: {"Content-Type": "application/json", "Accept": "application/json" }
+        })
+        .then(function (response) {
+            // handle success
+            tokenKey = encodeURIComponent(response.data["logontoken"]).toString();
+        })
+        .catch(function (response) {
+            // handle error
+            console.warn(response);
+            tokenKey =  null;
+        });
+    }
 
 
 export const SuspiciousTransactionInvestigation = (props) => {
 
     return (
         <div className="SuspiciousTransactionInvestigation">
-            <h2>Şüpheli İşlem İnceleme</h2>
-        <div dangerouslySetInnerHTML={{ __html: "<iframe src='https://vergidosyasi.com/2017/03/28/supheli-islem-tipleri/' height = 410 width=1050/>"}} />
+            {Counter() }
+            {console.warn(tokenKey)}
+            <a rel="noopener noreferrer" href={SupTransInvesRportUrl+tokenKey} target="_blank">Şüpheli İşlem Raporunu Görüntülemek İçin Tıklayınız.</a>
+            
         </div>
     );
 }
@@ -20,7 +48,7 @@ export const WatchListInvestigation
     = (props) => {
         return (
             <div className="WatchListInvestigation">
-                <h2>İzleme Listesi İnceleme</h2>
+                <a rel="noopener noreferrer" href={WatchListInvesUrl+tokenKey} target="_blank">İzleme Listesi Raporunu Görüntülemek İçin Tıklayınız.</a>
             </div>
         );
     }
@@ -29,7 +57,7 @@ export const TransactionListInvestigation = (props) => {
 
     return (
         <div className="TransactionListInvestigation">
-            <h2>İşlem Listesi İnceleme</h2>
+            <a rel="noopener noreferrer" href={TransListInvesUrl+tokenKey} target="_blank">İşlem Listesi Raporu Görüntülemek İçin Tıklayınız.</a>
         </div>
     );
 }

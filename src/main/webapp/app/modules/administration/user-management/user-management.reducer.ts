@@ -122,7 +122,10 @@ export const getRoles = () => ({
 });
 
 export const getUser: ICrudGetAction<IUser> = id => {
-  const requestUrl = `${apiUrl}/${id}`;
+  let requestUrl = `${apiUrl}/${id}`;
+  if (window.location.href.includes('modules')) {
+    requestUrl = `${apiUrl}/${window.location.href.split('user-management/')[1].split('/')[0]}`;
+  }
   return {
     type: ACTION_TYPES.FETCH_USER,
     payload: axios.get<IUser>(requestUrl),

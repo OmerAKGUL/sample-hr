@@ -26,14 +26,14 @@ export const AfsroleDetail = (props: IAfsroleDetailProps) => {
         </h2>
         <dl className="jh-entity-details">
           <dt>
-            <span id="code">
-              <Translate contentKey="sampleHrApp.afsrole.code">Code</Translate>
+            <span id="name">
+              <Translate contentKey="sampleHrApp.afsrole.name">Name</Translate>
             </span>
           </dt>
           <dd>{afsroleEntity.code}</dd>
           <dt>
-            <span id="name">
-              <Translate contentKey="sampleHrApp.afsrole.name">Name</Translate>
+            <span id="code">
+              <Translate contentKey="sampleHrApp.afsrole.code">Code</Translate>
             </span>
           </dt>
           <dd>{afsroleEntity.name}</dd>

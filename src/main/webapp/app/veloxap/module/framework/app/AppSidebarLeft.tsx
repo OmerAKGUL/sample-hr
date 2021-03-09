@@ -37,7 +37,7 @@ export const AppNavMenu = (props) => {
   const routes  = currentMainRouting;
   const links = routes.map( (item,index) => {
     const k = "l0."+index;
-    return <li key={k}
+    return <li key={k} hidden={item.hide}
               onClick ={()=>onClickAppNavMenu(changeALState,match.url)}>
               <Link to={item.path}>{item.title}</Link>
           </li>;

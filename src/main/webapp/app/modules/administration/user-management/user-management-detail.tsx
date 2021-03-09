@@ -14,7 +14,7 @@ export interface IUserManagementDetailProps extends StateProps, DispatchProps, R
 
 export const UserManagementDetail = (props: IUserManagementDetailProps) => {
   useEffect(() => {
-    props.getUser(props.match.params.login);
+    props.getUser(!window.location.href.includes("modules") ? props.match.params.login : props.match.url.split("/")[6]);
   }, []);
 
   const { user } = props;
@@ -25,6 +25,46 @@ export const UserManagementDetail = (props: IUserManagementDetailProps) => {
         <Translate contentKey="userManagement.detail.title">User</Translate> [<b>{user.login}</b>]
       </h2>
       <Row size="md">
+        
+      {window.location.href.includes("modules")?
+      <table  style ={({ marginLeft: '0.9rem' })} className="jh-entity-details">
+        <tr>
+          <th>
+            <Translate contentKey="userManagement.login">Login</Translate>
+          </th>
+      
+          <th>
+            <Translate contentKey="userManagement.profiles">Profiles</Translate>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <span>{user.login}</span>&nbsp;
+            {user.activated ? (
+              <Badge color="success">
+                <Translate contentKey="userManagement.activated">Activated</Translate>
+              </Badge>
+            ) : (
+              <Badge color="danger">
+                <Translate contentKey="userManagement.deactivated">Deactivated</Translate>
+              </Badge>
+            )}
+          </td>
+          <td>
+            <ul className="list-unstyled">
+            {user.authorities
+              ? user.authorities.map((authority, i) => (
+                  <li key={`user-auth-${i}`}>
+                    <Badge color="info">{authority}</Badge>
+                  </li>
+                ))
+              : null}
+            </ul>
+          </td>
+      </tr>
+    </table>
+
+        :
         <dl className="jh-entity-details">
           <dt>
             <Translate contentKey="userManagement.login">Login</Translate>
@@ -92,8 +132,8 @@ export const UserManagementDetail = (props: IUserManagementDetailProps) => {
             </ul>
           </dd>
         </dl>
-      </Row>
-      <Button tag={Link} to="/admin/user-management" replace color="info">
+      }</Row>
+      <Button tag={Link} to={window.location.href.includes("modules")? "/modules/afs/admin/user-management":"/admin/user-management"} replace color="info">
         <FontAwesomeIcon icon="arrow-left" />{' '}
         <span className="d-none d-md-inline">
           <Translate contentKey="entity.action.back">Back</Translate>

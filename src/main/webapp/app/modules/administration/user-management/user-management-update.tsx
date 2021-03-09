@@ -13,13 +13,14 @@ import { IRootState } from 'app/shared/reducers';
 export interface IUserManagementUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ login: string }> {}
 
 export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
-  const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.login);
+  const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.login );
 
+  
   useEffect(() => {
-    if (isNew) {
+    if (isNew && !props.match.url.includes("modules")) {
       props.reset();
     } else {
-      props.getUser(props.match.params.login);
+      props.getUser(!window.location.href.includes("modules") ? props.match.params.login : props.match.url.split("/")[5]);
     }
     props.getRoles();
     return () => {
@@ -28,11 +29,11 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
   }, []);
 
   const handleClose = () => {
-    props.history.push('/admin/user-management');
+    !props.match.url.includes("modules") ? props.history.push('/admin/user-management') :  props.history.push('/modules/afs/admin/user-management');
   };
 
   const saveUser = (event, values) => {
-    if (isNew) {
+    if (isNew && !props.match.url.includes("modules")) {
       props.createUser(values);
     } else {
       props.updateUser(values);
@@ -95,7 +96,8 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   value={user.login}
                 />
               </AvGroup>
-              <AvGroup>
+              {!props.match.url.includes("modules")?
+              (<AvGroup>
                 <Label for="firstName">
                   <Translate contentKey="userManagement.firstName">First Name</Translate>
                 </Label>
@@ -111,7 +113,7 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   }}
                   value={user.firstName}
                 />
-              </AvGroup>
+              </AvGroup>):null} {!props.match.url.includes("modules")?(
               <AvGroup>
                 <Label for="lastName">
                   <Translate contentKey="userManagement.lastName">Last Name</Translate>
@@ -129,7 +131,7 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   value={user.lastName}
                 />
                 <AvFeedback>This field cannot be longer than 50 characters.</AvFeedback>
-              </AvGroup>
+              </AvGroup>):null} {!props.match.url.includes("modules")?(
               <AvGroup>
                 <AvField
                   name="email"
@@ -155,13 +157,13 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   }}
                   value={user.email}
                 />
-              </AvGroup>
+              </AvGroup>):null} {!props.match.url.includes("modules")?(
               <AvGroup check>
                 <Label>
                   <AvInput type="checkbox" name="activated" value={user.activated} checked={user.activated} disabled={!user.id} />{' '}
                   <Translate contentKey="userManagement.activated">Activated</Translate>
                 </Label>
-              </AvGroup>
+              </AvGroup>):null} {!props.match.url.includes("modules")?(
               <AvGroup>
                 <Label for="langKey">
                   <Translate contentKey="userManagement.langKey">Language Key</Translate>
@@ -173,7 +175,7 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                     </option>
                   ))}
                 </AvField>
-              </AvGroup>
+              </AvGroup>):null} 
               <AvGroup>
                 <Label for="authorities">
                   <Translate contentKey="userManagement.profiles">Profiles</Translate>
@@ -186,7 +188,7 @@ export const UserManagementUpdate = (props: IUserManagementUpdateProps) => {
                   ))}
                 </AvInput>
               </AvGroup>
-              <Button tag={Link} to="/admin/user-management" replace color="info">
+              <Button tag={Link} to={!props.match.url.includes("modules") ? "/admin/user-management" :  "/modules/afs/admin/user-management"} replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">
