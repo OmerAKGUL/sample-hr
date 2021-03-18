@@ -96,6 +96,8 @@ public class WlmwldataFind {
         val=val.replace("Ü","u");
         val=val.replace("ı","I");
         val=val.replace("İ","I");
+        val=val.replace("ş","S");
+        val=val.replace("Ş","S");
         val=val.toUpperCase();
 
         return val;
