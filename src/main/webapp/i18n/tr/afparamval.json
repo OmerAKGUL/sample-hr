@@ -2,38 +2,38 @@
   "sampleHrApp": {
     "afparamval": {
       "home": {
-        "title": "Afparamvals",
-        "createLabel": "Create a new Afparamval",
-        "createOrEditLabel": "Create or edit a Afparamval",
-        "notFound": "No Afparamvals found",
+        "title": "Sistem Parametre Değerleri",
+        "createLabel": "Yeni bir Sistem Parametre Değeri oluştur",
+        "createOrEditLabel": "Bir Sistem Parametre Değeri oluştur ya da güncelle",
+        "notFound": "Sistem Parametre Değeri bulunmamaktadır",
         "matchFieldsInfo": "!!!! Eşleştirme alanı toplam değerin 100 olması gerekmektedir.",
         "matchAlgoInfo": "!!!! Eşleşme Algoritmalarından sadece bir tanesi TRUE değer seçilebilir."
       },
-      "created": "A new Afparamval is created with identifier {{ param }}",
-      "updated": "A Afparamval is updated with identifier {{ param }}",
-      "deleted": "A Afparamval is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem Parametre Değeri oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem Parametre Değeri güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem Parametre Değeri silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afparamval {{ id }}?"
+        "question": "{{ id }} nolu Sistem Parametre Değeri silmek istediğinizden emin misiniz??"
       },
       "detail": {
-        "title": "Afparamval"
+        "title": "Sistem Parametre Değeri"
       },
-      "code": "Code",
+      "code": "Kod",
       "idxno": "Idxno",
-      "paramtype": "Paramtype",
+      "paramtype": "Parametre Tipi",
       "paramgrpname": "Paramgrpname",
-      "valuetype": "Valuetype",
-      "valueformat": "Valueformat",
-      "valueunit": "Valueunit",
-      "value": "Value",
-      "descr": "Descr",
+      "valuetype": "Değer Tipi",
+      "valueformat": "Değer Formatı",
+      "valueunit": "Değer Birimi",
+      "value": "Değer",
+      "descr": "Açıklama",
       "ownersys": "Ownersys",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid"
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullanıcı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "İş Akış Durumu",
+      "wfprocid": "İş Akış Süreç ID"
     }
   }
 }

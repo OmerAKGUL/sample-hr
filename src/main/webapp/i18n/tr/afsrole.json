@@ -2,23 +2,23 @@
   "sampleHrApp": {
     "afsrole": {
       "home": {
-        "title": "Afsroles",
-        "createLabel": "Create a new Afsrole",
-        "createOrEditLabel": "Create or edit a Afsrole",
-        "notFound": "No Afsroles found"
+        "title": "Sistem Rolleri",
+        "createLabel": "Yeni bir Sistem Rolü oluştur",
+        "createOrEditLabel": "Bir Sistem Rolü oluştur ya da düzenle",
+        "notFound": "Sistem Rolleri bulunmamaktadır"
       },
-      "created": "A new Afsrole is created with identifier {{ param }}",
-      "updated": "A Afsrole is updated with identifier {{ param }}",
-      "deleted": "A Afsrole is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem Rolü oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem Rolü güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem Rolü silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afsrole {{ id }}?"
+        "question": "{{ id }} nolu Sistem Rolü'nü silmek istediğinize emin misiniz?"
       },
       "detail": {
-        "title": "Afsrole"
+        "title": "Sistem Rolü"
       },
-      "code": "Code",
-      "name": "Name",
-      "descr": "Descr"
+      "code": "Kod",
+      "name": "İsim",
+      "descr": "Açıklama"
     }
   }
 }

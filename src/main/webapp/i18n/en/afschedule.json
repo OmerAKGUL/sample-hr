@@ -2,32 +2,32 @@
   "sampleHrApp": {
     "afschedule": {
       "home": {
-        "title": "Afschedules",
-        "createLabel": "Create a new Afschedule",
-        "createOrEditLabel": "Create or edit a Afschedule",
-        "notFound": "No Afschedules found"
+        "title": " Application Framework Schedules",
+        "createLabel": "Create a new  Application Framework Schedule",
+        "createOrEditLabel": "Create or edit a  Application Framework Schedule",
+        "notFound": "No  Application Framework Schedules found"
       },
-      "created": "A new Afschedule is created with identifier {{ param }}",
-      "updated": "A Afschedule is updated with identifier {{ param }}",
-      "deleted": "A Afschedule is deleted with identifier {{ param }}",
+      "created": "A new  Application Framework Schedule is created with identifier {{ param }}",
+      "updated": "A  Application Framework Schedule is updated with identifier {{ param }}",
+      "deleted": "A  Application Framework Schedule is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afschedule {{ id }}?"
+        "question": "Are you sure you want to delete  Application Framework Schedule {{ id }}?"
       },
       "detail": {
-        "title": "Afschedule"
+        "title": " Application Framework Schedule"
       },
       "name": "Name",
-      "descr": "Descr",
+      "descr": "Description",
       "dtvalidfrom": "Dtvalidfrom",
       "dtvaliduntil": "Dtvaliduntil",
-      "periodunit": "Periodunit",
+      "periodunit": "Period Unit",
       "period": "Period",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid"
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow Process ID"
     }
   }
 }

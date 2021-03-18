@@ -63,7 +63,7 @@ export const Mematchresult = (props: IMematchresultProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.mematchresult.invprocid">Invprocid</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.mematchresult.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -74,7 +74,7 @@ export const Mematchresult = (props: IMematchresultProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.mematchresult.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -107,14 +107,14 @@ export const Mematchresult = (props: IMematchresultProps) => {
                       ''
                     )}
                   </td>
-                  <td>
+                  {/* <td>
                     {mematchresult.createdt ? <TextFormat type="date" value={mematchresult.createdt} format={APP_DATE_FORMAT} /> : null}
                   </td>
                   <td>
                     {mematchresult.updatedt ? <TextFormat type="date" value={mematchresult.updatedt} format={APP_DATE_FORMAT} /> : null}
                   </td>
                   <td>{mematchresult.createusr}</td>
-                  <td>{mematchresult.updateusr}</td>
+                  <td>{mematchresult.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${mematchresult.id}`} color="info" size="sm">

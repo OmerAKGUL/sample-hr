@@ -2,32 +2,32 @@
   "sampleHrApp": {
     "afwfstate": {
       "home": {
-        "title": "Afwfstates",
-        "createLabel": "Create a new Afwfstate",
-        "createOrEditLabel": "Create or edit a Afwfstate",
-        "notFound": "No Afwfstates found"
+        "title": "Sistem İş Akış Durumları",
+        "createLabel": "Yeni bir Sistem İş Akış Durumu oluştur",
+        "createOrEditLabel": "Bir Sistem İş Akış Durumu oluştur ya da güncelle",
+        "notFound": "Sistem İş Akış Durumları bulunmamaktadır"
       },
-      "created": "A new Afwfstate is created with identifier {{ param }}",
-      "updated": "A Afwfstate is updated with identifier {{ param }}",
-      "deleted": "A Afwfstate is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem İş Akış Durumu oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem İş Akış Durumu güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem İş Akış Durumu silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afwfstate {{ id }}?"
+        "question": "{{ id }} nolu Sistem İş Akış Durumu'nü silmek istediğinizden emin misiniz?"
       },
       "detail": {
-        "title": "Afwfstate"
+        "title": "Sistem İş Akış Durumu"
       },
-      "code": "Code",
-      "name": "Name",
-      "descr": "Descr",
+      "code": "Kod",
+      "name": "İsim",
+      "descr": "Açıklama",
       "apprefhandlerfrm": "Apprefhandlerfrm",
       "apprefhandlerdom": "Apprefhandlerdom",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "wfcode": "Wfcode"
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullanıcı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "İş Akış Durumu",
+      "wfprocid": "İş Akış Süreç ID",
+      "wfcode": "İş Akış Kodu"
     }
   }
 }

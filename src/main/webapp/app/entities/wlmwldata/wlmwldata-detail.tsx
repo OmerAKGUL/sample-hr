@@ -113,12 +113,13 @@ export const WlmwldataDetail = (props: IWlmwldataDetailProps) => {
           </span>
         </Button>
         &nbsp;
+        {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("İzleme Listesi Tanım ; Update")?
         <Button tag={Link} to={`/modules/wlm/wlmwldata/${wlmwldataEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>
           </span>
-        </Button>
+        </Button>:null}
       </Col>
     </Row>
   );

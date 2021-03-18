@@ -2,31 +2,31 @@
   "sampleHrApp": {
     "afworkflow": {
       "home": {
-        "title": "Afworkflows",
-        "createLabel": "Create a new Afworkflow",
-        "createOrEditLabel": "Create or edit a Afworkflow",
-        "notFound": "No Afworkflows found"
+        "title": "Application Framework Flows",
+        "createLabel": "Create a new Application Framework Flow",
+        "createOrEditLabel": "Create or edit a Application Framework Flow",
+        "notFound": "No Application Framework Flows found"
       },
-      "created": "A new Afworkflow is created with identifier {{ param }}",
-      "updated": "A Afworkflow is updated with identifier {{ param }}",
-      "deleted": "A Afworkflow is deleted with identifier {{ param }}",
+      "created": "A new Application Framework Flow is created with identifier {{ param }}",
+      "updated": "A Application Framework Flow is updated with identifier {{ param }}",
+      "deleted": "A Application Framework Flow is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afworkflow {{ id }}?"
+        "question": "Are you sure you want to delete Application Framework Flow {{ id }}?"
       },
       "detail": {
-        "title": "Afworkflow"
+        "title": "Application Framework Flow"
       },
       "code": "Code",
       "name": "Name",
-      "descr": "Descr",
+      "descr": "Description",
       "apprefmngfrm": "Apprefmngfrm",
       "apprefmngdomain": "Apprefmngdomain",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid"
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow Process ID"
     }
   }
 }

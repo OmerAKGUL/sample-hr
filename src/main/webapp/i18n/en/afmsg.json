@@ -2,27 +2,27 @@
   "sampleHrApp": {
     "afmsg": {
       "home": {
-        "title": "Afmsgs",
-        "createLabel": "Create a new Afmsg",
-        "createOrEditLabel": "Create or edit a Afmsg",
-        "notFound": "No Afmsgs found"
+        "title": "Messages",
+        "createLabel": "Create a new Message",
+        "createOrEditLabel": "Create or edit a Message",
+        "notFound": "No messages found"
       },
-      "created": "A new Afmsg is created with identifier {{ param }}",
-      "updated": "A Afmsg is updated with identifier {{ param }}",
-      "deleted": "A Afmsg is deleted with identifier {{ param }}",
+      "created": "A new Message is created with identifier {{ param }}",
+      "updated": "A Message is updated with identifier {{ param }}",
+      "deleted": "A Message is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afmsg {{ id }}?"
+        "question": "Are you sure you want to delete Message {{ id }}?"
       },
       "detail": {
-        "title": "Afmsg"
+        "title": "Message"
       },
-      "appmsgtype": "Appmsgtype",
-      "apprefctxinfo": "Apprefctxinfo",
-      "appmsgcode": "Appmsgcode",
-      "langisocode": "Langisocode",
-      "appmsgtxt": "Appmsgtxt",
-      "msgseverity": "Msgseverity",
-      "appsyscode": "Appsyscode"
+      "appmsgtype": "Application Message Type",
+      "apprefctxinfo": "Applicatin Referance Info",
+      "appmsgcode": "Application Message Code",
+      "langisocode": "Language ISO Code",
+      "appmsgtxt": "Application Message Text",
+      "msgseverity": "Message Severity",
+      "appsyscode": "Applicatin System Code"
     }
   }
 }

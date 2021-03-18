@@ -2,33 +2,33 @@
   "sampleHrApp": {
     "wlmwldata": {
       "home": {
-        "title": "Wlmwldata",
-        "createLabel": "Create a new Wlmwldata",
-        "createOrEditLabel": "Create or edit a Wlmwldata",
-        "notFound": "No Wlmwldata found"
+        "title": "Data İzleme Listesi",
+        "createLabel": "Yeni bir Data İzleme Listesi oluştur",
+        "createOrEditLabel": "Bir Data İzleme Listesi oluştur ya da düzenle",
+        "notFound": "Data İzleme Listesi bulunmamaktadır"
       },
-      "created": "A new Wlmwldata is created with identifier {{ param }}",
-      "updated": "A Wlmwldata is updated with identifier {{ param }}",
-      "deleted": "A Wlmwldata is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Data İzleme Listesi oluşturuldu",
+      "updated": "{{ param }} ID'li yeni bir Data İzleme Listesi güncellendi",
+      "deleted": "{{ param }} ID'li bir Data İzleme Listesi silindi",
       "delete": {
-        "question": "Are you sure you want to delete Wlmwldata {{ id }}?"
+        "question": "Data İzleme Listesi {{ id }}'yi silmek istediğinizden emin misiniz?"
       },
       "detail": {
-        "title": "Wlmwldata"
+        "title": "Data İzleme Listesi"
       },
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "namedata": "Namedata",
-      "addressdata": "Addressdata",
-      "citydata": "Citydata",
-      "countrydata": "Countrydata",
-      "birthdatedata": "Birthdatedata",
-      "tinnumberdata": "Tinnumberdata",
-      "wltype": "Wltype"
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullanıcı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "İş Akış Durumu",
+      "wfprocid": "İş Akış ID",
+      "namedata": "İsim",
+      "addressdata": "Adres",
+      "citydata": "İl",
+      "countrydata": "Ülke",
+      "birthdatedata": "Doğum Tarihi",
+      "tinnumberdata": "Number",
+      "wltype": "İzleme Listesi Tipi"
     }
   }
 }

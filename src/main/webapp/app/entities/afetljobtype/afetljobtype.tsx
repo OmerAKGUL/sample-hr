@@ -21,13 +21,14 @@ export const Afetljobtype = (props: IAfetljobtypeProps) => {
   return (
     <div>
       <h2 id="afetljobtype-heading">
+        {console.warn(window.sessionStorage.getItem("createUpdateDeleteAuth").toString())}
         <Translate contentKey="sampleHrApp.afetljobtype.home.title">Afetljobtypes</Translate>
-        {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
+        {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("Özel Liste Aktarım ; Create")?
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.afetljobtype.home.createLabel">Create new Afetljobtype</Translate>
-        </Link>}
+        </Link>:null}
       </h2>
       <div className="table-responsive">
         {afetljobtypeList && afetljobtypeList.length > 0 ? (
@@ -79,7 +80,7 @@ export const Afetljobtype = (props: IAfetljobtypeProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.afetljobtype.scheduleid">Scheduleid</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.afetljobtype.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -90,7 +91,7 @@ export const Afetljobtype = (props: IAfetljobtypeProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.afetljobtype.updateusr">Updateusr</Translate>
-                </th>
+                </th> */ }
                 <th />
               </tr>
             </thead>
@@ -126,14 +127,14 @@ export const Afetljobtype = (props: IAfetljobtypeProps) => {
                       ''
                     )}
                   </td>
-                  <td>
+                  {/* <td>
                     {afetljobtype.createdt ? <TextFormat type="date" value={afetljobtype.createdt} format={APP_DATE_FORMAT} /> : null}
                   </td>
                   <td>
                     {afetljobtype.updatedt ? <TextFormat type="date" value={afetljobtype.updatedt} format={APP_DATE_FORMAT} /> : null}
                   </td>
                   <td>{afetljobtype.createusr}</td>
-                  <td>{afetljobtype.updateusr}</td>
+                  <td>{afetljobtype.updateusr}</td> */ }
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
 				            {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?
@@ -153,26 +154,26 @@ export const Afetljobtype = (props: IAfetljobtypeProps) => {
                         </Button>:null}
                       
                     {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
-                      <Button tag={Link} to={`${match.url}/${afetljobtype.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${afetljobtype.id}/edit`} color="info" size="sm">
                             <FontAwesomeIcon icon="eye" />{' '}
                             <span className="d-none d-md-inline">
                               <Translate contentKey="entity.action.view">View</Translate>
                             </span>
                           </Button>}
-                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
-                      <Button tag={Link} to={`${match.url}/${afetljobtype.id}/edit`} color="primary" size="sm">
+                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("Özel Liste Aktarım ; Update")?
+                      <Button tag={Link} to={`${match.url}/${afetljobtype.id}`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
-                      </Button>}
-                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:
+                      </Button>:null}
+                    {window.location.pathname==="/modules/iwl/iwl2/afetljobtype"?null:window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("Özel Liste Aktarım ; Delete")?
                       <Button tag={Link} to={`${match.url}/${afetljobtype.id}/delete`} color="danger" size="sm">
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
                         </span>
-                      </Button>}
+                      </Button>:null}
                       
 
                     </div>

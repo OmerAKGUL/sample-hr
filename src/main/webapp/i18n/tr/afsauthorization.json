@@ -2,28 +2,28 @@
   "sampleHrApp": {
     "afsauthorization": {
       "home": {
-        "title": "Afsauthorizations",
-        "createLabel": "Create a new Afsauthorization",
-        "createOrEditLabel": "Create or edit a Afsauthorization",
-        "notFound": "No Afsauthorizations found"
+        "title": "Sistem Yetkilendirmeleri",
+        "createLabel": "Yeni bir Sistem Yetkilendirmesi oluştur",
+        "createOrEditLabel": "Bir Sistem Yetkilendirmesi oluştur ya da düzenle",
+        "notFound": "Sistem Yetkilendirmeleri bulunmamaktadır"
       },
-      "created": "A new Afsauthorization is created with identifier {{ param }}",
-      "updated": "A Afsauthorization is updated with identifier {{ param }}",
-      "deleted": "A Afsauthorization is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem Yetkilendirmesi oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem Yetkilendirmesi güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem Yetkilendirmesi silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afsauthorization {{ id }}?"
+        "question": "{{ id }} nolu Sistem Yetkilendirmesi silmek istediğinize emin misiniz?"
       },
       "detail": {
-        "title": "Afsauthorization"
+        "title": "Sistem Yetkilendirmesi"
       },
-      "authtype": "Authtype",
-      "afsid": "Afsid",
-      "afsid2": "Afsid 2",
-      "afwid": "Afwid",
-      "rolecode": "Rolecode",
-      "acccode": "Acccode",
-      "modulecode": "Modulecode",
-      "menuitemcode": "Menuitemcode"
+      "authtype": "Yetkilendirme Tipi",
+      "afsid": "System ID",
+      "afsid2": "System ID 2",
+      "afwid": "Uygulama Sistem ID",
+      "rolecode": "Kod Rolü",
+      "acccode": "Kod Eylemi",
+      "modulecode": "Kod Modülü",
+      "menuitemcode": "Karşılaştırma Motoru Nesne Kodu"
     }
   }
 }

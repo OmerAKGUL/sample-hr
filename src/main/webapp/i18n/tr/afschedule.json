@@ -2,32 +2,32 @@
   "sampleHrApp": {
     "afschedule": {
       "home": {
-        "title": "Afschedules",
-        "createLabel": "Create a new Afschedule",
-        "createOrEditLabel": "Create or edit a Afschedule",
-        "notFound": "No Afschedules found"
+        "title": "Sistem Programları",
+        "createLabel": "Yeni bir Sistem Programı oluştur",
+        "createOrEditLabel": "Bir Sistem Programı oluştur ya da güncelle",
+        "notFound": "Sistem Programı bulunmamaktadır"
       },
-      "created": "A new Afschedule is created with identifier {{ param }}",
-      "updated": "A Afschedule is updated with identifier {{ param }}",
-      "deleted": "A Afschedule is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem Programı oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem Programı güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem Programı silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afschedule {{ id }}?"
+        "question": "{{ id }} nolu Sistem Programı'nı silmek istediğinizden emin misiniz?"
       },
       "detail": {
-        "title": "Afschedule"
+        "title": "Sistem Programı"
       },
-      "name": "Name",
-      "descr": "Descr",
+      "name": "İsim",
+      "descr": "Açıklama",
       "dtvalidfrom": "Dtvalidfrom",
       "dtvaliduntil": "Dtvaliduntil",
       "periodunit": "Periodunit",
-      "period": "Period",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid"
+      "period": "Periyot",
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullanıcı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "İş Akış Durumu",
+      "wfprocid": "İş Akış Süreç ID"
     }
   }
 }

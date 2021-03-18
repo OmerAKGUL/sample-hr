@@ -1,6 +1,8 @@
 package com.mdsap.samplehr.web.rest;
 
 import com.mdsap.samplehr.domain.Wlmwldata;
+import com.mdsap.samplehr.domain.model.WLmwldataMatchResult;
+import com.mdsap.samplehr.domain.model.WlmwldataFind;
 import com.mdsap.samplehr.repository.WlmwldataRepository;
 import com.mdsap.samplehr.web.rest.errors.BadRequestAlertException;
 
@@ -123,5 +125,43 @@ public class WlmwldataResource {
         log.debug("REST request to delete Wlmwldata : {}", id);
         wlmwldataRepository.deleteById(id);
         return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();
+    }
+
+    /**
+     * {@code POST  /wlmwldata} : Find  a wlmwldata.
+     *
+     * @param wlmwldatafind the wlmwldata to find.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new wlmwldata, or with status {@code 400 (Bad Request)} if the wlmwldata has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping("/findwlmwldata")
+    public ResponseEntity<WLmwldataMatchResult> findWlmwldata(@RequestBody WlmwldataFind wlmwldatafind) throws URISyntaxException {
+        log.debug("REST request to save Wlmwldata : {}", wlmwldatafind);
+
+        List<Wlmwldata> result= null;
+        wlmwldatafind.updateifblank();
+        if(wlmwldatafind.getNamedata()!=null && wlmwldatafind.getTinnumberdata()!=null && wlmwldatafind.getCountrydata()!=null)
+            result = wlmwldataRepository.findOneByNamedataAndTinnumberdataAndCountrydata(wlmwldatafind.getNamedata(),wlmwldatafind.getTinnumberdata(),wlmwldatafind.getCountrydata());
+
+        else if(wlmwldatafind.getNamedata()!=null && wlmwldatafind.getTinnumberdata()!=null)
+            result = wlmwldataRepository.findOneByNamedataAndTinnumberdata(wlmwldatafind.getNamedata(),wlmwldatafind.getTinnumberdata());
+
+        else if(wlmwldatafind.getNamedata()!=null && wlmwldatafind.getCountrydata()!=null)
+            result = wlmwldataRepository.findOneByNamedataAndCountrydata(wlmwldatafind.getNamedata(),wlmwldatafind.getCountrydata());
+
+        else if(wlmwldatafind.getTinnumberdata()!=null && wlmwldatafind.getCountrydata()!=null)
+            result = wlmwldataRepository.findOneByTinnumberdataAndCountrydata(wlmwldatafind.getTinnumberdata(),wlmwldatafind.getCountrydata());
+
+        else if(wlmwldatafind.getTinnumberdata()!=null)
+            result = wlmwldataRepository.findOneByTinnumberdata(wlmwldatafind.getTinnumberdata());
+
+        else if(wlmwldatafind.getNamedata()!=null)
+            result = wlmwldataRepository.findOneByNamedata(wlmwldatafind.getNamedata());
+
+        WLmwldataMatchResult matchResult = new WLmwldataMatchResult();
+        matchResult.addMatchData(result);
+
+        // HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), result);
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(matchResult));
     }
 }

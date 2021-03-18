@@ -2,33 +2,33 @@
   "sampleHrApp": {
     "wlmwldata": {
       "home": {
-        "title": "Wlmwldata",
-        "createLabel": "Create a new Wlmwldata",
-        "createOrEditLabel": "Create or edit a Wlmwldata",
-        "notFound": "No Wlmwldata found"
+        "title": "Watch List Data",
+        "createLabel": "Create a new Watch List Data",
+        "createOrEditLabel": "Create or edit a Watch List Data",
+        "notFound": "No Watch List Data found"
       },
-      "created": "A new Wlmwldata is created with identifier {{ param }}",
-      "updated": "A Wlmwldata is updated with identifier {{ param }}",
-      "deleted": "A Wlmwldata is deleted with identifier {{ param }}",
+      "created": "A new Watch List Data is created with identifier {{ param }}",
+      "updated": "A Watch List Data is updated with identifier {{ param }}",
+      "deleted": "A Watch List Data is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Wlmwldata {{ id }}?"
+        "question": "Are you sure you want to delete Watch List Data {{ id }}?"
       },
       "detail": {
-        "title": "Wlmwldata"
+        "title": "Watch List Data"
       },
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "namedata": "Namedata",
-      "addressdata": "Addressdata",
-      "citydata": "Citydata",
-      "countrydata": "Countrydata",
-      "birthdatedata": "Birthdatedata",
-      "tinnumberdata": "Tinnumberdata",
-      "wltype": "Wltype"
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow ID",
+      "namedata": "Name",
+      "addressdata": "Address",
+      "citydata": "City",
+      "countrydata": "Country",
+      "birthdatedata": "Birth Date",
+      "tinnumberdata": "Number",
+      "wltype": "Watch List Type"
     }
   }
 }

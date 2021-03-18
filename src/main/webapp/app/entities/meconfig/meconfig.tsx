@@ -12,22 +12,35 @@ import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 
 export interface IMeconfigProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
+let backgroundColor = 'red';
+
+function colorPicker( aValue) {
+ 
+  if (aValue === "1")
+    backgroundColor = 'red';
+  else if (aValue === "2")
+    backgroundColor = 'yellow';
+  else
+    backgroundColor = 'green';
+  
+  }
+
 export const Meconfig = (props: IMeconfigProps) => {
   useEffect(() => {
     props.getEntities();
   }, []);
 
-
+ 
   const { meconfigList, match, loading } = props;
   return (
     <div>
       <h2 id="meconfig-heading">
         <Translate contentKey="sampleHrApp.meconfig.home.title">Meconfigs</Translate>
-        <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
+        { /* <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.meconfig.home.createLabel">Create new Meconfig</Translate>
-        </Link>
+        </Link> */ }
       </h2>
       <div className="table-responsive">
         {meconfigList && meconfigList.length > 0 ? (
@@ -58,7 +71,7 @@ export const Meconfig = (props: IMeconfigProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.meconfig.scheduleid">Scheduleid</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.meconfig.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -69,7 +82,7 @@ export const Meconfig = (props: IMeconfigProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.meconfig.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -85,8 +98,8 @@ export const Meconfig = (props: IMeconfigProps) => {
                   <td>{meconfig.name}</td>
                   <td>{meconfig.descr}</td>
                   <td>{meconfig.wlfieldlist}</td>
-                  {/* bgcolor = {meconfig.wfstate === "1" ? "red":meconfig.wfstate === "2" ? "yellow":"green" } */}
-          <td >
+                  {colorPicker(meconfig.wfstate)}
+          <td style={{backgroundColor}}>
 					
 					{meconfig.wfstate === "1" ? <Translate contentKey="sampleHrApp.meconfig.stopped">Stopped</Translate>:meconfig.wfstate === "2" ? <Translate contentKey="sampleHrApp.meconfig.preparing">Preparing</Translate>:<Translate contentKey="sampleHrApp.meconfig.started">Started</Translate>}
 					
@@ -94,10 +107,10 @@ export const Meconfig = (props: IMeconfigProps) => {
                   
 					<td>{meconfig.wfprocid}</td>
                   <td>{meconfig.scheduleid ? <Link to={`afschedule/${meconfig.scheduleid.id}`}>{meconfig.scheduleid.name}</Link> : ''}</td>
-                  <td>{meconfig.createdt ? <TextFormat type="date" value={meconfig.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{meconfig.createdt ? <TextFormat type="date" value={meconfig.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{meconfig.updatedt ? <TextFormat type="date" value={meconfig.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{meconfig.createusr}</td>
-                  <td>{meconfig.updateusr}</td>
+                   <td>{meconfig.updateusr}</td> */}
                   <td className="text-right">
 					<div className="btn-group flex-btn-group-container">
 					{meconfig.wfstate === "1"?

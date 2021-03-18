@@ -2,23 +2,23 @@
   "sampleHrApp": {
     "afsrole": {
       "home": {
-        "title": "Afsroles",
-        "createLabel": "Create a new Afsrole",
-        "createOrEditLabel": "Create or edit a Afsrole",
-        "notFound": "No Afsroles found"
+        "title": "Application Framework System Roles",
+        "createLabel": "Create a new Application Framework System Role",
+        "createOrEditLabel": "Create or edit a Application Framework System Role",
+        "notFound": "No Application Framework System Roles found"
       },
-      "created": "A new Afsrole is created with identifier {{ param }}",
-      "updated": "A Afsrole is updated with identifier {{ param }}",
-      "deleted": "A Afsrole is deleted with identifier {{ param }}",
+      "created": "A new Application Framework System Role is created with identifier {{ param }}",
+      "updated": "A Application Framework System Role is updated with identifier {{ param }}",
+      "deleted": "A Application Framework System Role is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afsrole {{ id }}?"
+        "question": "Are you sure you want to delete Application Framework System Role {{ id }}?"
       },
       "detail": {
-        "title": "Afsrole"
+        "title": "Application Framework System Role"
       },
       "code": "Code",
       "name": "Name",
-      "descr": "Descr"
+      "descr": "Description"
     }
   }
 }

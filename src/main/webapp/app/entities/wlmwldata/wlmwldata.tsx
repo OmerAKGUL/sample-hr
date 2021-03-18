@@ -69,11 +69,12 @@ export const Wlmwldata = (props: IWlmwldataProps) => {
     <div>
       <h2 id="wlmwldata-heading">
         <Translate contentKey="sampleHrApp.wlmwldata.home.title">Wlmwldata</Translate>
+        {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("İzleme Listesi Tanım ; Create")?
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.wlmwldata.home.createLabel">Create new Wlmwldata</Translate>
-        </Link>
+        </Link>:null}
       </h2>
       <div className="table-responsive">
         {wlmwldataList && wlmwldataList.length > 0 ? (
@@ -110,7 +111,7 @@ export const Wlmwldata = (props: IWlmwldataProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.wlmwldata.wltype">Wltype</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('createdt')}>
+                {/* <th className="hand" onClick={sort('createdt')}>
                   <Translate contentKey="sampleHrApp.wlmwldata.createdt">Createdt</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('updatedt')}>
@@ -121,7 +122,7 @@ export const Wlmwldata = (props: IWlmwldataProps) => {
                 </th>
                 <th className="hand" onClick={sort('updateusr')}>
                   <Translate contentKey="sampleHrApp.wlmwldata.updateusr">Updateusr</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
+                 </th> */}
                 <th />
               </tr>
             </thead>
@@ -146,21 +147,22 @@ export const Wlmwldata = (props: IWlmwldataProps) => {
                   </td>
                   <td>{wlmwldata.tinnumberdata}</td>
                   <td>{wlmwldata.wltype ? <Link to={`wlmwltype/${wlmwldata.wltype.id}`}>{wlmwldata.wltype.name}</Link> : ''}</td>
-                  <td>{wlmwldata.createdt ? <TextFormat type="date" value={wlmwldata.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{wlmwldata.createdt ? <TextFormat type="date" value={wlmwldata.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{wlmwldata.updatedt ? <TextFormat type="date" value={wlmwldata.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{wlmwldata.createusr}</td>
-                  <td>{wlmwldata.updateusr}</td>
+                    <td>{wlmwldata.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${wlmwldata.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${wlmwldata.id}/edit?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
+                      {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("İzleme Listesi Tanım ; Update")?
                       <Button
                         tag={Link}
-                        to={`${match.url}/${wlmwldata.id}/edit?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
+                        to={`${match.url}/${wlmwldata.id}`}
                         color="primary"
                         size="sm"
                       >
@@ -168,7 +170,8 @@ export const Wlmwldata = (props: IWlmwldataProps) => {
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
-                      </Button>
+                      </Button>:null}
+                      {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("İzleme Listesi Tanım ; Delete")?
                       <Button
                         tag={Link}
                         to={`${match.url}/${wlmwldata.id}/delete?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}
@@ -179,7 +182,7 @@ export const Wlmwldata = (props: IWlmwldataProps) => {
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
                         </span>
-                      </Button>
+                      </Button>:null}
                     </div>
                   </td>
                 </tr>

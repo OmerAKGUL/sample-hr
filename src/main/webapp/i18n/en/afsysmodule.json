@@ -2,24 +2,24 @@
   "sampleHrApp": {
     "afsysmodule": {
       "home": {
-        "title": "Afsysmodules",
-        "createLabel": "Create a new Afsysmodule",
-        "createOrEditLabel": "Create or edit a Afsysmodule",
-        "notFound": "No Afsysmodules found"
+        "title": "Application Framework System Modules",
+        "createLabel": "Create a new Application Framework System Module",
+        "createOrEditLabel": "Create or edit a Application Framework System Module",
+        "notFound": "No Application Framework System Modules found"
       },
-      "created": "A new Afsysmodule is created with identifier {{ param }}",
-      "updated": "A Afsysmodule is updated with identifier {{ param }}",
-      "deleted": "A Afsysmodule is deleted with identifier {{ param }}",
+      "created": "A new Application Framework System Module is created with identifier {{ param }}",
+      "updated": "A Application Framework System Module is updated with identifier {{ param }}",
+      "deleted": "A Application Framework System Module is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afsysmodule {{ id }}?"
+        "question": "Are you sure you want to delete Application Framework System Module {{ id }}?"
       },
       "detail": {
-        "title": "Afsysmodule"
+        "title": "Application Framework System Module"
       },
       "code": "Code",
       "name": "Name",
-      "descr": "Descr",
-      "appsyscode": "Appsyscode"
+      "descr": "Description",
+      "appsyscode": "Application System Code"
     }
   }
 }

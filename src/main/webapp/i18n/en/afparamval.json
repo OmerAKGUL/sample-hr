@@ -2,38 +2,38 @@
   "sampleHrApp": {
     "afparamval": {
       "home": {
-        "title": "Afparamvals",
-        "createLabel": "Create a new Afparamval",
-        "createOrEditLabel": "Create or edit a Afparamval",
-        "notFound": "No Afparamvals found",
+        "title": "Application Framework Parameter Values",
+        "createLabel": "Create a new Application Framework Parameter Value",
+        "createOrEditLabel": "Create or edit a Application Framework Parameter Value",
+        "notFound": "No Application Framework Parameter Values found",
         "matchFieldsInfo": "!!!! The total value of the Match Fields must be 100.",
         "matchAlgoInfo": "!!!! Match Algortihm only one value must be TRUE."
       },
-      "created": "A new Afparamval is created with identifier {{ param }}",
-      "updated": "A Afparamval is updated with identifier {{ param }}",
-      "deleted": "A Afparamval is deleted with identifier {{ param }}",
+      "created": "A new Application Framework Parameter Value is created with identifier {{ param }}",
+      "updated": "A Application Framework Parameter Value is updated with identifier {{ param }}",
+      "deleted": "A Application Framework Parameter Value is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afparamval {{ id }}?"
+        "question": "Are you sure you want to delete Application Framework Parameter Value {{ id }}?"
       },
       "detail": {
-        "title": "Afparamval"
+        "title": "Application Framework Parameter Value"
       },
       "code": "Code",
       "idxno": "Idxno",
-      "paramtype": "Paramtype",
+      "paramtype": "Parameter Type",
       "paramgrpname": "Paramgrpname",
-      "valuetype": "Valuetype",
-      "valueformat": "Valueformat",
-      "valueunit": "Valueunit",
+      "valuetype": "Value Type",
+      "valueformat": "Value Format",
+      "valueunit": "Value Unit",
       "value": "Value",
-      "descr": "Descr",
-      "ownersys": "Ownersys",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid"
+      "descr": "Description",
+      "ownersys": "Owner System",
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow Process ID"
     }
   }
 }

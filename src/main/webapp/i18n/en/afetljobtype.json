@@ -2,37 +2,37 @@
   "sampleHrApp": {
     "afetljobtype": {
       "home": {
-        "title": "Afetljobtypes",
-        "createLabel": "Create a new Afetljobtype",
-        "createOrEditLabel": "Create or edit a Afetljobtype",
-        "notFound": "No Afetljobtypes found"
+        "title": "Etl Job Type",
+        "createLabel": "Create a new ETL Job Type",
+        "createOrEditLabel": "Create or edit a ETL Job Type",
+        "notFound": "No ETL Job Types found"
       },
-      "created": "A new Afetljobtype is created with identifier {{ param }}",
-      "updated": "A Afetljobtype is updated with identifier {{ param }}",
-      "deleted": "A Afetljobtype is deleted with identifier {{ param }}",
+      "created": "A new ETL Job Type is created with identifier {{ param }}",
+      "updated": "A ETL Job Type is updated with identifier {{ param }}",
+      "deleted": "A ETL Job Type is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afetljobtype {{ id }}?"
+        "question": "Are you sure you want to delete ETL Job Type {{ id }}?"
       },
       "detail": {
-        "title": "Afetljobtype"
+        "title": "ETL Job Type"
       },
       "jobname": "Job Name",
       "apprefid": "Application Refference ID",
       "srcdataprofile": "Source Data Profile",
       "tgtdataprofile": "Target Data Profile",
-      "afsid": "Afsid",
-      "srclocurl": "Srclocurl",
-      "tgtlocurl": "Tgtlocurl",
-      "srcconntype": "Srcconntype",
-      "tgtconntype": "Tgtconntype",
+      "afsid": "AFS ID",
+      "srclocurl": "Source Local URL",
+      "tgtlocurl": "Target Local URL",
+      "srcconntype": "Source Connection Type",
+      "tgtconntype": "Target Connection Type",
       "createdt": "Create Date",
       "updatedt": "Update Date",
       "createusr": "Create User",
       "updateusr": "Update User",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "srcsyscode": "Srcsyscode",
-      "tgtsyscode": "Tgtsyscode",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow ID",
+      "srcsyscode": "Source System Code",
+      "tgtsyscode": "Target System Code",
       "scheduleid": "Schedule ID"
     }
   }

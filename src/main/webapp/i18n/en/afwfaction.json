@@ -2,36 +2,36 @@
   "sampleHrApp": {
     "afwfaction": {
       "home": {
-        "title": "Afwfactions",
-        "createLabel": "Create a new Afwfaction",
-        "createOrEditLabel": "Create or edit a Afwfaction",
-        "notFound": "No Afwfactions found"
+        "title": "Application Framework Work Flow Actions",
+        "createLabel": "Create a new Application Framework Work Flow Action",
+        "createOrEditLabel": "Create or edit a Application Framework Work Flow Action",
+        "notFound": "No Application Framework Work Flow Actions found"
       },
-      "created": "A new Afwfaction is created with identifier {{ param }}",
-      "updated": "A Afwfaction is updated with identifier {{ param }}",
-      "deleted": "A Afwfaction is deleted with identifier {{ param }}",
+      "created": "A new Application Framework Work Flow Action is created with identifier {{ param }}",
+      "updated": "A Application Framework Work Flow Action is updated with identifier {{ param }}",
+      "deleted": "A Application Framework Work Flow Action is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afwfaction {{ id }}?"
+        "question": "Are you sure you want to delete Application Framework Work Flow Action {{ id }}?"
       },
       "detail": {
-        "title": "Afwfaction"
+        "title": "Application Framework Work Flow Action"
       },
       "code": "Code",
       "name": "Name",
-      "descr": "Descr",
+      "descr": "Description",
       "apprefhandler": "Apprefhandler",
-      "afsid": "Afsid",
+      "afsid": "Application Framework System ID",
       "afmid": "Afmid",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "appmenucode": "Appmenucode",
-      "appformcode": "Appformcode",
-      "appmodulecode": "Appmodulecode",
-      "wfcode": "Wfcode"
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow Process ID",
+      "appmenucode": "Application Menu Code",
+      "appformcode": "Application Form Code",
+      "appmodulecode": "Application Module Code",
+      "wfcode": "Work Flow Code"
     }
   }
 }

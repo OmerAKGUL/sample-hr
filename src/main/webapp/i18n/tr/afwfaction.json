@@ -2,36 +2,36 @@
   "sampleHrApp": {
     "afwfaction": {
       "home": {
-        "title": "Afwfactions",
-        "createLabel": "Create a new Afwfaction",
-        "createOrEditLabel": "Create or edit a Afwfaction",
-        "notFound": "No Afwfactions found"
+        "title": "İş Akış İşlemi",
+        "createLabel": "Yeni bir İş Akış İşlemi oluştur",
+        "createOrEditLabel": "Bir İş Akış İşlemi oluştur ya da güncelle",
+        "notFound": "İş Akış İşlemi bulunmamaktadır"
       },
-      "created": "A new Afwfaction is created with identifier {{ param }}",
-      "updated": "A Afwfaction is updated with identifier {{ param }}",
-      "deleted": "A Afwfaction is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir İş Akış İşlemi oluşturuldu",
+      "updated": "{{ param }} ID'li bir İş Akış İşlemi güncellendi",
+      "deleted": "{{ param }} ID'li bir İş Akış İşlemi silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afwfaction {{ id }}?"
+        "question": "{{ id }} nolu İş Akış İşlemi'ni silmek istediğinizden emin misiniz?"
       },
       "detail": {
-        "title": "Afwfaction"
+        "title": "İş Akış İşlemi"
       },
-      "code": "Code",
-      "name": "Name",
-      "descr": "Descr",
+      "code": "Kod",
+      "name": "İsim",
+      "descr": "Açıklama",
       "apprefhandler": "Apprefhandler",
-      "afsid": "Afsid",
+      "afsid": "Sistem ID",
       "afmid": "Afmid",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "appmenucode": "Appmenucode",
-      "appformcode": "Appformcode",
-      "appmodulecode": "Appmodulecode",
-      "wfcode": "Wfcode"
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullanıcı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "İş Akış Durumu",
+      "wfprocid": "İş Akış Süreç ID",
+      "appmenucode": "Uygulama Menü Kodu",
+      "appformcode": "Uygulama Form Kodu",
+      "appmodulecode": "Uygulama Modül Kodu",
+      "wfcode": "İş Akış Kodu"
     }
   }
 }

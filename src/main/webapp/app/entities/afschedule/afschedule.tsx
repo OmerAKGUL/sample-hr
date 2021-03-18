@@ -60,7 +60,7 @@ export const Afschedule = (props: IAfscheduleProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.afschedule.wfprocid">Wfprocid</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.afschedule.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -71,7 +71,7 @@ export const Afschedule = (props: IAfscheduleProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.afschedule.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -97,10 +97,10 @@ export const Afschedule = (props: IAfscheduleProps) => {
                   <td>{afschedule.period}</td>
                   <td>{afschedule.wfstate}</td>
                   <td>{afschedule.wfprocid}</td>
-                  <td>{afschedule.createdt ? <TextFormat type="date" value={afschedule.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{afschedule.createdt ? <TextFormat type="date" value={afschedule.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afschedule.updatedt ? <TextFormat type="date" value={afschedule.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afschedule.createusr}</td>
-                  <td>{afschedule.updateusr}</td>
+                   <td>{afschedule.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${afschedule.id}`} color="info" size="sm">

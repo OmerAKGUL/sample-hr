@@ -2,34 +2,34 @@
   "sampleHrApp": {
     "meconfig": {
       "home": {
-        "title": "Meconfigs",
-        "createLabel": "Create a new Meconfig",
-        "createOrEditLabel": "Create or edit a Meconfig",
-        "notFound": "No Meconfigs found"
+        "title": "Matching Engine Configuration",
+        "createLabel": "Create a new Matching Engine Configuration",
+        "createOrEditLabel": "Create or edit a Matching Engine Configuration",
+        "notFound": "No Matching Engine Configuration found"
       },
-      "created": "A new Meconfig is created with identifier {{ param }}",
-      "updated": "A Meconfig is updated with identifier {{ param }}",
-      "deleted": "A Meconfig is deleted with identifier {{ param }}",
+      "created": "A new Matching Engine Configuration is created with identifier {{ param }}",
+      "updated": "A Matching Engine Configuration is updated with identifier {{ param }}",
+      "deleted": "A Matching Engine Configuration is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Meconfig {{ id }}?",
-        "questionstart": "Are you sure you want to start Meconfig {{ id }}?",
-        "questionstop": "Are you sure you want to stop Meconfig {{ id }}?",
-        "nosuch": "No such action can be done because of WFState value."
+        "question": "Are you sure you want to delete Matching Engine Configuration {{ id }}?",
+        "questionstart": "Are you sure you want to start Matching Engine Configuration {{ id }}?",
+        "questionstop": "Are you sure you want to stop Matching Engine Configuration {{ id }}?",
+        "nosuch": "No such action can be done because of Work Flow State value."
       },
       "detail": {
-        "title": "Meconfig"
+        "title": "Matching Engine Configuration"
       },
       "code": "Code",
       "name": "Name",
-      "descr": "Descr",
-      "wlfieldlist": "Wlfieldlist",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "scheduleid": "Scheduleid",
+      "descr": "Description",
+      "wlfieldlist": "Work Flow Field List",
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow ID",
+      "scheduleid": "Schedule ID",
       "stopped": "Stopped",
       "started": "Started",
       "preparing": "Preparing"

@@ -2,35 +2,35 @@
   "sampleHrApp": {
     "meinvestprofile": {
       "home": {
-        "title": "Meinvestprofiles",
-        "createLabel": "Create a new Meinvestprofile",
-        "createOrEditLabel": "Create or edit a Meinvestprofile",
-        "notFound": "No Meinvestprofiles found"
+        "title": "Karşılaştırma Motoru İnceleme Listeleri",
+        "createLabel": "Yeni bir Karşılaştırma Motoru İnceleme Listesi oluştur",
+        "createOrEditLabel": "Bir Karşılaştırma Motoru İnceleme Listesi oluştur ya da düzenle ",
+        "notFound": "Karşılaştırma Motoru İnceleme Listesi bulunamadı"
       },
-      "created": "A new Meinvestprofile is created with identifier {{ param }}",
-      "updated": "A Meinvestprofile is updated with identifier {{ param }}",
-      "deleted": "A Meinvestprofile is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Karşılaştırma Motoru İnceleme Listesi oluşturuldu",
+      "updated": "{{ param }} ID'li bir Karşılaştırma Motoru İnceleme Listesi güncellendi",
+      "deleted": "{{ param }} ID'li bir Karşılaştırma Motoru İnceleme Listesi silindi",
       "delete": {
-        "question": "Are you sure you want to delete Meinvestprofile {{ id }}?"
+        "question": "{{ id }} nolu Karşılaştırma Motoru İnceleme Listesi silmek istediğinize emin misiniz?"
       },
       "detail": {
-        "title": "Meinvestprofile"
+        "title": "Karşılaştırma Motoru İnceleme Listesi"
       },
-      "name": "Name",
-      "wlmid": "Wlmid",
+      "name": "İsim",
+      "wlmid": "İzleme Listesi ID",
       "afsid": "Afsid",
-      "invtype": "Invtype",
-      "processdescr": "Processdescr",
-      "notifgrp1emailaddr": "Notifgrp 1 Emailaddr",
-      "notifgrp2emailaddr": "Notifgrp 2 Emailaddr",
-      "notifmsgtempl": "Notifmsgtempl",
-      "matchwltype": "Matchwltype",
-      "matchtxntype": "Matchtxntype",
-      "matchtxncusttype": "Matchtxncusttype",
-      "matchtxnacctype": "Matchtxnacctype",
-      "matchsystemcode": "Matchsystemcode",
-      "invrespuserid": "Invrespuserid",
-      "invresprole": "Invresprole"
+      "invtype": "Araştırma Tipi",
+      "processdescr": "Süreç Tanımı",
+      "notifgrp1emailaddr": "Bilgilendirme Grubu 1 Email Adresi",
+      "notifgrp2emailaddr": "Bilgilendirme Grubu 2 Email Adresi",
+      "notifmsgtempl": "Bilgilendirme Mesaj Şablonu",
+      "matchwltype": "İzleme Listesi Tipi Karşılaştırma",
+      "matchtxntype": "Karşılaştırma Tipi",
+      "matchtxncusttype": "Müşteri Tipi Karşılaştırması",
+      "matchtxnacctype": "Müşteri Aksiyon Tipi Karşılaştırması",
+      "matchsystemcode": "Sistem Kodu Karşılaştırması",
+      "invrespuserid": "Araştırma Tepki Kullanıcı ID",
+      "invresprole": "Araştırma Tepki Rolü"
     }
   }
 }

@@ -20,6 +20,7 @@ const initialState = {
   loginError: false, // Errors returned from server side
   showModalLogin: false,
   account: {} as any,
+  menuAuthorization: (null as unknown) as string,
   errorMessage: (null as unknown) as string, // Errors returned from server side
   redirectMessage: (null as unknown) as string,
   sessionHasBeenFetched: false,
@@ -106,6 +107,7 @@ export const getSession: () => void = () => async (dispatch, getState) => {
 
   const { account } = getState().authentication;
   if (account && account.langKey) {
+    window.sessionStorage.setItem('accountIdForMenu', account.id);
     const langKey = Storage.session.get('locale', account.langKey);
     await dispatch(setLocale(langKey));
   }

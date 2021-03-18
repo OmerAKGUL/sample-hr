@@ -139,12 +139,13 @@ export const AfetljobtypeDetail = (props: IAfetljobtypeDetailProps) => {
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/modules/iwl/afetljobtype/${afetljobtypeEntity.id}/edit`} replace color="primary">
+        {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("Özel Liste Aktarım ; Update")? 
+        <Button tag={Link} to={`/modules/iwl/afetljobtype/${afetljobtypeEntity.id}`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>
           </span>
-        </Button>
+        </Button>: null}
       </Col>
     </Row>
   );

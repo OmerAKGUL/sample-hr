@@ -22,11 +22,11 @@ export const Memtdconfig = (props: IMemtdconfigProps) => {
     <div>
       <h2 id="memtdconfig-heading">
         <Translate contentKey="sampleHrApp.memtdconfig.home.title">Memtdconfigs</Translate>
-        <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
+        {/* <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.memtdconfig.home.createLabel">Create new Memtdconfig</Translate>
-        </Link>
+          </Link> */}
       </h2>
       <div className="table-responsive">
         {memtdconfigList && memtdconfigList.length > 0 ? (

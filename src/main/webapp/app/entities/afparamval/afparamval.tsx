@@ -113,7 +113,7 @@ export const Afparamval = (props: IAfparamvalProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.afparamval.wfprocid">Wfprocid</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.afparamval.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -124,7 +124,7 @@ export const Afparamval = (props: IAfparamvalProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.afparamval.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -152,10 +152,10 @@ export const Afparamval = (props: IAfparamvalProps) => {
                   <td>{afparamval.ownersys}</td>
                   <td>{afparamval.wfstate}</td>
                   <td>{afparamval.wfprocid}</td>
-                  <td>{afparamval.createdt ? <TextFormat type="date" value={afparamval.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{afparamval.createdt ? <TextFormat type="date" value={afparamval.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afparamval.updatedt ? <TextFormat type="date" value={afparamval.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afparamval.createusr}</td>
-                  <td>{afparamval.updateusr}</td>
+                  <td>{afparamval.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${afparamval.id}`} color="info" size="sm">

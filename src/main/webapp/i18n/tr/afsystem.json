@@ -2,28 +2,28 @@
   "sampleHrApp": {
     "afsystem": {
       "home": {
-        "title": "Afsystems",
-        "createLabel": "Create a new Afsystem",
-        "createOrEditLabel": "Create or edit a Afsystem",
-        "notFound": "No Afsystems found"
+        "title": "Sistemler",
+        "createLabel": "Yeni bir Sistem oluştur",
+        "createOrEditLabel": "Sistem oluştur ya da düzenle",
+        "notFound": "Sistem bulunmamaktadır"
       },
-      "created": "A new Afsystem is created with identifier {{ param }}",
-      "updated": "A Afsystem is updated with identifier {{ param }}",
-      "deleted": "A Afsystem is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afsystem {{ id }}?"
+        "question": "{{ id }} nolu Sistem silmek istediğinize emin misiniz?"
       },
       "detail": {
-        "title": "Afsystem"
+        "title": "Sistem"
       },
-      "code": "Code",
-      "name": "Name",
-      "descr": "Descr",
-      "apprefcode": "Apprefcode",
-      "systype": "Systype",
-      "appdomaincode": "Appdomaincode",
-      "connecttype": "Connecttype",
-      "connectstr": "Connectstr"
+      "code": "Kod",
+      "name": "İsim",
+      "descr": "Açıklama",
+      "apprefcode": "Uygulama Referans Kodu",
+      "systype": "Sistem Tipi",
+      "appdomaincode": "Uygulama Domain Kodu",
+      "connecttype": "Bağlantı Tipi",
+      "connectstr": "Bağlantı Bilgisi"
     }
   }
 }

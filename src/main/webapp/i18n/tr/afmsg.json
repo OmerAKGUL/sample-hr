@@ -2,27 +2,27 @@
   "sampleHrApp": {
     "afmsg": {
       "home": {
-        "title": "Afmsgs",
-        "createLabel": "Create a new Afmsg",
-        "createOrEditLabel": "Create or edit a Afmsg",
-        "notFound": "No Afmsgs found"
+        "title": "Mesaj",
+        "createLabel": "Yeni bir mesaj olustur",
+        "createOrEditLabel": "Bir mesaj olustur ya da duzenle",
+        "notFound": "Mesaj bulunamadi"
       },
-      "created": "A new Afmsg is created with identifier {{ param }}",
-      "updated": "A Afmsg is updated with identifier {{ param }}",
-      "deleted": "A Afmsg is deleted with identifier {{ param }}",
+      "created": "{{ param }} id'li bir mesaj oluşturldu.",
+      "updated": "{{ param }} id'li bir mesaj guncellendi",
+      "deleted": "{{ param }} id'li bir mesaj silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afmsg {{ id }}?"
+        "question": "Mesaj {{ id }}'yi silmek istediginizden emin misiniz ?"
       },
       "detail": {
-        "title": "Afmsg"
+        "title": "Mesaj"
       },
-      "appmsgtype": "Appmsgtype",
-      "apprefctxinfo": "Apprefctxinfo",
-      "appmsgcode": "Appmsgcode",
-      "langisocode": "Langisocode",
-      "appmsgtxt": "Appmsgtxt",
-      "msgseverity": "Msgseverity",
-      "appsyscode": "Appsyscode"
+      "appmsgtype": "Uygulama Mesaj Tipi",
+      "apprefctxinfo": "Uygulama Referans Bilgisi",
+      "appmsgcode": "Uygulama Mesaj Kodu",
+      "langisocode": "ISO Dil Kodu",
+      "appmsgtxt": "Uygulama Mesaj Metni",
+      "msgseverity": "Mesaj Onceligi",
+      "appsyscode": "Uygulama Sistem Kodu"
     }
   }
 }

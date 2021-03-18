@@ -203,7 +203,7 @@ export const AppLayoutContainer=(props:Types.IAppLayoutProps)=>{
           <AppSidebarLeft {...props} />
           <AppRouteTarget {...props} />
           <AppSidebarRight {...props} />
-          <AppMsgBar {...props} />
+          {/* <AppMsgBar {...props} />*/}
       </AppLayoutContext.Provider>
     </div>
   );

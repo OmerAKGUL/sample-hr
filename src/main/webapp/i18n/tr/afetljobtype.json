@@ -7,11 +7,11 @@
         "createOrEditLabel": "ETL Düzenle ya da Oluştur",
         "notFound": "ETL İş Listesi Bulunmamaktadır"
       },
-      "created": "{{ param }} id li ETL İşi oluşturuldu.",
-      "updated": "{{ param }} id li ETL İşi güncellendi.",
-      "deleted": "{{ param }} id li ETL İşi silinid.",
+      "created": "{{ param }} ID'li ETL İşi oluşturuldu.",
+      "updated": "{{ param }} ID'li ETL İşi güncellendi.",
+      "deleted": "{{ param }} ID'li ETL İşi silindi.",
       "delete": {
-        "question": "{{ id }}'li ETLi silmek istediğinize emin misiniz?"
+        "question": "{{ id }}'li ETL'i silmek istediğinize emin misiniz?"
       },
       "detail": {
         "title": "ETL İş Listesi"
@@ -22,7 +22,7 @@
       "tgtdataprofile": "Hedef Veri Profili",
       "afsid": "AFS ID",
       "srclocurl": "Kaynak Local URL",
-      "tgtlocurl": "Hedeh Local URL",
+      "tgtlocurl": "Hedef Local URL",
       "srcconntype": "Kaynak Bağlantı",
       "tgtconntype": "Hedef Bağlantı",
       "createdt": "Oluşturulma Tarihi",

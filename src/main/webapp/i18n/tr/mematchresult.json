@@ -2,33 +2,33 @@
   "sampleHrApp": {
     "mematchresult": {
       "home": {
-        "title": "Mematchresults",
-        "createLabel": "Create a new Mematchresult",
-        "createOrEditLabel": "Create or edit a Mematchresult",
-        "notFound": "No Mematchresults found"
+        "title": "Karşılaştırma Motoru Eşleşme Sonuçları",
+        "createLabel": "Yeni bir Karşılaştırma Motoru Eşleşme Sonucu oluştur",
+        "createOrEditLabel": "Karşılaştırma Motoru Eşleşme Sonucu oluştur ya da düzenle",
+        "notFound": "Karşılaştırma Motoru Eşleşme Sonuçları bulunmamaktadır"
       },
-      "created": "A new Mematchresult is created with identifier {{ param }}",
-      "updated": "A Mematchresult is updated with identifier {{ param }}",
-      "deleted": "A Mematchresult is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Karşılaştırma Motoru Eşleşme Sonucu oluşturuldu",
+      "updated": "{{ param }} ID'li bir Karşılaştırma Motoru Eşleşme Sonucu güncellendi",
+      "deleted": "{{ param }} ID'li bir Karşılaştırma Motoru Eşleşme Sonucu silindi",
       "delete": {
-        "question": "Are you sure you want to delete Mematchresult {{ id }}?"
+        "question": "{{ id }} nolu Karşılaştırma Motoru Eşleşme Sonucunu silmek istediğinize emin misiniz?"
       },
       "detail": {
-        "title": "Mematchresult"
+        "title": "Karşılaştırma Motoru Eşleşme Sonucu"
       },
-      "matchid": "Matchid",
-      "matchctxid": "Matchctxid",
-      "matchwltype": "Matchwltype",
-      "matchtxnid": "Matchtxnid",
-      "matchscore": "Matchscore",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "matchconfigcode": "Matchconfigcode",
-      "invprocid": "Invprocid"
+      "matchid": "Eşleşme ID",
+      "matchctxid": "Eşleşme İşlem ID",
+      "matchwltype": "İzleme Listesi Eşleşme Tipi",
+      "matchtxnid": "Eşleşme İşlem ID",
+      "matchscore": "Eşleşme Puanı",
+      "createdt": "Oluşturulma Tarihi",
+      "updatedt": "Güncelleme Tarihi",
+      "createusr": "Oluşturan Kullanıcı",
+      "updateusr": "Güncelleyen Kullanıcı",
+      "wfstate": "İş Akış Durumu",
+      "wfprocid": "İş Akış Süreç ID",
+      "matchconfigcode": "Eşleştirme Konfigürasyon Kodu",
+      "invprocid": "İnceleme Süreç ID"
     }
   }
 }

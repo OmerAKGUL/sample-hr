@@ -15,8 +15,8 @@ function Counter() {
 
 
     axios({
-        method: 'get',
-        url: 'http://BO43:9000/api/vuserroleswebapis',
+        method: 'post',
+        url: 'http://192.168.1.35:6405/biprws/v1/logon/long',
         data:  {"username": "Administrator", "password": "Mds123", "auth": "secEnterprise"},
         headers: {"Content-Type": "application/json", "Accept": "application/json" }
         })

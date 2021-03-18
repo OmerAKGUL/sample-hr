@@ -4,32 +4,32 @@
       "home": {
         "title": "Karşılaştırma Motoru",
         "createLabel": "Yeni Karşılaştırma Oluştur",
-        "createOrEditLabel": "Karşılaştırma olurtur ve düzenle",
+        "createOrEditLabel": "Karşılaştırma oluştur ve düzenle",
         "notFound": "Herhangi bir karşılaştırma bulunmamaktadır."
       },
       "created": "{{ param }} Karşılaştırma konfirigayonu eklendi.",
-      "updated": "A Meconfig is updated with identifier {{ param }}",
-      "deleted": "A Meconfig is deleted with identifier {{ param }}",
+      "updated": "{{ param }} ID'li karşılaştırma motoru güncellendi",
+      "deleted": "{{ param }} ID'li karşılaştırma moturu silindi",
       "delete": {
-        "question": "Are you sure you want to delete Meconfig {{ id }}?",
-        "questionstart": "Başlatmak istediğinize emin misiniz? Meconfig {{ id }}?",
-        "questionstop": "Durdurmak istediğinize emin misiniz? Meconfig {{ id }}?",
-        "nosuch": "No such action can be done because of WFState value."
+        "question": "{{ id }} nolu Karşılaştırma Motoru'nu silmek istediğinize emin misiniz?",
+        "questionstart": "{{ id }} nolu Karşılaştırma Motoru'nu başlatmak istediğinize emin misiniz?",
+        "questionstop": "{{ id }} nolu Karşılaştırma Motoru'nu durdurmak istediğinize emin misiniz?",
+        "nosuch": "İş akış durum değeri yüzünden böyle bir işlem gerçekleştirilemez"
       },
       "detail": {
-        "title": "Meconfig"
+        "title": "Karşılaştırma Motoru Konfigürasyonu"
       },
       "code": "Karşılaştırma Kodu",
       "name": "Karşılaştırma İsmi",
       "descr": "Tanım",
-      "wlfieldlist": "İş Durum Alan Listesi",
+      "wlfieldlist": "İş Akış Alan Listesi",
       "createdt": "Oluşturulma Tarihi",
       "updatedt": "Güncelleme Tarihi",
       "createusr": "Oluşturan Kullancı",
       "updateusr": "Güncelleyen Kullanıcı",
-      "wfstate": "Çalışma Durumu",
+      "wfstate": "İş Akış Durumu",
       "wfprocid": "İş Durum ID",
-      "scheduleid": "Zamanlama İsmi",
+      "scheduleid": "Zamanlama ID",
       "stopped": "Durduruldu",
       "started": "Başlatıldı",
       "preparing": "Hazırlanıyor"

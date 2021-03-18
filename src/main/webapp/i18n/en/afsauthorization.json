@@ -2,28 +2,28 @@
   "sampleHrApp": {
     "afsauthorization": {
       "home": {
-        "title": "Afsauthorizations",
-        "createLabel": "Create a new Afsauthorization",
-        "createOrEditLabel": "Create or edit a Afsauthorization",
-        "notFound": "No Afsauthorizations found"
+        "title": "Application Framework System Authorizations",
+        "createLabel": "Create a new Application Framework System Authorizations",
+        "createOrEditLabel": "Create or edit a Application Framework System Authorizations",
+        "notFound": "No Application Framework System Authorizationss found"
       },
-      "created": "A new Afsauthorization is created with identifier {{ param }}",
-      "updated": "A Afsauthorization is updated with identifier {{ param }}",
-      "deleted": "A Afsauthorization is deleted with identifier {{ param }}",
+      "created": "A new Application Framework System Authorizations is created with identifier {{ param }}",
+      "updated": "A Application Framework System Authorizations is updated with identifier {{ param }}",
+      "deleted": "A Application Framework System Authorizations is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Afsauthorization {{ id }}?"
+        "question": "Are you sure you want to delete Application Framework System Authorizations {{ id }}?"
       },
       "detail": {
-        "title": "Afsauthorization"
+        "title": "Application Framework System Authorizations"
       },
-      "authtype": "Authtype",
-      "afsid": "Afsid",
-      "afsid2": "Afsid 2",
-      "afwid": "Afwid",
-      "rolecode": "Rolecode",
-      "acccode": "Acccode",
-      "modulecode": "Modulecode",
-      "menuitemcode": "Menuitemcode"
+      "authtype": "Authorization Type",
+      "afsid": "Application Framework System ID",
+      "afsid2": "Application Framework System ID 2",
+      "afwid": "Application Framework ID",
+      "rolecode": "Role Code",
+      "acccode": "Action Code",
+      "modulecode": "Module Code",
+      "menuitemcode": "Matching Engine Item Code"
     }
   }
 }

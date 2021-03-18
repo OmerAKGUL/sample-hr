@@ -22,6 +22,9 @@ public class Vuserroleswebapi implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+    @Column(name = "userid")
+    private Long userId;
+
     @Column(name = "actionname")
     private String actionName;
 
@@ -39,7 +42,20 @@ public class Vuserroleswebapi implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+    // add from halil
+    public Long getUserId() {
+        return userId;
+    }
 
+    public Vuserroleswebapi userId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+    // -----
     public String getActionName() {
         return actionName;
     }
@@ -101,6 +117,7 @@ public class Vuserroleswebapi implements Serializable {
     public String toString() {
         return "Vuserroleswebapi{" +
             "id=" + getId() +
+            ", userId='" + getUserId() + "'" +
             ", actionName='" + getActionName() + "'" +
             ", moduleName='" + getModuleName() + "'" +
             ", menuName='" + getMenuName() + "'" +

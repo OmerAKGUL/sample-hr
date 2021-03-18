@@ -2,24 +2,24 @@
   "sampleHrApp": {
     "afsysmodule": {
       "home": {
-        "title": "Afsysmodules",
-        "createLabel": "Create a new Afsysmodule",
-        "createOrEditLabel": "Create or edit a Afsysmodule",
-        "notFound": "No Afsysmodules found"
+        "title": "Sistem Modülleri",
+        "createLabel": "Yeni bir Sistem Modülü oluştur",
+        "createOrEditLabel": "Bir Sistem Modülü oluştur ya da düzenle",
+        "notFound": "Sistem Modülleri bulunmamaktadır"
       },
-      "created": "A new Afsysmodule is created with identifier {{ param }}",
-      "updated": "A Afsysmodule is updated with identifier {{ param }}",
-      "deleted": "A Afsysmodule is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem Modülü oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem Modülü güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem Modülü silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afsysmodule {{ id }}?"
+        "question": "{{ id }} nolu Sistem Modülü'nü silmek istediğinizden emin misiniz?"
       },
       "detail": {
-        "title": "Afsysmodule"
+        "title": "Sistem Modülü"
       },
-      "code": "Code",
-      "name": "Name",
-      "descr": "Descr",
-      "appsyscode": "Appsyscode"
+      "code": "Kod",
+      "name": "İsim",
+      "descr": "Açıklama",
+      "appsyscode": "Sistem Kodu"
     }
   }
 }

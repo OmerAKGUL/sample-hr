@@ -60,7 +60,7 @@ export const Afwfstate = (props: IAfwfstateProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.afwfstate.wfcode">Wfcode</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.afwfstate.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -71,7 +71,7 @@ export const Afwfstate = (props: IAfwfstateProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.afwfstate.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -91,10 +91,10 @@ export const Afwfstate = (props: IAfwfstateProps) => {
                   <td>{afwfstate.wfstate}</td>
                   <td>{afwfstate.wfprocid}</td>
                   <td>{afwfstate.wfcode ? <Link to={`afworkflow/${afwfstate.wfcode.id}`}>{afwfstate.wfcode.name}</Link> : ''}</td>
-                  <td>{afwfstate.createdt ? <TextFormat type="date" value={afwfstate.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{afwfstate.createdt ? <TextFormat type="date" value={afwfstate.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfstate.updatedt ? <TextFormat type="date" value={afwfstate.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfstate.createusr}</td>
-                  <td>{afwfstate.updateusr}</td>
+                  <td>{afwfstate.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${afwfstate.id}`} color="info" size="sm">

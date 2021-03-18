@@ -2,33 +2,33 @@
   "sampleHrApp": {
     "mematchresult": {
       "home": {
-        "title": "Mematchresults",
-        "createLabel": "Create a new Mematchresult",
-        "createOrEditLabel": "Create or edit a Mematchresult",
-        "notFound": "No Mematchresults found"
+        "title": "Matching Engine Match Results",
+        "createLabel": "Create a new Matching Engine Match Result",
+        "createOrEditLabel": "Create or edit a Matching Engine Match Result",
+        "notFound": "No Matching Engine Match Results found"
       },
-      "created": "A new Mematchresult is created with identifier {{ param }}",
-      "updated": "A Mematchresult is updated with identifier {{ param }}",
-      "deleted": "A Mematchresult is deleted with identifier {{ param }}",
+      "created": "A new Matching Engine Match Result is created with identifier {{ param }}",
+      "updated": "A Matching Engine Match Result is updated with identifier {{ param }}",
+      "deleted": "A Matching Engine Match Result is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Mematchresult {{ id }}?"
+        "question": "Are you sure you want to delete Matching Engine Match Result {{ id }}?"
       },
       "detail": {
-        "title": "Mematchresult"
+        "title": "Matching Engine Match Result"
       },
-      "matchid": "Matchid",
-      "matchctxid": "Matchctxid",
-      "matchwltype": "Matchwltype",
-      "matchtxnid": "Matchtxnid",
-      "matchscore": "Matchscore",
-      "createdt": "Createdt",
-      "updatedt": "Updatedt",
-      "createusr": "Createusr",
-      "updateusr": "Updateusr",
-      "wfstate": "Wfstate",
-      "wfprocid": "Wfprocid",
-      "matchconfigcode": "Matchconfigcode",
-      "invprocid": "Invprocid"
+      "matchid": "Match ID",
+      "matchctxid": "Match Transection ID",
+      "matchwltype": "Match Watch List Type",
+      "matchtxnid": "Match Transection ID",
+      "matchscore": "Match Score",
+      "createdt": "Create Date",
+      "updatedt": "Update Date",
+      "createusr": "Create User",
+      "updateusr": "Update User",
+      "wfstate": "Work Flow State",
+      "wfprocid": "Work Flow Process ID",
+      "matchconfigcode": "Match Configuration Code",
+      "invprocid": "Investigation Process ID"
     }
   }
 }

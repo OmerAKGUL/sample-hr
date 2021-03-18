@@ -2,22 +2,22 @@
   "sampleHrApp": {
     "afsroleuser": {
       "home": {
-        "title": "Afsroleusers",
-        "createLabel": "Create a new Afsroleuser",
-        "createOrEditLabel": "Create or edit a Afsroleuser",
-        "notFound": "No Afsroleusers found"
+        "title": "Sistem Rolü Kullanıcıları",
+        "createLabel": "Yeni bir Sistem Rolü Kullanıcısı oluştur",
+        "createOrEditLabel": "Bir Sistem Rolü Kullanıcısı oluştur ya da düzenle",
+        "notFound": "Sistem Rolü Kullanıcıları bulunmamaktadır"
       },
-      "created": "A new Afsroleuser is created with identifier {{ param }}",
-      "updated": "A Afsroleuser is updated with identifier {{ param }}",
-      "deleted": "A Afsroleuser is deleted with identifier {{ param }}",
+      "created": "{{ param }} ID'li yeni bir Sistem Rolü Kullanıcısı oluşturuldu",
+      "updated": "{{ param }} ID'li bir Sistem Rolü Kullanıcısı güncellendi",
+      "deleted": "{{ param }} ID'li bir Sistem Rolü Kullanıcısı silindi",
       "delete": {
-        "question": "Are you sure you want to delete Afsroleuser {{ id }}?"
+        "question": "{{ id }} nolu Sistem Rolü Kullanıcısını silmek istediğinize emin misiniz?"
       },
       "detail": {
-        "title": "Afsroleuser"
+        "title": "Sistem Rolü Kullanıcısı"
       },
-      "usrid": "Usrid",
-      "rolecode": "Rolecode"
+      "usrid": "Kullanıcı ID",
+      "rolecode": "Kod Rolü"
     }
   }
 }

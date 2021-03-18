@@ -72,7 +72,7 @@ export const Afwfaction = (props: IAfwfactionProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.afwfaction.wfcode">Wfcode</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.afwfaction.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -83,7 +83,7 @@ export const Afwfaction = (props: IAfwfactionProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.afwfaction.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -117,10 +117,10 @@ export const Afwfaction = (props: IAfwfactionProps) => {
                     )}
                   </td>
                   <td>{afwfaction.wfcode ? <Link to={`afworkflow/${afwfaction.wfcode.id}`}>{afwfaction.wfcode.name}</Link> : ''}</td>
-                  <td>{afwfaction.createdt ? <TextFormat type="date" value={afwfaction.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{afwfaction.createdt ? <TextFormat type="date" value={afwfaction.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfaction.updatedt ? <TextFormat type="date" value={afwfaction.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afwfaction.createusr}</td>
-                  <td>{afwfaction.updateusr}</td>
+                    <td>{afwfaction.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${afwfaction.id}`} color="info" size="sm">

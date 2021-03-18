@@ -69,11 +69,12 @@ export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
     <div>
       <h2 id="itxtxnqueue-heading">
         <Translate contentKey="sampleHrApp.itxtxnqueue.home.title">Itxtxnqueues</Translate>
+        {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("İşlem Entegrasyon İzleme ; Create")?
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.itxtxnqueue.home.createLabel">Create new Itxtxnqueue</Translate>
-        </Link>
+        </Link>:null}
       </h2>
       <div className="table-responsive">
         {itxtxnqueueList && itxtxnqueueList.length > 0 ? (
@@ -269,7 +270,7 @@ export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.itxtxnqueue.etljobtype">Etljobtype</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.itxtxnqueue.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -280,7 +281,7 @@ export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.itxtxnqueue.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -392,30 +393,32 @@ export const Itxtxnqueue = (props: IItxtxnqueueProps) => {
                       ''
                     )}
                   </td>
-                  <td>{itxtxnqueue.createdt ? <TextFormat type="date" value={itxtxnqueue.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{itxtxnqueue.createdt ? <TextFormat type="date" value={itxtxnqueue.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{itxtxnqueue.updatedt ? <TextFormat type="date" value={itxtxnqueue.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{itxtxnqueue.createusr}</td>
-                  <td>{itxtxnqueue.updateusr}</td>
+                    <td>{itxtxnqueue.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${itxtxnqueue.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${itxtxnqueue.id}/edit`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${itxtxnqueue.id}/edit`} color="primary" size="sm">
+                      {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("İşlem Entegrasyon İzleme ; Update")?
+                      <Button tag={Link} to={`${match.url}/${itxtxnqueue.id}`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
-                      </Button>
+                      </Button>:null}
+                      {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("İşlem Entegrasyon İzleme ; Delete")?
                       <Button tag={Link} to={`${match.url}/${itxtxnqueue.id}/delete`} color="danger" size="sm">
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
                         </span>
-                      </Button>
+                      </Button>:null}
                     </div>
                   </td>
                 </tr>

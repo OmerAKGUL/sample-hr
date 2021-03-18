@@ -22,11 +22,12 @@ export const Meinvestprofile = (props: IMeinvestprofileProps) => {
     <div>
       <h2 id="meinvestprofile-heading">
         <Translate contentKey="sampleHrApp.meinvestprofile.home.title">Meinvestprofiles</Translate>
+        {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("Inceleme Profili Tanım ; Create")?
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="sampleHrApp.meinvestprofile.home.createLabel">Create new Meinvestprofile</Translate>
-        </Link>
+        </Link>:null}
       </h2>
       <div className="table-responsive">
         {meinvestprofileList && meinvestprofileList.length > 0 ? (
@@ -153,24 +154,26 @@ export const Meinvestprofile = (props: IMeinvestprofileProps) => {
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${meinvestprofile.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${meinvestprofile.id}/edit`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${meinvestprofile.id}/edit`} color="primary" size="sm">
+                      {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("Inceleme Profili Tanım ; Update")?
+                      <Button tag={Link} to={`${match.url}/${meinvestprofile.id}`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
-                      </Button>
+                      </Button>:null}
+                      {window.sessionStorage.getItem("createUpdateDeleteAuth").toString().includes("Inceleme Profili Tanım ; Delete")?
                       <Button tag={Link} to={`${match.url}/${meinvestprofile.id}/delete`} color="danger" size="sm">
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
                         </span>
-                      </Button>
+                      </Button>:null}
                     </div>
                   </td>
                 </tr>

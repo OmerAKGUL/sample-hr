@@ -57,7 +57,7 @@ export const Afworkflow = (props: IAfworkflowProps) => {
                 <th>
                   <Translate contentKey="sampleHrApp.afworkflow.wfprocid">Wfprocid</Translate>
                 </th>
-                <th>
+                {/* <th>
                   <Translate contentKey="sampleHrApp.afworkflow.createdt">Createdt</Translate>
                 </th>
                 <th>
@@ -68,7 +68,7 @@ export const Afworkflow = (props: IAfworkflowProps) => {
                 </th>
                 <th>
                   <Translate contentKey="sampleHrApp.afworkflow.updateusr">Updateusr</Translate>
-                </th>
+                </th> */}
                 <th />
               </tr>
             </thead>
@@ -87,10 +87,10 @@ export const Afworkflow = (props: IAfworkflowProps) => {
                   <td>{afworkflow.apprefmngdomain}</td>
                   <td>{afworkflow.wfstate}</td>
                   <td>{afworkflow.wfprocid}</td>
-                  <td>{afworkflow.createdt ? <TextFormat type="date" value={afworkflow.createdt} format={APP_DATE_FORMAT} /> : null}</td>
+                  {/* <td>{afworkflow.createdt ? <TextFormat type="date" value={afworkflow.createdt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afworkflow.updatedt ? <TextFormat type="date" value={afworkflow.updatedt} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{afworkflow.createusr}</td>
-                  <td>{afworkflow.updateusr}</td>
+                  <td>{afworkflow.updateusr}</td> */}
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${afworkflow.id}`} color="info" size="sm">
