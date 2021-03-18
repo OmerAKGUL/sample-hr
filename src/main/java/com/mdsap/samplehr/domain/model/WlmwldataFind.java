@@ -62,7 +62,7 @@ public class WlmwldataFind {
         this.tinnumberdata = tinnumberdata;
     }
 
-    public void updateifblank() {
+    public void update() {
         if(namedata.length()==0)
             namedata=null;
         if(tinnumberdata.length()==0)
@@ -74,6 +74,41 @@ public class WlmwldataFind {
         if(citydata.length()==0)
             citydata=null;
 
+        namedata=replaceTurkishCharSet(namedata);
+        tinnumberdata=replaceTurkishCharSet(tinnumberdata);
+        countrydata=replaceTurkishCharSet(countrydata);
+        citydata=replaceTurkishCharSet(citydata);
+        addressdata=replaceTurkishCharSet(addressdata);
 
+
+    }
+
+    private String replaceTurkishCharSet(String val)
+    {
+        if(val == null) return null;
+        val=val.replace("ç","C");
+        val=val.replace("Ç","C");
+        val=val.replace("ö","O");
+        val=val.replace("Ö","O");
+        val=val.replace("ğ","G");
+        val=val.replace("Ğ","G");
+        val=val.replace("ü","U");
+        val=val.replace("Ü","u");
+        val=val.replace("ı","I");
+        val=val.replace("İ","I");
+        val=val.toUpperCase();
+
+        return val;
+    }
+
+    @Override
+    public String toString() {
+        return "WlmwldataFind{" +
+            "namedata='" + namedata + '\'' +
+            ", addressdata='" + addressdata + '\'' +
+            ", citydata='" + citydata + '\'' +
+            ", countrydata='" + countrydata + '\'' +
+            ", tinnumberdata='" + tinnumberdata + '\'' +
+            '}';
     }
 }

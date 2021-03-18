@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -139,7 +138,11 @@ public class WlmwldataResource {
         log.debug("REST request to save Wlmwldata : {}", wlmwldatafind);
 
         List<Wlmwldata> result= null;
-        wlmwldatafind.updateifblank();
+
+        wlmwldatafind.update();
+
+        System.out.println(wlmwldatafind.toString());
+
         if(wlmwldatafind.getNamedata()!=null && wlmwldatafind.getTinnumberdata()!=null && wlmwldatafind.getCountrydata()!=null)
             result = wlmwldataRepository.findOneByNamedataAndTinnumberdataAndCountrydata(wlmwldatafind.getNamedata(),wlmwldatafind.getTinnumberdata(),wlmwldatafind.getCountrydata());
 
