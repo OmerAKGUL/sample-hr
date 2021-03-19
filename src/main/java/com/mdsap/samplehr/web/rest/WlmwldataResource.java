@@ -141,7 +141,6 @@ public class WlmwldataResource {
 
         wlmwldatafind.update();
 
-        System.out.println(wlmwldatafind.toString());
 
         if(wlmwldatafind.getNamedata()!=null && wlmwldatafind.getTinnumberdata()!=null && wlmwldatafind.getCountrydata()!=null)
             result = wlmwldataRepository.findOneByNamedataAndTinnumberdataAndCountrydata(wlmwldatafind.getNamedata(),wlmwldatafind.getTinnumberdata(),wlmwldatafind.getCountrydata());
@@ -164,7 +163,6 @@ public class WlmwldataResource {
         WLmwldataMatchResult matchResult = new WLmwldataMatchResult();
         matchResult.addMatchData(result);
 
-        // HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), result);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(matchResult));
     }
 }
